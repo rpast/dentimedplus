@@ -93,7 +93,7 @@ html {
     justify-content: flex-end;
     width: 100%;
     margin-left: auto;
-    margin-right: 1.5rem;
+    margin-right: 2.5rem;
     @include desktop {
         display: flex;
     }
@@ -170,17 +170,25 @@ html {
         height: 900px;
     }
     #{&}-text {
-        @include margins-vw(200px, 80px, 0px, 80px, hero);
-        @include smartphone-h {
-            margin-top: 3rem;
-        } 
+        @include fixed-margins(hero-s);
+        @include s-tablet-w {
+            @include fixed-margins(hero-m);
+        }
         @include l-tablet-w {
-            @include fixed-margins(hero);
+            @include fixed-margins(hero-l);
         }
         & h1 {
             font-size: 3.8rem;
+            @include s-tablet-w {
+                min-width: 400px;
+                font-size: 4.8rem;
+            }
             @include l-tablet-w {
                 min-width: 600px;
+                font-size: 5.8rem;
+            }
+            @include desktop {
+                min-width: 700px;
                 font-size: 6.8rem;
             }
         }
@@ -194,8 +202,8 @@ html {
             & #phone-hero {
                 fill: white;
                 margin: 0 2rem 2rem 1rem;
-                width: 30%;
-                max-width: 150px;
+                width: 35%;
+                max-width: 200px;
             }
             & .call-us-text {
                 font-size: 1.25em;

@@ -366,7 +366,7 @@ html h1, html h2, html h3, html h4 {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 820px) {
   html {
     font-size: 20px;
   }
@@ -517,7 +517,7 @@ html h1, html h2, html h3, html h4 {
           justify-content: flex-end;
   width: 100%;
   margin-left: auto;
-  margin-right: 1.5rem;
+  margin-right: 2.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -643,28 +643,25 @@ html h1, html h2, html h3, html h4 {
   }
 }
 
-@media screen and (min-width: 900px) and (max-height: 900px) {
+@media screen and (min-width: 820px) and (max-height: 820px) {
   .hero {
     height: 900px;
   }
 }
 
 .hero .hero-text {
-  margin-top: 19.53125vw;
-  margin-right: 7.8125vw;
-  margin-bottom: 0vw;
-  margin-left: 7.8125vw;
+  margin: 4rem 2rem 0 2rem;
 }
 
-@media screen and (max-height: 639px) {
+@media screen and (min-width: 640px) {
   .hero .hero-text {
-    margin-top: 3rem;
+    margin: 4rem 3rem 0 3rem;
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 820px) {
   .hero .hero-text {
-    margin: 2rem 4rem 0 4rem;
+    margin: 5rem 4rem 0 4rem;
   }
 }
 
@@ -672,9 +669,23 @@ html h1, html h2, html h3, html h4 {
   font-size: 3.8rem;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 640px) {
+  .hero .hero-text h1 {
+    min-width: 400px;
+    font-size: 4.8rem;
+  }
+}
+
+@media screen and (min-width: 820px) {
   .hero .hero-text h1 {
     min-width: 600px;
+    font-size: 5.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero .hero-text h1 {
+    min-width: 700px;
     font-size: 6.8rem;
   }
 }
@@ -706,8 +717,8 @@ html h1, html h2, html h3, html h4 {
 .hero .hero-text .call-us #phone-hero {
   fill: white;
   margin: 0 2rem 2rem 1rem;
-  width: 30%;
-  max-width: 150px;
+  width: 35%;
+  max-width: 200px;
 }
 
 .hero .hero-text .call-us .call-us-text {

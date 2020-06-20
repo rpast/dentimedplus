@@ -62,8 +62,12 @@
 }
 
 @mixin fixed-margins($section) {
-    @if $section == hero {
-        margin: 2rem 4rem 0 4rem;
+    @if $section == hero-s {
+        margin: 4rem 2rem 0 2rem;
+    } @else if $section == hero-m {
+        margin: 4rem 3rem 0 3rem;
+    } @else if $section == hero-l {
+        margin: 5rem 4rem 0 4rem;
     } @else if $section == section {
         margin: 0rem 1.5em 0em 1.5em;
     }
@@ -71,7 +75,6 @@
 
 @mixin flex-djacai($direction, $j-content, $a-content, $a-items) {
     display: flex;
-
     flex-direction: $direction;
     justify-content: $j-content;
     align-content: $a-content;
