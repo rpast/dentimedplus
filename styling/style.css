@@ -378,6 +378,10 @@ html h1, html h2, html h3, html h4 {
   }
 }
 
+a, a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+
 #wrapper {
   -webkit-transition: opacity 0.6s ease;
   transition: opacity 0.6s ease;
@@ -434,7 +438,7 @@ html h1, html h2, html h3, html h4 {
 }
 
 #wrapper .wrapper-menu {
-  margin-top: 6rem;
+  margin-top: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,8 +455,8 @@ html h1, html h2, html h3, html h4 {
 }
 
 #wrapper .wrapper-menu a {
+  color: black;
   font-size: 1.5em;
-  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin-bottom: 2em;
@@ -491,7 +495,6 @@ html h1, html h2, html h3, html h4 {
     transition: box-shadow 0.3s ease;
     transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
     min-width: 80px;
-    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     padding: 1rem;
@@ -803,31 +806,32 @@ section.about .about-wrapper {
 }
 
 @media screen and (min-width: 1024px) {
-  section.about .about-wrapper .about-header {
+  .about-header {
     width: 800px;
     max-width: 1000px;
   }
 }
 
-section.about .about-wrapper .about-header h2 {
-  margin: 0 0 1rem 0;
-  font-size: 3rem;
+.about-header h2 {
+  margin: 0 0 2rem 0;
+  font-size: 2.3rem;
+  letter-spacing: 0.04rem;
 }
 
 @media screen and (min-width: 500px) {
-  section.about .about-wrapper .about-header h2 {
+  .about-header h2 {
     margin: 0 0 1.5rem 0;
   }
 }
 
 @media screen and (min-width: 640px) {
-  section.about .about-wrapper .about-header h2 {
+  .about-header h2 {
     margin: 0.25rem 0 1.5rem 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  section.about .about-wrapper .about-header h2 {
+  .about-header h2 {
     margin: 1rem 1.5rem 1.5rem 2rem;
   }
 }
@@ -837,7 +841,7 @@ section.about .about-wrapper .about-header h2 {
 }
 
 .myslides-team {
-  height: 840px;
+  height: 940px;
 }
 
 .myslides, .myslides-team {
@@ -940,6 +944,21 @@ section.about .about-wrapper .about-header h2 {
 }
 
 .myslides .gallery-text-box, .myslides-team .gallery-text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 3rem 1rem 3rem 1rem;
 }
 
@@ -985,13 +1004,13 @@ section.about .about-wrapper .about-header h2 {
 }
 
 .services span a {
-  text-decoration: none;
   text-transform: none;
   letter-spacing: 0.1rem;
+  color: black;
   font-family: "Abhaya Libre", serif;
   font-weight: 1000;
   font-size: 2em;
-  margin: 1em 0 0 0.5em;
+  margin: 1rem 0 2rem 0;
 }
 
 .services span a:hover {
@@ -999,7 +1018,7 @@ section.about .about-wrapper .about-header h2 {
 }
 
 .services-margin {
-  margin-top: 5rem;
+  margin: 6rem 0 0 2rem;
 }
 
 .top-margin {
@@ -1040,6 +1059,7 @@ td {
 }
 
 .contact-box {
+  width: 300px;
   max-width: 400px;
   padding: 1em 1em 1em 2em;
   margin: 0em 0em 4rem 0em;
@@ -1057,17 +1077,40 @@ td {
 }
 
 .button {
-  margin: 2rem 2rem;
-}
-
-.button a {
-  padding: 1rem 2rem;
-  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  font-size: 16px;
+  margin: 4rem 0rem 1rem 0rem;
+  padding: 1rem 1rem;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border: 1px solid black;
+  border-radius: 3px;
+  color: black;
 }
 
-.button a:hover {
+.button:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: -webkit-transform 300ms, -webkit-box-shadow 300ms;
+  transition: -webkit-transform 300ms, -webkit-box-shadow 300ms;
+  transition: transform 300ms, box-shadow 300ms;
+  transition: transform 300ms, box-shadow 300ms, -webkit-transform 300ms, -webkit-box-shadow 300ms;
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }

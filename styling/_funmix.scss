@@ -90,7 +90,6 @@
 }
 
 @mixin link-decor($case, $spacing) {
-    text-decoration: none;
     text-transform: $case;
     letter-spacing: $spacing;
 }

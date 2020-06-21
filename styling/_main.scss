@@ -25,6 +25,10 @@ html {
     }
 }
 
+a, a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
 // Set up the mobile menu navigation
 #wrapper {
     transition: opacity 0.6s ease;
@@ -53,12 +57,13 @@ html {
         }
     }
     & .wrapper-menu {
-        margin-top: 6rem;
+        margin-top: 10rem;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
         & a {
+            color: black;
             font-size: 1.5em;
             @include link-decor(uppercase, 0.2rem);
             margin-bottom: 2em;
@@ -245,35 +250,36 @@ section.about {
             flex-direction: row;
             justify-content: space-between;
         }
-        & .about-header {
-            @media screen and (min-width: $desktop) {
-                width: 800px;
-                max-width: 1000px;
-            }
-            & h2 {
-                margin: 0 0 1rem 0;
-                font-size: 3rem;
-                @media screen and (min-width: $phone) {
-                    margin: 0 0 1.5rem 0;
-                }
-                @include s-tablet-w {
-                    margin: 0.25rem 0 1.5rem 0;
-                }
-                @media screen and (min-width: $desktop) {
-                    margin: 1rem 1.5rem 1.5rem 2rem;
-                }
-            }
-        }
     }
 }
 
+.about-header {
+    @media screen and (min-width: $desktop) {
+        width: 800px;
+        max-width: 1000px;
+    }
+    & h2 {
+        margin: 0 0 2rem 0;
+        font-size: 2.3rem;
+        letter-spacing: 0.04rem;
+        @media screen and (min-width: $phone) {
+            margin: 0 0 1.5rem 0;
+        }
+        @include s-tablet-w {
+            margin: 0.25rem 0 1.5rem 0;
+        }
+        @media screen and (min-width: $desktop) {
+            margin: 1rem 1.5rem 1.5rem 2rem;
+        }
+    }
+}
 
 .myslides {
     height: 840px;
 }
 
 .myslides-team {
-    height: 840px;
+    height: 940px;
 }
 
 .myslides, .myslides-team {
@@ -330,6 +336,7 @@ section.about {
         margin: 0;
     }
     & .gallery-text-box {
+        @include flex-djacai(column, flex-start, center, center);
         margin: 3rem 1rem 3rem 1rem;
         //height: 300px;
         @include s-tablet-w {
@@ -362,19 +369,19 @@ section.about {
         flex-direction: column;
         & a {
             @include link-decor(none, 0.1rem);
+            color: black;
             font-family: $dent-font-head;
             font-weight: 1000;
             font-size: 2em;
-            margin: 1em 0 0 0.5em;
+            margin: 1rem 0 2rem 0;
         }
         & a:hover {
             color: $dent-nav-dark;
         }
     }
 }
-
 .services-margin {
-    margin-top: 5rem;
+    margin: 6rem 0 0 2rem;
 }
 
 .top-margin {
@@ -411,6 +418,7 @@ td {
 }
 
 .contact-box {
+    width: 300px;
     max-width: 400px;
     padding: 1em 1em 1em 2em;    
     margin: 0em 0em 4rem 0em;
@@ -424,12 +432,20 @@ td {
     margin-bottom: 1em;
 }
 .button {
-    margin: 2rem 2rem;
-    & a {
-        padding: 1rem 2rem;
-        @include link-decor(uppercase, 0.2rem);
-    }
-    & a:hover {
-        box-shadow: 0 2px 2px rgba(0,0,0,0.25);
-    }
+    @include flex-djacai(column, center, center, center);
+    @include link-decor(uppercase, 0.2rem);
+    //min-width: 100px;
+    font-size: 16px;
+    margin: 4rem 0rem 1rem 0rem;
+    padding: 1rem 1rem;
+
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+}
+.button:hover {
+    transform: scale(.95);
+    transition: transform 300ms, box-shadow 300ms;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
 }
