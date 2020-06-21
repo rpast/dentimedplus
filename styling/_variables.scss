@@ -20,6 +20,10 @@ $s-tablet: 640px;
 $l-tablet: 820px;
 $desktop: 1024px;
 
+//breakpoints for displaying hero banner on tall phones
+$tall-phone-height: 680px;
+$tall-phone-width: 374px;
+
 $max-breakpoint: 414;
 $max-breakpoint-fontsize: 1024;
 $wide-screen: "(min-width: #{$max-breakpoint-fontsize}px)";  

@@ -38,6 +38,11 @@
         @content;
     }
 }
+@mixin tall-smartphone {
+    @media screen and (min-height: $tall-phone-height) and (min-width: $tall-phone-width) and (max-width: $s-tablet) {
+        @content;
+    }
+}
 @mixin tablet-h {
     @media screen and (min-width: $l-tablet) and (max-height: $l-tablet) {
         @content;
@@ -54,16 +59,18 @@
     }
 }
 
-@mixin margins-vw($top, $right, $bottom, $left, $section) {
-    margin-top: get-vw($top);
-    margin-right: get-vw($right);
-    margin-bottom: get-vw($bottom);
-    margin-left: get-vw($left);
-}
+// @mixin margins-vw($top, $right, $bottom, $left, $section) {
+//     margin-top: get-vw($top);
+//     margin-right: get-vw($right);
+//     margin-bottom: get-vw($bottom);
+//     margin-left: get-vw($left);
+// }
 
 @mixin fixed-margins($section) {
     @if $section == hero-s {
         margin: 4rem 2rem 0 2rem;
+    } @else if $section == hero-s-tall {
+        margin: 6rem 2rem 0 2rem;
     } @else if $section == hero-m {
         margin: 4rem 3rem 0 3rem;
     } @else if $section == hero-l {
