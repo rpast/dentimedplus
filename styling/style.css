@@ -551,11 +551,18 @@ a, a:hover, a:visited, a:link, a:active {
   position: fixed;
   z-index: 2;
   top: 0;
-  height: 10vh;
-  min-height: 80px;
+  height: 7vh;
   width: 100vw;
   -webkit-box-shadow: 0 0;
           box-shadow: 0 0;
+}
+
+#navbar .fatbar {
+  display: inherit;
+  position: inherit;
+  background-color: #f18b62;
+  height: 1vh;
+  z-index: 1;
 }
 
 .menu-container {

@@ -116,10 +116,17 @@ a, a:hover, a:visited, a:link, a:active {
     position: fixed;
     z-index: 2;
     top: 0;
-    height: 10vh;
-    min-height: 80px;
+    height: 7vh;
+    //min-height: 80px;
     width: 100vw;
     box-shadow: 0 0;
+    & .fatbar {
+        display: inherit;
+        position: inherit;
+        background-color: $dent-cinnamon;
+        height: 1vh;
+        z-index: 1;
+    }
 }
 .menu-container{
     margin-left: auto;
