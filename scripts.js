@@ -65,7 +65,7 @@ function showDivs(n, className, counterFlag) {
 }
 
 // Style toggler for navbar
-var myNav = document.querySelector("#navbar");
+var myNav = document.querySelector(".navbar");
 var myLogo = document.querySelector(".logo");
 var myLinks = document.querySelector(".navbar-links")
 var myCall = document.querySelector(".call-us-nav")
@@ -77,17 +77,15 @@ window.onscroll = function () {
 	var scrolledVal2 = document.documentElement.scrollTop;
 
 	if (scrolledVal1 >= clientH || scrolledVal2 >= clientH) {
-		myNav.style.backgroundColor = "rgba(255,255,255,1)";
-		myNav.style.boxShadow = "0px 3px 10px 0px rgba(0, 0, 0, .5)";
-		myNav.style.justifyContent = "space-evenly";
+		myNav.classList.add("navbar-solid");
+		myNav.classList.remove("navbar-transparent");
 		myLogo.style.display = "flex";
 		myCall.style.visibility = "visible";
 		this.myLinks.style.color = "rgb(0,0,0)";
 		myHamburger.style.fill = "rgba(0,0,0,1)";
 	} else {
-		myNav.style.backgroundColor = "rgba(255,255,255,0)";
-		myNav.style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0)";
-		myNav.style.justifyContent = "center";
+		myNav.classList.add("navbar-transparent");
+		myNav.classList.remove("navbar-solid");
 		myLogo.style.display = "none";
 		myCall.style.visibility = "hidden";
 		this.myLinks.style.color = "rgb(255,255,255)"

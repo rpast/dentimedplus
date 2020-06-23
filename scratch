@@ -1,2 +1,23 @@
-https://www.google.com/maps/d/drive?state=%7B%22ids%22%3A%5B%2216wOL-cdgwRRLY8cBKU2dHEcaMGGrly5j%22%5D%2C%22action%22%3A%22open%22%2C%22userId%22%3A%22111803276134783573018%22%7D&usp=sharing
+var myNav = document.querySelector(".navbar");
+var myLogo = document.querySelector(".logo");
+var myLinks = document.querySelector(".navbar-links")
+var myCall = document.querySelector(".call-us-nav")
+var myHamburger = document.querySelector("#menu-icon");
 
+	if (scrolledVal1 >= clientH || scrolledVal2 >= clientH) {
+		myNav.style.backgroundColor = "rgba(255,255,255,1)";
+		myNav.style.boxShadow = "0px 3px 10px 0px rgba(0, 0, 0, .5)";
+		myNav.style.justifyContent = "space-evenly";
+		myLogo.style.display = "flex";
+		myCall.style.visibility = "visible";
+		this.myLinks.style.color = "rgb(0,0,0)";
+		myHamburger.style.fill = "rgba(0,0,0,1)";
+	} else {
+		myNav.style.backgroundColor = "rgba(255,255,255,0)";
+		myNav.style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0)";
+		myNav.style.justifyContent = "center";
+		myLogo.style.display = "none";
+		myCall.style.visibility = "hidden";
+		this.myLinks.style.color = "rgb(255,255,255)"
+		myHamburger.style.fill = "rgba(255,255,255,1)";
+	}

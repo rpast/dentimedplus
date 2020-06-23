@@ -108,26 +108,36 @@ a, a:hover, a:visited, a:link, a:active {
     margin-right: 1rem;
 }
 
-#navbar {
+.navbar {
     transition: background-color 0.6s ease;
     display: flex;
-    justify-content: center;
     align-items: center;
     position: fixed;
     z-index: 2;
     top: 0;
-    height: 7vh;
-    //min-height: 80px;
+    height: 6.2vh;
     width: 100vw;
-    box-shadow: 0 0;
-    & .fatbar {
-        display: inherit;
-        position: inherit;
-        background-color: $dent-cinnamon;
-        height: 1vh;
-        z-index: 1;
-    }
 }
+.navbar-solid { //toggler
+    min-height: 40px;
+    background-color: rgba(255,255,255,1);
+    justify-content: space-evenly;
+}
+.navbar-solid::after { //display cinnamon bar
+    @extend .navbar;
+    content: " ";
+    top: 6.2vh;
+    background-color: $dent-cinnamon;
+    height: 6px;
+    opacity: 1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .3);
+}
+.navbar-transparent { //toggler
+    background-color: rgba(255,255,255,0);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    justify-content: center;
+}
+
 .menu-container{
     margin-left: auto;
     margin-right: 1.5rem;
