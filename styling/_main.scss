@@ -104,11 +104,13 @@ a, a:hover, a:visited, a:link, a:active {
     }
 }
 #phone-nav {
-    width: 40px;
+    width: 35px;
     margin-right: 1rem;
 }
 
 .navbar {
+    //FIXME: navbar top margin dissapears when .navbar-transparent toggled
+    //TODO: make the navbar height in pxs
     transition: background-color 0.6s ease;
     display: flex;
     align-items: center;
@@ -119,11 +121,12 @@ a, a:hover, a:visited, a:link, a:active {
     width: 100vw;
 }
 .navbar-solid { //toggler
-    min-height: 40px;
+    min-height: 50px;
     background-color: rgba(255,255,255,1);
     justify-content: space-evenly;
 }
 .navbar-solid::after { //display cinnamon bar
+    //FIXME: horizontal mobile overlapping
     @extend .navbar;
     content: " ";
     top: 6.2vh;
@@ -151,8 +154,8 @@ a, a:hover, a:visited, a:link, a:active {
 #menu-icon {
     fill: white;
     display: inherit; //This will be changed once clicked or width > threshold
-    height: 7vh;
-    min-height: 50px;
+    height: 4vh;
+    min-height: 40px;
     @include s-tablet-w {
         display: none
     }

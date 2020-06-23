@@ -532,7 +532,7 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 #phone-nav {
-  width: 40px;
+  width: 35px;
   margin-right: 1rem;
 }
 
@@ -553,7 +553,7 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 .navbar-solid {
-  min-height: 40px;
+  min-height: 50px;
   background-color: white;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -611,8 +611,8 @@ a, a:hover, a:visited, a:link, a:active {
 #menu-icon {
   fill: white;
   display: inherit;
-  height: 7vh;
-  min-height: 50px;
+  height: 4vh;
+  min-height: 40px;
 }
 
 @media screen and (min-width: 640px) {

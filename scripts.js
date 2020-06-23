@@ -70,30 +70,53 @@ var myLogo = document.querySelector(".logo");
 var myLinks = document.querySelector(".navbar-links")
 var myCall = document.querySelector(".call-us-nav")
 var myHamburger = document.querySelector("#menu-icon");
+
 var clientH = document.documentElement.clientHeight / 15;
 
 window.onscroll = function () {
-	var scrolledVal1 = document.body.scrollTop;
-	var scrolledVal2 = document.documentElement.scrollTop;
+    var scrolledVal1 = document.body.scrollTop;
+    var scrolledVal2 = document.documentElement.scrollTop;
 
-	if (scrolledVal1 >= clientH || scrolledVal2 >= clientH) {
-		myNav.classList.add("navbar-solid");
-		myNav.classList.remove("navbar-transparent");
-		myLogo.style.display = "flex";
-		myCall.style.visibility = "visible";
-		this.myLinks.style.color = "rgb(0,0,0)";
-		myHamburger.style.fill = "rgba(0,0,0,1)";
-	} else {
-		myNav.classList.add("navbar-transparent");
-		myNav.classList.remove("navbar-solid");
-		myLogo.style.display = "none";
-		myCall.style.visibility = "hidden";
-		this.myLinks.style.color = "rgb(255,255,255)"
-		myHamburger.style.fill = "rgba(255,255,255,1)";
-	}
+    if (scrolledVal1 >= clientH || scrolledVal2 >= clientH) {
+        myNav.classList.add("navbar-solid");
+        myNav.classList.remove("navbar-transparent");
+        myLogo.style.display = "flex";
+        myCall.style.visibility = "visible";
+        this.myLinks.style.color = "rgb(0,0,0)";
+        myHamburger.style.fill = "rgba(0,0,0,1)";
+    } else {
+        myNav.classList.add("navbar-transparent");
+        myNav.classList.remove("navbar-solid");
+        myLogo.style.display = "none";
+        myCall.style.visibility = "hidden";
+        this.myLinks.style.color = "rgb(255,255,255)"
+        myHamburger.style.fill = "rgba(255,255,255,1)";
+    }
 };
 
 // Smooth scroll handler
 const scroll = new SmoothScroll('a[href*="#"]', {
 	speed: 300,
 });
+
+//Intersection observer for catching the scroll position
+//TODO: implement intersection observer for lazy imgs and nav styling
+//set empty containers to observe at the begining and the end of
+//services section
+const servicesSection = document.querySelector("#services");
+const options = { 
+    root: null,
+    threshold: 0.9,
+    rootMargin: "1px" //>50% doesnt work, find a way to convert vh to pixels
+};
+
+const io = new IntersectionObserver(function(entries, io) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) { //react only when intersecting with element
+            return;
+        }
+        console.log(entry.target);
+    });
+}, options);
+
+io.observe(servicesSection);
