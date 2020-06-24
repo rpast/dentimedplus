@@ -109,19 +109,17 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 .navbar {
-    //FIXME: navbar top margin dissapears when .navbar-transparent toggled
-    //TODO: make the navbar height in pxs
+    //TODO: adjust navbar height to desktop view
     transition: background-color 0.6s ease;
     display: flex;
     align-items: center;
     position: fixed;
     z-index: 2;
     top: 0;
-    height: 6.2vh;
+    height: 50px;
     width: 100vw;
 }
 .navbar-solid { //toggler
-    min-height: 50px;
     background-color: rgba(255,255,255,1);
     justify-content: space-evenly;
 }
@@ -129,21 +127,21 @@ a, a:hover, a:visited, a:link, a:active {
     //FIXME: horizontal mobile overlapping
     @extend .navbar;
     content: " ";
-    top: 6.2vh;
+    top: 50px;
     background-color: $dent-cinnamon;
     height: 6px;
     opacity: 1;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .3);
 }
 .navbar-transparent { //toggler
+
     background-color: rgba(255,255,255,0);
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
     justify-content: center;
 }
 
 .menu-container{
-    margin-left: auto;
-    margin-right: 1.5rem;
+    margin: 0.5rem 1.5rem 0.5rem auto;
     @include s-tablet-w {
         margin: 0rem;
     }
@@ -154,8 +152,8 @@ a, a:hover, a:visited, a:link, a:active {
 #menu-icon {
     fill: white;
     display: inherit; //This will be changed once clicked or width > threshold
-    height: 4vh;
-    min-height: 40px;
+    height: 3vh;
+    min-height: 35px;
     @include s-tablet-w {
         display: none
     }
