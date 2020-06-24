@@ -488,7 +488,7 @@ a, a:hover, a:visited, a:link, a:active {
     color: white;
   }
   .navbar-links a {
-    font-size: 18px;
+    font-size: 16px;
     color: inherit;
     -webkit-transition: -webkit-box-shadow 0.3s ease;
     transition: -webkit-box-shadow 0.3s ease;
@@ -521,6 +521,7 @@ a, a:hover, a:visited, a:link, a:active {
   width: 100%;
   margin-left: auto;
   margin-right: 2.5rem;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -532,8 +533,8 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 #phone-nav {
-  width: 35px;
-  margin-right: 1rem;
+  width: 30px;
+  margin: 1rem;
 }
 
 .navbar, .navbar-solid::after {
@@ -620,7 +621,7 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 .logo {
-  width: 55px;
+  width: 40px;
   display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;

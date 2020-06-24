@@ -78,7 +78,7 @@ a, a:hover, a:visited, a:link, a:active {
         width: 100vw;
         color: rgb(255,255,255);
         & a {
-            font-size: 18px;
+            font-size: 16px;
             color: inherit;
             transition: box-shadow 0.3s ease;
             min-width: 80px;
@@ -99,17 +99,17 @@ a, a:hover, a:visited, a:link, a:active {
     width: 100%;
     margin-left: auto;
     margin-right: 2.5rem;
+    font-size: 20px;
     @include desktop {
         display: flex;
     }
 }
 #phone-nav {
-    width: 35px;
-    margin-right: 1rem;
+    width: 30px;
+    margin: 1rem;
 }
 
 .navbar {
-    //TODO: adjust navbar height to desktop view
     transition: background-color 0.6s ease;
     display: flex;
     align-items: center;
@@ -124,7 +124,6 @@ a, a:hover, a:visited, a:link, a:active {
     justify-content: space-evenly;
 }
 .navbar-solid::after { //display cinnamon bar
-    //FIXME: horizontal mobile overlapping
     @extend .navbar;
     content: " ";
     top: 50px;
@@ -160,7 +159,7 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 .logo {
-    width: 55px;
+    width: 40px;
     //visibility: none;
     display: none;
     flex-direction: row;
