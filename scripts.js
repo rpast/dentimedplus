@@ -1,20 +1,21 @@
 // Toggle between adding and removing the "responsive" 
 // class to topnav when the user clicks on the icon
 
-var menu = document.querySelector("#wrapper");
+var menu = document.querySelector("#menu-wrapper");
 var nav = document.querySelector("#navbar");
 var icon = document.querySelector("#menu-icon");
 
 // Activate menu wrapper
 function hamburgerToggle() {
-	console.log(menu.style.visibility);
-	if (menu.style.display == "") {
-		menu.style.display = "flex";
-		nav.style.display = "none";
-	} else if (menu.style.display == "flex") {
-		menu.style.display = "";
-		nav.style.display = "flex";
-	}
+    if(menu.classList.contains('wrapper-on')) {
+        console.log('wyłączam');
+        menu.classList.remove('wrapper-on');
+        menu.classList.add('wrapper-off');
+    } else if(menu.classList.contains('wrapper-off')) {
+        console.log('włączam');
+        menu.classList.remove('wrapper-off');
+        menu.classList.add('wrapper-on');
+    }
 }
 
 // Carousel handlers

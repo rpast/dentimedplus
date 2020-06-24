@@ -382,17 +382,7 @@ a, a:hover, a:visited, a:link, a:active {
   text-decoration: none;
 }
 
-#wrapper {
-  -webkit-transition: opacity 0.6s ease;
-  transition: opacity 0.6s ease;
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+#menu-wrapper {
   height: 100vh;
   width: 100%;
   color: black;
@@ -400,7 +390,7 @@ a, a:hover, a:visited, a:link, a:active {
   position: fixed;
 }
 
-#wrapper .close-container {
+#menu-wrapper .close-icon-box {
   display: inherit;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -412,7 +402,7 @@ a, a:hover, a:visited, a:link, a:active {
   margin-left: auto;
 }
 
-#wrapper .close-container a {
+#menu-wrapper .close-icon-box a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,14 +420,14 @@ a, a:hover, a:visited, a:link, a:active {
           align-items: center;
 }
 
-#wrapper .close-container #close-icon {
+#menu-wrapper .close-icon-box #close-icon {
   margin-right: 1.5rem;
   fill: black;
   height: 7vh;
   min-height: 50px;
 }
 
-#wrapper .wrapper-menu {
+#menu-wrapper .wrapper-menu {
   margin-top: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,12 +444,36 @@ a, a:hover, a:visited, a:link, a:active {
           flex-direction: column;
 }
 
-#wrapper .wrapper-menu a {
+#menu-wrapper .wrapper-menu a {
   color: black;
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin-bottom: 2em;
+}
+
+.wrapper-on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: display 0.6s ease;
+  transition: display 0.6s ease;
+}
+
+.wrapper-off {
+  display: none;
 }
 
 .navbar-links {
