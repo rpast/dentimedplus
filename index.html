@@ -11,11 +11,9 @@
     <body>
         <!-- Define hidden menu wrapper -->
         <div id="menu-wrapper" class="wrapper-off">
-            <div class="close-icon-box">
-                <!-- Close svg icon -->
+            <div class="icon-flexbox">
                 <a href="javascript:void(0);" onclick="hamburgerToggle()">
                     <?xml version="1.0" encoding="iso-8859-1"?>
-                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <svg version="1.1" id="close-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
                         <g>
@@ -26,6 +24,7 @@
                     </svg>
                 </a>
             </div>
+
             <div class="wrapper-menu">  
                     <a href="#us" onclick="hamburgerToggle()">O nas</a>
                     <a href="#team" onclick="hamburgerToggle()">Zespół</a>
@@ -36,7 +35,7 @@
 
         <!-- Define navbar -->
         <!-- <div class="fatbar"></div> -->
-        <nav class="navbar navbar-transparent">
+        <nav id="navbar" class="navbar navbar-on navbar-transparent">
             
                 <!-- Logo small -->
                 <a id="logo" class="logo" href="#hero">
@@ -85,11 +84,10 @@
                 </div>
                 
                 <!-- hamburger menu svg icon -->
-                <div class="menu-container">
+                <div class="ham-icon-box">
                     <a href="javascript:void(0);" onclick="hamburgerToggle()">
                         <?xml version="1.0" encoding="iso-8859-1"?>
-                        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg version="1.1" id="menu-icon" class="ham-light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+                        <svg version="1.1" id="ham-icon" class="hamburger-on" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
                             <g>
                                 <rect x="9" y="12" width="40" height="2"/>
                                 <rect x="9" y="28" width="40" height="2"/>
@@ -99,7 +97,7 @@
                         </svg>
                     </a>
                 </div>
-            </div class="navbar fat">
+            </div>
         </nav>
 
         <!-- Define hero banner -->

@@ -384,47 +384,21 @@ a, a:hover, a:visited, a:link, a:active {
 
 #menu-wrapper {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   color: black;
   background-color: white;
   position: fixed;
+  z-index: 3;
 }
 
-#menu-wrapper .close-icon-box {
-  display: inherit;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 10vh;
-  margin-left: auto;
+#menu-wrapper .icon-flexbox {
+  margin: 0.5rem 1.5rem 0.5rem auto;
 }
 
-#menu-wrapper .close-icon-box a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#menu-wrapper .close-icon-box #close-icon {
-  margin-right: 1.5rem;
+#menu-wrapper .icon-flexbox #close-icon {
   fill: black;
-  height: 7vh;
-  min-height: 50px;
+  height: 3vh;
+  min-height: 35px;
 }
 
 #menu-wrapper .wrapper-menu {
@@ -554,17 +528,24 @@ a, a:hover, a:visited, a:link, a:active {
 .navbar, .navbar-solid::after {
   -webkit-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  height: 50px;
+  width: 100vw;
+}
+
+.navbar-on {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  height: 50px;
-  width: 100vw;
+}
+
+.navbar-off {
+  display: none;
 }
 
 .navbar-solid {
@@ -593,17 +574,17 @@ a, a:hover, a:visited, a:link, a:active {
           justify-content: center;
 }
 
-.menu-container {
+.ham-icon-box {
   margin: 0.5rem 1.5rem 0.5rem auto;
 }
 
 @media screen and (min-width: 640px) {
-  .menu-container {
+  .ham-icon-box {
     margin: 0rem;
   }
 }
 
-.menu-container a {
+.ham-icon-box a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,17 +602,26 @@ a, a:hover, a:visited, a:link, a:active {
           align-items: center;
 }
 
-#menu-icon {
+#ham-icon {
   fill: white;
-  display: inherit;
   height: 3vh;
   min-height: 35px;
 }
 
+.hamburger-on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media screen and (min-width: 640px) {
-  #menu-icon {
+  .hamburger-on {
     display: none;
   }
+}
+
+.hamburger-off {
+  display: none;
 }
 
 .logo {

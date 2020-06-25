@@ -7,14 +7,22 @@ var icon = document.querySelector("#menu-icon");
 
 // Activate menu wrapper
 function hamburgerToggle() {
+    //if menu is visible
     if(menu.classList.contains('wrapper-on')) {
-        console.log('wyłączam');
         menu.classList.remove('wrapper-on');
         menu.classList.add('wrapper-off');
+        nav.classList.remove('navbar-off');
+        nav.classList.add('navbar-on');
+        icon.classList.remove('hamburger-off');
+        icon.classList.add('hamburger-on');
+    //if menu is hidden
     } else if(menu.classList.contains('wrapper-off')) {
-        console.log('włączam');
         menu.classList.remove('wrapper-off');
         menu.classList.add('wrapper-on');
+        nav.classList.remove('navbar-on');
+        nav.classList.add('navbar-off');
+        icon.classList.remove('hamburger-on');
+        icon.classList.add('hamburger-off');
     }
 }
 
@@ -70,7 +78,7 @@ var myNav = document.querySelector(".navbar");
 var myLogo = document.querySelector(".logo");
 var myLinks = document.querySelector(".navbar-links")
 var myCall = document.querySelector(".call-us-nav")
-var myHamburger = document.querySelector("#menu-icon");
+var myHamburger = document.querySelector("#ham-icon");
 
 var clientH = document.documentElement.clientHeight / 15;
 
