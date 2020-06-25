@@ -34,7 +34,7 @@ a, a:hover, a:visited, a:link, a:active {
     height: 100vh;
     width: 100vw;
     color: black;
-    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,1);
     position: fixed;
     z-index: 3;
     & .icon-flexbox {
@@ -48,11 +48,9 @@ a, a:hover, a:visited, a:link, a:active {
     
 
     & .wrapper-menu {
-        margin-top: 10rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
+        //margin-top: 10rem;
+        height: 100vh;
+        @include flex-djacai(column, center, center, center);
         & a {
             color: black;
             font-size: 1.5em;
