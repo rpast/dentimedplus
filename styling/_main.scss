@@ -30,6 +30,16 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 // Set up the mobile menu navigation
+.off {
+    display: none;
+}
+.on-row {
+    @include flex-djacai(row, center, center, center);
+}
+.on-col {
+    @include flex-djacai(column, center, center, center);
+}
+
 #menu-wrapper {
     height: 100vh;
     width: 100vw;
@@ -167,7 +177,6 @@ a, a:hover, a:visited, a:link, a:active {
 
 .logo {
     width: 40px;
-    //visibility: none;
     display: none;
     flex-direction: row;
     margin: 0 1rem 0 2rem;
@@ -264,23 +273,16 @@ section.about {
         flex-direction: row;
         justify-content: flex-start;
     }
-    & .about-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 85vw;
-        @media screen and (min-width: $desktop) {
-            flex-direction: row;
-            justify-content: space-between;
+    & .office-wrapper {
+        @include desktop {
+            @include flex-djacai(row, center, center, center);
         }
     }
 }
 
 .about-header {
     @media screen and (min-width: $desktop) {
-        width: 800px;
-        max-width: 1000px;
+        display: none;
     }
     & h2 {
         margin: 0 0 2rem 0;
@@ -292,14 +294,14 @@ section.about {
         @include s-tablet-w {
             margin: 0.25rem 0 1.5rem 0;
         }
-        @media screen and (min-width: $desktop) {
-            margin: 1rem 1.5rem 1.5rem 2rem;
-        }
+        // @media screen and (min-width: $desktop) {
+        //     margin: 1rem 1.5rem 1.5rem 2rem;
+        // }
     }
 }
 
 .myslides {
-    height: 840px;
+    //height: 840px;
 }
 
 .myslides-team {
@@ -307,11 +309,11 @@ section.about {
 }
 
 .myslides, .myslides-team {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 80vw;
+    //display: flex;
+    //align-items: center;
+    //justify-content: flex-start;
+    //flex-direction: column;
+    //width: 40vw;
     max-width: 2000px;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
     //margin: 0 auto;
@@ -325,7 +327,7 @@ section.about {
         justify-content: center;
         flex-direction: column;
         & img.picture-team {
-            width: 100%;
+            //width: 100%;
             max-width: 350px;
             height: auto;
             margin-bottom: 1em;
@@ -334,7 +336,7 @@ section.about {
             transition: transform 300ms, box-shadow 300ms;
         }
         & img.picture {
-            width: 100%;
+            //width: 100%;
             max-width: 450px;
             height: auto;
             margin-bottom: 1em;
