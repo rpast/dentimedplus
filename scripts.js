@@ -64,8 +64,8 @@ window.onscroll = function () {
     }
 };
 
-// Carousel handlers //
-
+// Gallery switcher handlers - carousel //
+//TODO: Fix 'clear interval'!
 //floor counter values
 var slideIndex = 1; 
 var slideIndexTeam = 1;
@@ -133,8 +133,8 @@ function showDivs(counter, className, counterFlag, maxVw) {
 //instantiate the galleries and timers
 showDivs(slideIndex, "myslides", 1, desktopW);
 showDivs(slideIndexTeam, "myslides-team", 2, false);
-setInterval(plusDivsInterval, 6000);
-setInterval(plusDivsIntervalTeam, 6000);
+carouselTimer = setInterval(plusDivsInterval, 6000);
+carouselTimerTeam = setInterval(plusDivsIntervalTeam, 6000);
 
 //Reload the page when viewport gets resized
 window.onresize = function(){ 

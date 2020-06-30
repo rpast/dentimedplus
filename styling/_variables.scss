@@ -12,7 +12,6 @@ $dent-nav-light: rgba(85, 82, 250, 0.26);
 $dent-font-head: 'Abhaya Libre', serif;
 $dent-font-body: 'Open Sans', sans-serif;
 
-
 //Breakpoints
 $phone: 500px; 
 $phone-height: 639px;
@@ -27,3 +26,7 @@ $tall-phone-width: 374px;
 $max-breakpoint: 414;
 $max-breakpoint-fontsize: 1024;
 $wide-screen: "(min-width: #{$max-breakpoint-fontsize}px)";  
+
+//Varia
+$stopper-width: 15px;
+$stopper-margin: 4px;
