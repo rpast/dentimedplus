@@ -281,7 +281,7 @@ a, a:hover, a:visited, a:link, a:active {
 .office-wrapper {
     @include desktop {
         @include flex-djacai(row, center, center, center);
-        width: 65vw;
+        width: 60vw;
         
     }
 }
@@ -298,16 +298,6 @@ a, a:hover, a:visited, a:link, a:active {
         
     }
 }
-
-
-// .slides-wrapper {
-//     width: 90vw;
-//     background-color: white;
-//     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
-//     @include desktop {
-//         width: 65vw;
-//     }
-// }
 
 .myslides {
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
@@ -336,7 +326,7 @@ a, a:hover, a:visited, a:link, a:active {
 
 .myslides-team {
     background-color: white;
-    width: 90vw;
+    width: 85vw;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
     @include desktop {
         flex-direction: row;
@@ -372,27 +362,39 @@ a, a:hover, a:visited, a:link, a:active {
             width: 100%;
             height: auto;
             max-width: 450px;
-            margin-bottom: 1em;
+            margin: 1rem 0;
             transform: scale(.96);
         }
         & img.picture-team:hover {
             transform: scale(.92);
         }
     }
-    & p {
-        margin: 0;
-    }
     & .gallery-text-box {
-        @include flex-djacai(column, flex-start, center, center);
-        margin: 3rem 1rem 3rem 1rem;
-        //height: 300px;
+        @include flex-djacai(column, flex-start, flex-start, flex-start);
+        margin: 3rem 1.8rem 3rem 1.8rem;
         @include s-tablet-w {
             max-width: 70%;
         }
-        @media screen and (min-width: $desktop) {
+        @include desktop {
             margin: 3rem 1rem 3rem 1rem;
             max-width: 20vw;
         }
+        & p {
+            margin: 0;
+        }
+        & h2 {
+            margin: 0 0 1rem 0;
+        }
+        & a {
+            width: 100%;
+            @include flex-djacai(column, center, center, center);
+        }
+    }
+}
+
+.fixed-height {
+    @include desktop {
+        height: 600px;
     }
 }
 
@@ -471,13 +473,11 @@ td {
     margin-bottom: 1em;
 }
 .button {
-    @include flex-djacai(column, center, center, center);
     @include link-decor(uppercase, 0.2rem);
     //min-width: 100px;
     font-size: 16px;
     margin: 4rem 0rem 1rem 0rem;
     padding: 1rem 1rem;
-
     box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
     border: 1px solid black;
     border-radius: 3px;

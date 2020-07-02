@@ -864,7 +864,7 @@ a, a:hover, a:visited, a:link, a:active {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 65vw;
+    width: 60vw;
   }
 }
 
@@ -946,7 +946,7 @@ a, a:hover, a:visited, a:link, a:active {
 
 .myslides-team {
   background-color: white;
-  width: 90vw;
+  width: 85vw;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -1021,7 +1021,7 @@ a, a:hover, a:visited, a:link, a:active {
   width: 100%;
   height: auto;
   max-width: 450px;
-  margin-bottom: 1em;
+  margin: 1rem 0;
   -webkit-transform: scale(0.96);
           transform: scale(0.96);
 }
@@ -1029,10 +1029,6 @@ a, a:hover, a:visited, a:link, a:active {
 .myslides .picture-slider img.picture-team:hover, .myslides-team .picture-slider img.picture-team:hover {
   -webkit-transform: scale(0.92);
           transform: scale(0.92);
-}
-
-.myslides p, .myslides-team p {
-  margin: 0;
 }
 
 .myslides .gallery-text-box, .myslides-team .gallery-text-box {
@@ -1046,12 +1042,12 @@ a, a:hover, a:visited, a:link, a:active {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 3rem 1rem 3rem 1rem;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 3rem 1.8rem 3rem 1.8rem;
 }
 
 @media screen and (min-width: 640px) {
@@ -1064,6 +1060,39 @@ a, a:hover, a:visited, a:link, a:active {
   .myslides .gallery-text-box, .myslides-team .gallery-text-box {
     margin: 3rem 1rem 3rem 1rem;
     max-width: 20vw;
+  }
+}
+
+.myslides .gallery-text-box p, .myslides-team .gallery-text-box p {
+  margin: 0;
+}
+
+.myslides .gallery-text-box h2, .myslides-team .gallery-text-box h2 {
+  margin: 0 0 1rem 0;
+}
+
+.myslides .gallery-text-box a, .myslides-team .gallery-text-box a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .fixed-height {
+    height: 600px;
   }
 }
 
@@ -1160,21 +1189,6 @@ td {
 }
 
 .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 16px;
