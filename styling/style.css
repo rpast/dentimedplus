@@ -1250,4 +1250,9 @@ td {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
+
+.employee-hours {
+  font-size: 0.9rem;
+  border-bottom: 1px solid black;
+}
 /*# sourceMappingURL=style.css.map */
