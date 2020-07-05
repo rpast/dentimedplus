@@ -282,18 +282,21 @@ a, a:hover, a:visited, a:link, a:active {
     @include desktop {
         @include flex-djacai(row, center, center, center);
         width: 60vw;
+        max-width: 3000px; //prevent from being too large on HD screens
         
     }
 }
 
 .team-wrapper {
-    margin: 2rem 0 0 0;
-    padding: 2rem;
+    margin: 0;
+    padding: 4rem 0 4rem 0;
     background-image: url('../static/Hinterrhein.svg');
-    background-repeat: none;
+    //background-repeat: none;
     background-size: cover;
     width: 100vw;
     @include desktop {
+        height: 71vh;
+        max-height: 700px;
         @include flex-djacai(column, center, center, center);
         
     }
@@ -317,6 +320,12 @@ a, a:hover, a:visited, a:link, a:active {
             } 
         }
     }
+    & .gallery-text-box {
+        margin: 3rem 1.8rem 3rem 1.8rem;
+        @include desktop {
+            margin: 3rem 0.5rem 3rem 0.5rem;
+        }
+    }
 }
 .first-office {
     @include desktop {
@@ -331,9 +340,12 @@ a, a:hover, a:visited, a:link, a:active {
     @include desktop {
         flex-direction: row;
         margin-bottom: 0;
-        width: 65vw;
+        width: 60vw;
     }
     & .picture-slider {
+        @include desktop {
+            margin: 2rem 1rem 2rem 3rem;
+        }
         .stopper-box {
             @include flex-djacai(row, center, center, center);
             .stop-icon {
@@ -342,18 +354,23 @@ a, a:hover, a:visited, a:link, a:active {
             }
         }
     }
-    
+    & .gallery-text-box {
+        margin: 3rem 1.8rem 3rem 1.8rem;
+        @include desktop {
+            margin: 3rem;
+        }
+    }
 }
 
 .myslides, .myslides-team {
-    //width: 100%;
     & .picture-slider {
         @include flex-djacai(column, center, center, center);
         width: 100%;
         & img.picture-team {
             width: 100%;
             height: auto;
-            max-width: 350px;
+            min-width: 250px;
+            max-width: 380px;
             margin-bottom: 1em;
             transform: scale(.96);
             transition: transform 300ms;
@@ -371,13 +388,14 @@ a, a:hover, a:visited, a:link, a:active {
     }
     & .gallery-text-box {
         @include flex-djacai(column, flex-start, flex-start, flex-start);
-        margin: 3rem 1.8rem 3rem 1.8rem;
         @include s-tablet-w {
             max-width: 70%;
         }
         @include desktop {
-            margin: 3rem 1rem 3rem 1rem;
-            max-width: 20vw;
+            font-size: 0.9rem;
+        }
+        @include l-desktop {
+            font-size: 1rem;
         }
         & p {
             margin: 0;
@@ -394,7 +412,10 @@ a, a:hover, a:visited, a:link, a:active {
 
 .fixed-height {
     @include desktop {
-        height: 600px;
+        height: 550px;
+    }
+    @include l-desktop {
+        height: 450px;
     }
 }
 
@@ -476,7 +497,7 @@ td {
     @include link-decor(uppercase, 0.2rem);
     //min-width: 100px;
     font-size: 16px;
-    margin: 4rem 0rem 1rem 0rem;
+    margin: 3rem 0rem 1rem 0rem;
     padding: 1rem 1rem;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
     border: 1px solid black;

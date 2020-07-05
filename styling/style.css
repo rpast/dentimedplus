@@ -865,20 +865,22 @@ a, a:hover, a:visited, a:link, a:active {
         -ms-flex-align: center;
             align-items: center;
     width: 60vw;
+    max-width: 3000px;
   }
 }
 
 .team-wrapper {
-  margin: 2rem 0 0 0;
-  padding: 2rem;
+  margin: 0;
+  padding: 4rem 0 4rem 0;
   background-image: url("../static/Hinterrhein.svg");
-  background-repeat: none;
   background-size: cover;
   width: 100vw;
 }
 
 @media screen and (min-width: 1024px) {
   .team-wrapper {
+    height: 71vh;
+    max-height: 700px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -938,6 +940,16 @@ a, a:hover, a:visited, a:link, a:active {
   margin: 4px;
 }
 
+.myslides .gallery-text-box {
+  margin: 3rem 1.8rem 3rem 1.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .myslides .gallery-text-box {
+    margin: 3rem 0.5rem 3rem 0.5rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .first-office {
     margin-right: 2rem;
@@ -958,7 +970,13 @@ a, a:hover, a:visited, a:link, a:active {
         -ms-flex-direction: row;
             flex-direction: row;
     margin-bottom: 0;
-    width: 65vw;
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .myslides-team .picture-slider {
+    margin: 2rem 1rem 2rem 3rem;
   }
 }
 
@@ -985,6 +1003,16 @@ a, a:hover, a:visited, a:link, a:active {
   margin: 4px;
 }
 
+.myslides-team .gallery-text-box {
+  margin: 3rem 1.8rem 3rem 1.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .myslides-team .gallery-text-box {
+    margin: 3rem;
+  }
+}
+
 .myslides .picture-slider, .myslides-team .picture-slider {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1007,7 +1035,8 @@ a, a:hover, a:visited, a:link, a:active {
 .myslides .picture-slider img.picture-team, .myslides-team .picture-slider img.picture-team {
   width: 100%;
   height: auto;
-  max-width: 350px;
+  min-width: 250px;
+  max-width: 380px;
   margin-bottom: 1em;
   -webkit-transform: scale(0.96);
           transform: scale(0.96);
@@ -1047,7 +1076,6 @@ a, a:hover, a:visited, a:link, a:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 3rem 1.8rem 3rem 1.8rem;
 }
 
 @media screen and (min-width: 640px) {
@@ -1058,8 +1086,13 @@ a, a:hover, a:visited, a:link, a:active {
 
 @media screen and (min-width: 1024px) {
   .myslides .gallery-text-box, .myslides-team .gallery-text-box {
-    margin: 3rem 1rem 3rem 1rem;
-    max-width: 20vw;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .myslides .gallery-text-box, .myslides-team .gallery-text-box {
+    font-size: 1rem;
   }
 }
 
@@ -1092,7 +1125,13 @@ a, a:hover, a:visited, a:link, a:active {
 
 @media screen and (min-width: 1024px) {
   .fixed-height {
-    height: 600px;
+    height: 550px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .fixed-height {
+    height: 450px;
   }
 }
 
@@ -1192,7 +1231,7 @@ td {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 16px;
-  margin: 4rem 0rem 1rem 0rem;
+  margin: 3rem 0rem 1rem 0rem;
   padding: 1rem 1rem;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);

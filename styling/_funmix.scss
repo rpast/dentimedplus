@@ -33,6 +33,13 @@
     }
 }
 
+@mixin l-desktop {
+    @media screen and (min-width: $l-desktop) {
+        @content
+    };
+}
+
+
 @mixin smartphone-h {
     @media screen and (max-height: $phone-height) {
         @content;
