@@ -1155,7 +1155,7 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 .myslides .gallery-text-box table tr td:nth-child(even), .myslides-team .gallery-text-box table tr td:nth-child(even) {
-  min-width: 90px;
+  min-width: 100px;
 }
 
 @media screen and (min-width: 1024px) {
