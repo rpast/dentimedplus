@@ -447,24 +447,49 @@ a, a:hover, a:visited, a:link, a:active {
 
 .services{
     color: black;
-    background-image: url("../static/banner-minimal-service.png");
-    background-size: initial;
+    line-height: 3rem;
+    height: 100vh;
+    @include desktop {
+        height: auto;
+    }
+    //background-image: url("../static/banner-minimal-service.png");
+    //background-size: initial;
     //box-shadow: -144px 5px 5px 0px rgba(0, 0, 0, .25);
-    //background-color: $dent-cinnamon;
-    & span {
-        display: flex;
-        align-items: initial;
-        flex-direction: column;
+    & .serv-bar {
+        width: 100vw;
+        height: 6px;
+        background-color: $dent-cinnamon;
+        margin: 0;
+    }
+    & .serv-links {
+        @include flex-djacai(column, center, center, flex-start);
+        padding: 3.5rem 0;
+        @include desktop {
+            height: auto;
+            margin: 0 1rem 0 6rem;
+        }
+        & ul li {
+            list-style-type: none;   
+        }
+        & ul li:before { 
+            font-family: 'FontAwesome';
+            content: "\f058";
+            color: $dent-cinnamon;
+            margin-right: 1rem;
+        }
         & a {
             @include link-decor(none, 0.1rem);
             color: black;
             font-family: $dent-font-head;
             font-weight: 1000;
-            font-size: 2em;
-            margin: 1rem 0 2rem 0;
+            font-size: 1.2rem;
+            @include desktop {
+                font-size: 1.5rem;
+            }
         }
         & a:hover {
-            color: $dent-nav-dark;
+            // color: $dent-nav-dark;
+            color: $dent-cinnamon;
         }
     }
 }
@@ -516,9 +541,9 @@ td {
         font-size: 0.85em;
     }
 }
-.last {
-    margin-bottom: 1em;
-}
+// .last {
+//     margin-bottom: 1em;
+// }
 .button {
     @include link-decor(uppercase, 0.2rem);
     //min-width: 100px;
