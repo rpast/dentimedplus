@@ -361,6 +361,7 @@ a, a:hover, a:visited, a:link, a:active {
     }
     & .gallery-text-box {
         margin: 3rem 1.8rem 3rem 1.8rem;
+        min-width: 40%;
         @include desktop {
             margin: 3rem;
         }
@@ -371,6 +372,7 @@ a, a:hover, a:visited, a:link, a:active {
     & .picture-slider {
         @include flex-djacai(column, center, center, center);
         width: 100%;
+        max-height: 90%;
         & img.picture-team {
             width: 100%;
             height: auto;
