@@ -69,6 +69,9 @@ a, a:hover, a:visited, a:link, a:active {
         height: 3vh;
         min-height: 35px;
     }
+    & #close-serv-icon { //Specific margin for services description
+        margin-top: 1rem;
+    }
 }
 .wrapper-on { //toggler
     @include flex-djacai(column, flex-start, center, center);
@@ -433,20 +436,10 @@ a, a:hover, a:visited, a:link, a:active {
     } 
 }
 
-
-.fixed-height {
-    @include desktop {
-        height: 550px;
-    }
-    @include l-desktop {
-        height: 450px;
-    }
-}
-
 .services{
     color: black;
     line-height: 3rem;
-    //height: 100vh;
+    height: 100%;
     @include desktop {
         height: auto;
     }
@@ -459,6 +452,7 @@ a, a:hover, a:visited, a:link, a:active {
     & .services-wrapper {
         @include flex-djacai(row, flex-start, space-between, space-between);
         height: 100%;
+        position: relative;
         & .serv-links {
             @include flex-djacai(column, center, center, flex-start);
             padding: 3.5rem 0;
@@ -468,7 +462,8 @@ a, a:hover, a:visited, a:link, a:active {
                 width: 50%;
             }
             & ul li {
-                list-style-type: none;   
+                list-style-type: none; 
+                min-width: 430px;  
             }
             & ul li:before { 
                 font-family: 'FontAwesome';
@@ -486,7 +481,8 @@ a, a:hover, a:visited, a:link, a:active {
                 font-family: $dent-font-head;
                 font-weight: 1000;
                 font-size: 1.2rem;
-                @include desktop {
+
+                @include l-desktop {
                     font-size: 1.5rem;
                 }
             }
@@ -495,25 +491,30 @@ a, a:hover, a:visited, a:link, a:active {
             }
         }
         & .card-wrapper {
-            @include flex-djacai(column, center, center, center);
             position: absolute;
             z-index: 1;
-            //height: 100%;
-            background-color:brown;
+            height: inherit;
+            background-color: white;
             @include desktop {
+                position: unset;
                 height: auto;
                 @include flex-djacai(column, flex-start, center, center);
                 width: 100%;
             }
             & .service-card {
-                display: inherit;
+                position: relative;
+                //display: inherit;
                 flex-direction: column;
+                height: 100%;
                 @include desktop {
                     width: 70%;
-                    margin: 4.5rem 0 3.5rem 4rem;
+                    margin: 4.5rem 0 3.5rem 0rem;
                     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
                 }
-                & p {
+                @include l-desktop {
+                    margin: 4.5rem 4.5rem 3.5rem 4.5rem;
+                }
+                & p, h2 {
                     margin: 1.5rem;
                     line-height: 1.5rem;
                 }

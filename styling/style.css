@@ -472,6 +472,10 @@ a, a:hover, a:visited, a:link, a:active {
   min-height: 35px;
 }
 
+.icon-flexbox #close-serv-icon {
+  margin-top: 1rem;
+}
+
 .wrapper-on {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1160,21 +1164,10 @@ a, a:hover, a:visited, a:link, a:active {
   min-width: 100px;
 }
 
-@media screen and (min-width: 1024px) {
-  .fixed-height {
-    height: 550px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .fixed-height {
-    height: 450px;
-  }
-}
-
 .services {
   color: black;
   line-height: 3rem;
+  height: 100%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1207,6 +1200,7 @@ a, a:hover, a:visited, a:link, a:active {
       -ms-flex-align: space-between;
           align-items: space-between;
   height: 100%;
+  position: relative;
 }
 
 .services .services-wrapper .serv-links {
@@ -1238,6 +1232,7 @@ a, a:hover, a:visited, a:link, a:active {
 
 .services .services-wrapper .serv-links ul li {
   list-style-type: none;
+  min-width: 430px;
 }
 
 .services .services-wrapper .serv-links ul li:before {
@@ -1263,7 +1258,7 @@ a, a:hover, a:visited, a:link, a:active {
   font-size: 1.2rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1400px) {
   .services .services-wrapper .serv-links a {
     font-size: 1.5rem;
   }
@@ -1274,28 +1269,15 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 .services .services-wrapper .card-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: absolute;
   z-index: 1;
-  background-color: brown;
+  height: inherit;
+  background-color: white;
 }
 
 @media screen and (min-width: 1024px) {
   .services .services-wrapper .card-wrapper {
+    position: unset;
     height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1317,23 +1299,30 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 .services .services-wrapper .card-wrapper .service-card {
-  display: inherit;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
 }
 
 @media screen and (min-width: 1024px) {
   .services .services-wrapper .card-wrapper .service-card {
     width: 70%;
-    margin: 4.5rem 0 3.5rem 4rem;
+    margin: 4.5rem 0 3.5rem 0rem;
     -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
             box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
   }
 }
 
-.services .services-wrapper .card-wrapper .service-card p {
+@media screen and (min-width: 1400px) {
+  .services .services-wrapper .card-wrapper .service-card {
+    margin: 4.5rem 4.5rem 3.5rem 4.5rem;
+  }
+}
+
+.services .services-wrapper .card-wrapper .service-card p, .services .services-wrapper .card-wrapper .service-card h2 {
   margin: 1.5rem;
   line-height: 1.5rem;
 }
