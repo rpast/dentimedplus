@@ -113,17 +113,17 @@ function showDivs(counter, className, counterFlag, maxVw) {
         //Toggle classes on list elements
         for (i = 0; i < elemList.length; i++) {
             elemList[i].classList.add('off');
-            elemList[i].classList.remove('on-col')
+            elemList[i].classList.remove('on-col-center')
         }
         if (counterFlag == 1) { //always keep counter-1 element switched on
-            elemList[slideIndex - 1].classList.add('on-col');
+            elemList[slideIndex - 1].classList.add('on-col-center');
         } else {
-            elemList[slideIndexTeam - 1].classList.add('on-col');
+            elemList[slideIndexTeam - 1].classList.add('on-col-center');
         }
     } else { //in case vw > threshold switch on all elements from the office gallery (design specific)
         if(counterFlag == 1) {
             for (i = 0; i < elemList.length; i++) {
-                elemList[i].classList.add('on-col');
+                elemList[i].classList.add('on-col-center');
                 elemList[i].classList.remove('off')
             }
         }

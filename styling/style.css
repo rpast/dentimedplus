@@ -386,7 +386,7 @@ a, a:hover, a:visited, a:link, a:active {
   display: none;
 }
 
-.on-row {
+.on-row-start {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,9 +394,9 @@ a, a:hover, a:visited, a:link, a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
@@ -404,7 +404,7 @@ a, a:hover, a:visited, a:link, a:active {
           align-items: center;
 }
 
-.on-col {
+.on-col-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,18 +462,22 @@ a, a:hover, a:visited, a:link, a:active {
   margin-bottom: 2em;
 }
 
-.icon-flexbox {
-  margin: 0.5rem 1.5rem 0.5rem auto;
-}
-
-.icon-flexbox #close-icon, .icon-flexbox #close-serv-icon {
+.icon-flexbox #close-icon, .icon-flexbox #close-serv-icon, .icon-serv-flexbox #close-icon, .icon-serv-flexbox #close-serv-icon {
   fill: black;
   height: 3vh;
   min-height: 35px;
 }
 
-.icon-flexbox #close-serv-icon {
+.icon-flexbox #close-serv-icon, .icon-serv-flexbox #close-serv-icon {
   margin-top: 1rem;
+}
+
+.icon-flexbox {
+  margin: 0.5rem 1.5rem 0.5rem auto;
+}
+
+.icon-serv-flexbox {
+  margin: 0 1.5rem 0.5rem auto;
 }
 
 .wrapper-on {
@@ -1225,7 +1229,7 @@ a, a:hover, a:visited, a:link, a:active {
 @media screen and (min-width: 1024px) {
   .services .services-wrapper .serv-links {
     height: auto;
-    margin: 0 1rem 0 6rem;
+    margin: 0 0 0 6rem;
     width: 50%;
   }
 }
@@ -1310,6 +1314,7 @@ a, a:hover, a:visited, a:link, a:active {
 @media screen and (min-width: 1024px) {
   .services .services-wrapper .card-wrapper .service-card {
     width: 70%;
+    max-width: 800px;
     margin: 4.5rem 0 3.5rem 0rem;
     -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
             box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
@@ -1322,9 +1327,13 @@ a, a:hover, a:visited, a:link, a:active {
   }
 }
 
-.services .services-wrapper .card-wrapper .service-card p, .services .services-wrapper .card-wrapper .service-card h2 {
-  margin: 1.5rem;
+.services .services-wrapper .card-wrapper .service-card p {
+  margin: 0 1.5rem 1rem 1.5rem;
   line-height: 1.5rem;
+}
+
+.services .services-wrapper .card-wrapper .service-card h2 {
+  margin: 0 auto 0.5rem 1.5rem;
 }
 
 .services-margin {
