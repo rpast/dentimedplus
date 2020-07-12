@@ -10,26 +10,52 @@ const desktopW = 1024;
 
 var menu = document.querySelector("#menu-wrapper");
 var nav = document.querySelector("#navbar");
-var icon = document.querySelector("#menu-icon");
+//var icon = document.querySelector("#menu-icon");
+
+var cardWrapper = document.querySelector("#services-card-wrapper")
+
+var profilaktyka = document.querySelector("#profilaktyka")
+var endodoncja = document.querySelector("#endodoncja")
+var ortodoncja = document.querySelector("#ortodoncja")
+var estetyczna = document.querySelector("#estetyczna")
+var korony = document.querySelector("#korony")
+var chirurgia = document.querySelector("#chirurgia")
+
+function switcher(element, state, onState) {
+    //selected element gets switched. state = 1 switch-on, = 0 switch off.
+    if(state == 0) {
+        element.classList.remove(onState);
+        element.classList.add('off');
+    } else if(state == 1) {
+        element.classList.remove('off');
+        element.classList.add(onState);
+    }
+}
 
 // Activate menu wrapper
-function hamburgerToggle() {
-    //if menu is visible
-    if(menu.classList.contains('wrapper-on')) {
-        menu.classList.remove('wrapper-on');
-        menu.classList.add('wrapper-off');
-        nav.classList.remove('navbar-off');
-        nav.classList.add('navbar-on');
-        icon.classList.remove('hamburger-off');
-        icon.classList.add('hamburger-on');
-    //if menu is hidden
-    } else if(menu.classList.contains('wrapper-off')) {
-        menu.classList.remove('wrapper-off');
-        menu.classList.add('wrapper-on');
-        nav.classList.remove('navbar-on');
-        nav.classList.add('navbar-off');
-        icon.classList.remove('hamburger-on');
-        icon.classList.add('hamburger-off');
+function toggle(element) {
+    if(element == 'hamburger') {
+        //if menu is visible
+        if(menu.classList.contains('wrapper-on')) {
+            menu.classList.remove('wrapper-on');
+            menu.classList.add('wrapper-off');
+            nav.classList.remove('navbar-off');
+            nav.classList.add('navbar-on');
+            //icon.classList.remove('hamburger-off');
+            //icon.classList.add('hamburger-on');
+        //if menu is hidden
+        } else if(menu.classList.contains('wrapper-off')) {
+            menu.classList.remove('wrapper-off');
+            menu.classList.add('wrapper-on');
+            nav.classList.remove('navbar-on');
+            nav.classList.add('navbar-off');
+            //icon.classList.remove('hamburger-on');
+            //icon.classList.add('hamburger-off');
+        }
+    } else { //set behavior to close service wrapper
+        if(element.classList.contains('on-row-start')) {
+            switcher(cardWrapper, 0, 'on-row-start');
+            switcher(element, 0, 'on-row-start');
     }
 };
 
@@ -99,7 +125,7 @@ function showDivs(counter, className, counterFlag, maxVw) {
 
     var i;
     var elemList = document.getElementsByClassName(className);
-    console.log('elemList length '+elemList.length)
+    //console.log('elemList length '+elemList.length)
     
     if(vw < maxVw || maxVw == false) {
         if (counter > elemList.length) { //if # of elements in the list is shorter than counter val -> reset the counter

@@ -578,9 +578,7 @@ td {
         font-size: 0.85em;
     }
 }
-// .last {
-//     margin-bottom: 1em;
-// }
+
 .button {
     @include link-decor(uppercase, 0.2rem);
     //min-width: 100px;

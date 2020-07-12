@@ -13,7 +13,7 @@
         <div id="menu-wrapper" class="wrapper-off">
 
             <div class="icon-flexbox">
-                <a href="javascript:void(0);" onclick="hamburgerToggle()">
+                <a href="javascript:void(0);" onclick="toggle('hamburger')">
                     <?xml version="1.0" encoding="iso-8859-1"?>
                     <svg version="1.1" id="close-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
@@ -27,11 +27,11 @@
             </div>
 
             <div class="wrapper-menu">  
-                <a href="#offices" onclick="hamburgerToggle()">Gabinety</a>
-                <a href="#team" onclick="hamburgerToggle()">Zespół</a>
-                <a href="#services" onclick="hamburgerToggle()">Usługi</a>
-                <a href="#pricing" onclick="hamburgerToggle()">Cennik</a>
-                <a href="#contact" onclick="hamburgerToggle()">Kontakt</a>
+                <a href="#offices" onclick="toggle('hamburger')">Gabinety</a>
+                <a href="#team" onclick="toggle('hamburger')">Zespół</a>
+                <a href="#services" onclick="toggle('hamburger')">Usługi</a>
+                <a href="#pricing" onclick="toggle('hamburger')">Cennik</a>
+                <a href="#contact" onclick="toggle('hamburger')">Kontakt</a>
             </div>
 
         </div>
@@ -88,7 +88,7 @@
             
             <!-- hamburger menu svg icon -->
             <div class="ham-icon-box">
-                <a href="javascript:void(0);" onclick="hamburgerToggle()">
+                <a href="javascript:void(0);" onclick="toggle('hamburger')">
                     <svg id="ham-icon" class="hamburger-on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58"><rect x="9" y="12" width="40" height="2"/><rect x="9" y="28" width="40" height="2"/><rect x="9" y="44" width="40" height="2"/><path d="M0 0v58h58V0H0zM56 56H2V2h54V56z"/></svg>
                 </a>
             </div>
@@ -410,29 +410,29 @@
                 <div class="serv-links">
                     <ul>
                         <li>
-                            <a href="#profilaktyka">Profilaktyka</a>
+                            <a href="#profilaktyka" onclick="toggle('profilaktyka')">Profilaktyka</a>
                         </li>
                         <li>
-                            <a href="#endodoncja">Endodoncja</a>
+                            <a href="#endodoncja" onclick="toggle('endodoncja')">Endodoncja</a>
                         </li>
                         <li>
-                            <a href="#ortodoncja">Ortodoncja</a>
+                            <a href="#ortodoncja" onclick="toggle('ortodoncja')">Ortodoncja</a>
                         </li>
                         <li>
-                            <a href="#estetyczna">Stomatologia estetyczna</a>
+                            <a href="#estetyczna" onclick="toggle('estetyczna')">Stomatologia estetyczna</a>
+                        </li> 
+                        <li>
+                            <a href="#korony" onclick="toggle('korony')">Korony porcelanowe</a>
                         </li>
                         <li>
-                            <a href="#korony">Korony porcelanowe</a>
-                        </li>
-                        <li>
-                            <a href="#chirurgia" class="last">Chirurgia</a>
+                            <a href="#chirurgia" onclick="toggle('chirurgia')">Chirurgia</a>
                         </li>
                     </ul>
                 </div>
-                <div class="card-wrapper on-col-center">
+                <div id="services-card-wrapper" class="card-wrapper on-col-center">
                     <div id="profilaktyka" class="service-card off">
                         <div class="icon-serv-flexbox">
-                            <a href="javascript:void(0);" onclick="hamburgerToggle()">
+                            <a href="javascript:void(0);" onclick="toggle('close')">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
@@ -449,7 +449,7 @@
                     </div>
                     <div id="endodoncja" class="service-card off">
                         <div class="icon-serv-flexbox">
-                            <a href="javascript:void(0);" onclick="hamburgerToggle()">
+                            <a href="javascript:void(0);" onclick="toggle('close')">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
@@ -466,7 +466,7 @@
                     </div>
                     <div id="ortodoncja" class="service-card off">
                         <div class="icon-serv-flexbox">
-                            <a href="javascript:void(0);" onclick="hamburgerToggle()">
+                            <a href="javascript:void(0);" onclick="toggle('close')">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
@@ -483,7 +483,7 @@
                     </div>
                     <div id="estetyczna" class="service-card off">
                         <div class="icon-serv-flexbox">
-                            <a href="javascript:void(0);" onclick="hamburgerToggle()">
+                            <a href="javascript:void(0);" onclick="toggle('close')">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
@@ -500,7 +500,7 @@
                     </div>
                     <div id="korony" class="service-card off">
                         <div class="icon-serv-flexbox">
-                            <a href="javascript:void(0);" onclick="hamburgerToggle()">
+                            <a href="javascript:void(0);" onclick="toggle('close')">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
@@ -517,7 +517,7 @@
                     </div>
                     <div id="chirurgia" class="service-card on-row-start">
                         <div class="icon-serv-flexbox">
-                            <a href="javascript:void(0);" onclick="hamburgerToggle()">
+                            <a href="javascript:void(0);" onclick="toggle('close')">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
