@@ -21,6 +21,8 @@ var estetyczna = document.querySelector("#estetyczna")
 var korony = document.querySelector("#korony")
 var chirurgia = document.querySelector("#chirurgia")
 
+var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, chirurgia]
+
 function switcher(element, state, onState) {
     //selected element gets switched. state = 1 switch-on, = 0 switch off.
     if(state == 0) {
@@ -32,7 +34,10 @@ function switcher(element, state, onState) {
     }
 }
 
+function closeAllCards() 
+
 // Activate menu wrapper
+//TODO: refactor with toggle() function
 function toggle(element) {
     if(element == 'hamburger') {
         //if menu is visible
@@ -56,6 +61,10 @@ function toggle(element) {
         if(element.classList.contains('on-row-start')) {
             switcher(cardWrapper, 0, 'on-row-start');
             switcher(element, 0, 'on-row-start');
+        } else {
+            switcher(cardWrapper, 1, 'on-row-start');
+            switcher(element, 1, 'on-row-start');
+        }
     }
 };
 
