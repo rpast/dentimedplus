@@ -1354,6 +1354,31 @@ a, a:hover, a:visited, a:link, a:active {
   margin: 6rem 0 0 2rem;
 }
 
+.prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.prices .prices-table {
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  width: 60vw;
+  max-width: 1500px;
+}
+
 .top-margin {
   margin-top: 4rem;
 }
