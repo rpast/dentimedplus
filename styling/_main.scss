@@ -77,6 +77,9 @@ a, a:hover, a:visited, a:link, a:active {
 }
 .icon-serv-flexbox {
     margin: 0 1.5rem 0.5rem auto;
+    @include l-desktop {
+        display: none;
+    }
 }
 .wrapper-on { //toggler
     @include flex-djacai(column, flex-start, center, center);
@@ -510,6 +513,7 @@ a, a:hover, a:visited, a:link, a:active {
                 position: relative;
                 flex-direction: column;
                 height: 100%;
+                transition: display 0.6s ease;
                 @include desktop {
                     width: 70%;
                     max-width: 800px;
@@ -525,6 +529,9 @@ a, a:hover, a:visited, a:link, a:active {
                 }
                 & h2 {
                     margin: 0 auto 0.5rem 1.5rem;
+                    @include l-desktop {
+                        margin: 2rem auto 0.5rem 1.5rem;
+                    }
                 }
             }
         }

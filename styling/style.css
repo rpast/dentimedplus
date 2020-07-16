@@ -480,6 +480,12 @@ a, a:hover, a:visited, a:link, a:active {
   margin: 0 1.5rem 0.5rem auto;
 }
 
+@media screen and (min-width: 1400px) {
+  .icon-serv-flexbox {
+    display: none;
+  }
+}
+
 .wrapper-on {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1309,6 +1315,8 @@ a, a:hover, a:visited, a:link, a:active {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+  -webkit-transition: display 0.6s ease;
+  transition: display 0.6s ease;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1334,6 +1342,12 @@ a, a:hover, a:visited, a:link, a:active {
 
 .services .services-wrapper .card-wrapper .service-card h2 {
   margin: 0 auto 0.5rem 1.5rem;
+}
+
+@media screen and (min-width: 1400px) {
+  .services .services-wrapper .card-wrapper .service-card h2 {
+    margin: 2rem auto 0.5rem 1.5rem;
+  }
 }
 
 .services-margin {

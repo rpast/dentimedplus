@@ -23,18 +23,16 @@ var chirurgia = document.querySelector("#chirurgia")
 
 var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, chirurgia]
 
-function switcher(element, state, onState) {
+function switcher(element, state, onState, offState) {
     //selected element gets switched. state = 1 switch-on, = 0 switch off.
     if(state == 0) {
         element.classList.remove(onState);
-        element.classList.add('off');
+        element.classList.add(offState);
     } else if(state == 1) {
-        element.classList.remove('off');
+        element.classList.remove(offState);
         element.classList.add(onState);
     }
 }
-
-function closeAllCards() 
 
 // Activate menu wrapper
 //TODO: refactor with toggle() function
@@ -57,13 +55,20 @@ function toggle(element) {
             //icon.classList.remove('hamburger-on');
             //icon.classList.add('hamburger-off');
         }
-    } else { //set behavior to close service wrapper
+    } else { 
+        //Set behavior to close service object
         if(element.classList.contains('on-row-start')) {
-            switcher(cardWrapper, 0, 'on-row-start');
-            switcher(element, 0, 'on-row-start');
+            switcher(cardWrapper, 0, 'on-row-start', 'off');
+            switcher(element, 0, 'on-row-start', 'off');
         } else {
-            switcher(cardWrapper, 1, 'on-row-start');
-            switcher(element, 1, 'on-row-start');
+            //Switch off all the active objects in the DOM
+            for(i=0; i<servicesList.length; i++) {
+                var item = servicesList[i];
+                switcher(item, 0, 'on-row-start', 'off');
+            }
+            //Switch on element
+            switcher(cardWrapper, 1, 'on-row-start', 'off');
+            switcher(element, 1, 'on-row-start', 'off');
         }
     }
 };
