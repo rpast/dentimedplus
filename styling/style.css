@@ -1151,26 +1151,31 @@ a, a:hover, a:visited, a:link, a:active {
           align-items: center;
 }
 
-.myslides .gallery-text-box table, .myslides-team .gallery-text-box table {
+.employee-hours, .prices .prices-table {
   font-size: 0.8rem;
   text-align: left;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-.myslides .gallery-text-box table tr th, .myslides-team .gallery-text-box table tr th {
+.employee-hours tr th, .prices .prices-table tr th {
+  text-transform: uppercase;
   padding-bottom: 1rem;
 }
 
-.myslides .gallery-text-box table tr:nth-child(even), .myslides-team .gallery-text-box table tr:nth-child(even) {
-  background-color: rgba(85, 82, 250, 0.2);
+.employee-hours tr td, .prices .prices-table tr td {
+  padding: 0.2rem 1rem 0 0;
 }
 
-.myslides .gallery-text-box table tr td:nth-child(odd), .myslides-team .gallery-text-box table tr td:nth-child(odd) {
+.employee-hours tr:nth-child(even), .prices .prices-table tr:nth-child(even) {
+  background-color: rgba(85, 82, 250, 0.15);
+}
+
+.employee-hours tr td:nth-child(odd), .prices .prices-table tr td:nth-child(odd) {
   padding-left: 1rem;
 }
 
-.myslides .gallery-text-box table tr td:nth-child(even), .myslides-team .gallery-text-box table tr td:nth-child(even) {
+.employee-hours tr td:nth-child(even), .prices .prices-table tr td:nth-child(even) {
   min-width: 100px;
 }
 
@@ -1370,13 +1375,27 @@ a, a:hover, a:visited, a:link, a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 2rem;
 }
 
 .prices .prices-table {
+  margin-top: 2rem;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
-  width: 60vw;
+  width: 40vw;
   max-width: 1500px;
+}
+
+.prices .prices-table tr th {
+  padding: 0.8rem 0;
+}
+
+.prices .prices-table tr td {
+  padding: 0.5rem 0;
+}
+
+.prices .prices-table tr th:nth-child(odd) {
+  padding-left: 1rem;
 }
 
 .top-margin {
