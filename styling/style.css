@@ -722,6 +722,7 @@ a, a:hover, a:visited, a:link, a:active {
   height: 100vh;
   background-image: url("../static/banner-minimal.png");
   background-size: initial;
+  margin-bottom: 4rem;
 }
 
 @media screen and (max-height: 639px) {
@@ -844,19 +845,19 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 @media screen and (min-width: 1024px) {
-  .about-header {
+  .about-header, .prices .about-header-prices {
     display: none;
   }
 }
 
-.about-header h2 {
+.about-header h2, .prices .about-header-prices h2 {
   font-size: 2.3rem;
   letter-spacing: 0.04rem;
   margin: 0 0 1.5rem 0;
 }
 
 @media screen and (min-width: 640px) {
-  .about-header h2 {
+  .about-header h2, .prices .about-header-prices h2 {
     margin: 0.25rem 0 1.5rem 0;
   }
 }
@@ -919,19 +920,19 @@ a, a:hover, a:visited, a:link, a:active {
   }
 }
 
-.myslides {
+.myslides, .services .services-wrapper .card-wrapper .service-card {
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
-  width: 90vw;
+  width: 85vw;
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides {
+  .myslides, .services .services-wrapper .card-wrapper .service-card {
     width: 100%;
   }
 }
 
-.myslides .picture-slider .stopper-box {
+.myslides .picture-slider .stopper-box, .services .services-wrapper .card-wrapper .service-card .picture-slider .stopper-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -950,22 +951,22 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides .picture-slider .stopper-box {
+  .myslides .picture-slider .stopper-box, .services .services-wrapper .card-wrapper .service-card .picture-slider .stopper-box {
     display: none;
   }
 }
 
-.myslides .picture-slider .stopper-box .stop-icon {
+.myslides .picture-slider .stopper-box .stop-icon, .services .services-wrapper .card-wrapper .service-card .picture-slider .stopper-box .stop-icon {
   width: 15px;
   margin: 4px;
 }
 
-.myslides .gallery-text-box {
+.myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box {
   margin: 3rem 1.8rem 3rem 1.8rem;
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides .gallery-text-box {
+  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box {
     margin: 3rem 0.5rem 3rem 0.5rem;
   }
 }
@@ -976,7 +977,7 @@ a, a:hover, a:visited, a:link, a:active {
   }
 }
 
-.myslides-team {
+.myslides-team, .prices-card {
   background-color: white;
   width: 85vw;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
@@ -984,7 +985,7 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides-team {
+  .myslides-team, .prices-card {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -995,18 +996,18 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 @media screen and (min-width: 1400px) {
-  .myslides-team {
+  .myslides-team, .prices-card {
     width: 60vw;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides-team .picture-slider {
+  .myslides-team .picture-slider, .prices-card .picture-slider {
     margin: 2rem 1rem 2rem 3rem;
   }
 }
 
-.myslides-team .picture-slider .stopper-box {
+.myslides-team .picture-slider .stopper-box, .prices-card .picture-slider .stopper-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1024,23 +1025,27 @@ a, a:hover, a:visited, a:link, a:active {
           align-items: center;
 }
 
-.myslides-team .picture-slider .stopper-box .stop-icon {
+.myslides-team .picture-slider .stopper-box .stop-icon, .prices-card .picture-slider .stopper-box .stop-icon {
   width: 15px;
   margin: 4px;
 }
 
-.myslides-team .gallery-text-box {
+.myslides-team .gallery-text-box, .prices-card .gallery-text-box {
   margin: 3rem 1.8rem 3rem 1.8rem;
   min-width: 40%;
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides-team .gallery-text-box {
+  .myslides-team .gallery-text-box, .prices-card .gallery-text-box {
     margin: 3rem;
   }
 }
 
-.myslides .picture-slider, .myslides-team .picture-slider {
+.myslides, .services .services-wrapper .card-wrapper .service-card, .myslides-team, .prices-card {
+  margin-bottom: 4rem;
+}
+
+.myslides .picture-slider, .services .services-wrapper .card-wrapper .service-card .picture-slider, .myslides-team .picture-slider, .prices-card .picture-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1060,7 +1065,7 @@ a, a:hover, a:visited, a:link, a:active {
   max-height: 90%;
 }
 
-.myslides .picture-slider img.picture-team, .myslides-team .picture-slider img.picture-team {
+.myslides .picture-slider img.picture-team, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-team, .myslides-team .picture-slider img.picture-team, .prices-card .picture-slider img.picture-team {
   width: 100%;
   height: auto;
   min-width: 250px;
@@ -1074,7 +1079,7 @@ a, a:hover, a:visited, a:link, a:active {
   transition: transform 300ms, -webkit-transform 300ms;
 }
 
-.myslides .picture-slider img.picture, .myslides-team .picture-slider img.picture {
+.myslides .picture-slider img.picture, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture, .myslides-team .picture-slider img.picture, .prices-card .picture-slider img.picture {
   width: 100%;
   height: auto;
   max-width: 450px;
@@ -1083,12 +1088,12 @@ a, a:hover, a:visited, a:link, a:active {
           transform: scale(0.96);
 }
 
-.myslides .picture-slider img.picture-team:hover, .myslides-team .picture-slider img.picture-team:hover {
+.myslides .picture-slider img.picture-team:hover, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-team:hover, .myslides-team .picture-slider img.picture-team:hover, .prices-card .picture-slider img.picture-team:hover {
   -webkit-transform: scale(0.92);
           transform: scale(0.92);
 }
 
-.myslides .gallery-text-box, .myslides-team .gallery-text-box {
+.myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1107,32 +1112,32 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 @media screen and (min-width: 640px) {
-  .myslides .gallery-text-box, .myslides-team .gallery-text-box {
+  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box {
     max-width: 70%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides .gallery-text-box, .myslides-team .gallery-text-box {
+  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box {
     font-size: 0.9rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .myslides .gallery-text-box, .myslides-team .gallery-text-box {
+  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box {
     font-size: 1rem;
   }
 }
 
-.myslides .gallery-text-box p, .myslides-team .gallery-text-box p {
+.myslides .gallery-text-box p, .services .services-wrapper .card-wrapper .service-card .gallery-text-box p, .myslides-team .gallery-text-box p, .prices-card .gallery-text-box p {
   margin: 0 0 1.5rem 0;
 }
 
-.myslides .gallery-text-box h2, .myslides-team .gallery-text-box h2 {
+.myslides .gallery-text-box h2, .services .services-wrapper .card-wrapper .service-card .gallery-text-box h2, .myslides-team .gallery-text-box h2, .prices-card .gallery-text-box h2 {
   margin: 0 0 1rem 0;
 }
 
-.myslides .gallery-text-box a, .myslides-team .gallery-text-box a {
+.myslides .gallery-text-box a, .services .services-wrapper .card-wrapper .service-card .gallery-text-box a, .myslides-team .gallery-text-box a, .prices-card .gallery-text-box a {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1151,31 +1156,31 @@ a, a:hover, a:visited, a:link, a:active {
           align-items: center;
 }
 
-.employee-hours, .prices .prices-table {
+.employee-hours, .prices-card .prices-table {
   font-size: 0.8rem;
   text-align: left;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-.employee-hours tr th, .prices .prices-table tr th {
+.employee-hours tr th, .prices-card .prices-table tr th {
   text-transform: uppercase;
   padding-bottom: 1rem;
 }
 
-.employee-hours tr td, .prices .prices-table tr td {
+.employee-hours tr td, .prices-card .prices-table tr td {
   padding: 0.2rem 1rem 0 0;
 }
 
-.employee-hours tr:nth-child(even), .prices .prices-table tr:nth-child(even) {
+.employee-hours tr:nth-child(even), .prices-card .prices-table tr:nth-child(even) {
   background-color: rgba(85, 82, 250, 0.15);
 }
 
-.employee-hours tr td:nth-child(odd), .prices .prices-table tr td:nth-child(odd) {
+.employee-hours tr td:nth-child(odd), .prices-card .prices-table tr td:nth-child(odd) {
   padding-left: 1rem;
 }
 
-.employee-hours tr td:nth-child(even), .prices .prices-table tr td:nth-child(even) {
+.employee-hours tr td:nth-child(even), .prices-card .prices-table tr td:nth-child(even) {
   min-width: 100px;
 }
 
@@ -1183,6 +1188,7 @@ a, a:hover, a:visited, a:link, a:active {
   color: black;
   line-height: 3rem;
   height: 100%;
+  margin-bottom: 4rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1206,9 +1212,9 @@ a, a:hover, a:visited, a:link, a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: justify;
       align-content: space-between;
   -webkit-box-align: space-between;
@@ -1247,7 +1253,6 @@ a, a:hover, a:visited, a:link, a:active {
 
 .services .services-wrapper .serv-links ul li {
   list-style-type: none;
-  min-width: 430px;
 }
 
 .services .services-wrapper .serv-links ul li:before {
@@ -1319,9 +1324,7 @@ a, a:hover, a:visited, a:link, a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
-  -webkit-transition: display 0.6s ease;
-  transition: display 0.6s ease;
+  height: 90%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1375,27 +1378,52 @@ a, a:hover, a:visited, a:link, a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
-.prices .prices-table {
-  margin-top: 2rem;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
-  width: 40vw;
-  max-width: 1500px;
+@media screen and (min-width: 1024px) {
+  .prices .about-header-prices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
-.prices .prices-table tr th {
-  padding: 0.8rem 0;
+.prices-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.prices .prices-table tr td {
-  padding: 0.5rem 0;
+.prices-card .prices-table {
+  margin: 1rem 0;
+  margin: 1.8rem;
 }
 
-.prices .prices-table tr th:nth-child(odd) {
-  padding-left: 1rem;
+@media screen and (min-width: 1024px) {
+  .prices-card .prices-table {
+    width: 60%;
+  }
+}
+
+.prices-card .prices-table tr th {
+  padding: 0.8rem 0.5rem;
+}
+
+.prices-card .prices-table tr td {
+  padding: 0.5rem 0.5rem;
 }
 
 .top-margin {

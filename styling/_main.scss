@@ -213,6 +213,7 @@ a, a:hover, a:visited, a:link, a:active {
     height: 100vh;
     background-image: url("../static/banner-minimal.png");
     background-size: initial;
+    margin-bottom: $section-bottom-margin;
     @include smartphone-h {
         height: 640px;
     }
@@ -315,7 +316,7 @@ a, a:hover, a:visited, a:link, a:active {
 
 .myslides {
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
-    width: 90vw;
+    width: 85vw;
     @include desktop {
         width: 100%;
     }
@@ -378,6 +379,7 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 .myslides, .myslides-team {
+    margin-bottom: $section-bottom-margin;
     & .picture-slider {
         @include flex-djacai(column, center, center, center);
         width: 100%;
@@ -452,6 +454,7 @@ a, a:hover, a:visited, a:link, a:active {
     color: black;
     line-height: 3rem;
     height: 100%;
+    margin-bottom: $section-bottom-margin;
     @include desktop {
         height: auto;
     }
@@ -462,7 +465,7 @@ a, a:hover, a:visited, a:link, a:active {
         margin: 0;
     }
     & .services-wrapper {
-        @include flex-djacai(row, flex-start, space-between, space-between);
+        @include flex-djacai(row, center, space-between, space-between);
         height: 100%;
         position: relative;
         & .serv-links {
@@ -475,7 +478,6 @@ a, a:hover, a:visited, a:link, a:active {
             }
             & ul li {
                 list-style-type: none; 
-                min-width: 430px;  
             }
             & ul li:before { 
                 font-family: 'FontAwesome';
@@ -514,10 +516,11 @@ a, a:hover, a:visited, a:link, a:active {
                 width: 100%;
             }
             & .service-card {
+                @extend .myslides;
                 position: relative;
                 flex-direction: column;
-                height: 100%;
-                transition: display 0.6s ease;
+                height: 90%;
+
                 @include desktop {
                     width: 70%;
                     max-width: 800px;
@@ -547,21 +550,31 @@ a, a:hover, a:visited, a:link, a:active {
 
 .prices {
     @include flex-djacai(column, center, center, center);
-    margin-top: 2rem;
+    margin-bottom: $section-bottom-margin;
+    & .about-header-prices {
+        @extend .about-header;
+        @include desktop {
+            display: flex;
+        }
+    }
+}
+.prices-card {
+    @extend .myslides-team;
+    @include flex-djacai(column, center, center, center);
     & .prices-table {
         @extend .employee-hours;
-        margin-top: 2rem;
-        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
-        width: 40vw;
-        max-width: 1500px;
+        margin: 1rem 0;
+        //box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
+        margin: 1.8rem;
+        //max-width: 1500px;
+        @include desktop {
+            width: 60%;
+        }
         & tr th {
-            padding: 0.8rem 0;
+            padding: 0.8rem 0.5rem;
         }
         & tr td {
-            padding: 0.5rem 0;
-        }
-        & tr th:nth-child(odd) {
-            padding-left: 1rem;
+            padding: 0.5rem 0.5rem;
         }
     }
 }
