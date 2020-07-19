@@ -309,8 +309,7 @@ a, a:hover, a:visited, a:link, a:active {
     @include desktop {
         height: 71vh;
         max-height: 700px;
-        @include flex-djacai(column, center, center, center);
-        
+        @include flex-djacai(column, center, center, center);   
     }
 }
 
@@ -320,25 +319,26 @@ a, a:hover, a:visited, a:link, a:active {
     @include desktop {
         width: 100%;
     }
-    & .picture-slider {
-        .stopper-box {
-            @include flex-djacai(row, center, center, center);
-            @include desktop {
-                display: none;
-            }
-            .stop-icon {
-                width: $stopper-width;
-                margin: $stopper-margin;
-            } 
-        }
-    }
-    & .gallery-text-box {
-        margin: 3rem 1.8rem 3rem 1.8rem;
+    .stopper-box {
+        @include flex-djacai(row, center, center, center);
         @include desktop {
-            margin: 3rem 0.5rem 3rem 0.5rem;
+            display: none;
         }
+        & .stop-icon {
+            width: $stopper-width;
+            margin: $stopper-margin;
+        } 
     }
 }
+
+
+.gallery-text-box {
+    margin: 3rem 1.8rem 3rem 1.8rem;
+    @include desktop {
+        margin: 3rem 0.5rem 3rem 0.5rem;
+    }
+}
+
 .first-office {
     @include desktop {
         margin-right: 2rem;
@@ -392,6 +392,10 @@ a, a:hover, a:visited, a:link, a:active {
             margin-bottom: 1em;
             transform: scale(.96);
             transition: transform 300ms;
+        }
+        & img.picture-office {
+            @extend .picture-team;
+            min-width: 200px;
         }
         & img.picture { 
             width: 100%;
@@ -578,6 +582,84 @@ a, a:hover, a:visited, a:link, a:active {
         }
     }
 }
+
+.dentimed-gallery {
+    @extend .myslides-team;
+    @include flex-djacai(column, center, center, center);
+    width: 100vw;
+    height: 60vh;
+    max-height: 700px;
+    background-color: $dent-main-background;
+    box-shadow: none;
+    
+    .slogan::before { 
+        // position: relative;
+        // left: -80px;
+        // top: 60px;
+        font-family: 'FontAwesome';
+        content: "\f10d";
+        color: $dent-cinnamon-trans;
+        font-size: 1rem;
+        z-index: 0;
+        @include desktop {
+            font-size: 5rem;
+        }
+    }
+    .slogan {
+        @include flex-djacai(row, center, center, center);
+        margin: 0.2rem 0 0 0;
+        height: 30%;
+        color: $font-col-light;
+        max-width: 800px;
+        text-align: center;
+        font-weight: 100;
+        letter-spacing: 0.04rem;
+        h3 {
+            // position: inherit;
+            // text-align: center;
+            z-index: 2;
+        }
+    }
+    .slogan::after { 
+        // position: relative;
+        // left: 80px;
+        // top: -60px;
+        font-family: 'FontAwesome';
+        content: "\f10e";
+        color: $dent-cinnamon-trans;
+        font-size: 1rem;
+        z-index: 0;
+        @include desktop {
+            font-size: 5rem;
+        }
+    }
+    .dentimed-gallery-wrapper {
+        @include desktop {
+            @include flex-djacai(row, center, center, center);
+        }
+    }
+}
+
+.myslides-office {
+    margin: 0 1rem 0 1rem;
+    @include desktop {
+        margin: 0 2rem 0 0;
+    }
+    .picture-slider {
+        margin: 0;
+        .stopper-box {
+            @include desktop {
+                display: none;
+            }
+        }
+    }
+}
+.myslides-office:last-child {
+    @include desktop {
+        margin: 0;
+    }
+}
+
 
 .top-margin {
     margin-top: 4rem;

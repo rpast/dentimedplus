@@ -109,6 +109,7 @@ window.onscroll = function () {
 //floor counter values
 var slideIndex = 1; 
 var slideIndexTeam = 1;
+var slideIndexOffice = 1;
 
 //interval functions -> used to instantiate timer 
 function plusDivsInterval() {
@@ -116,6 +117,9 @@ function plusDivsInterval() {
 }
 function plusDivsIntervalTeam() {
     showDivs((slideIndexTeam += 1), "myslides-team", 2, false);
+}
+function plusDivsIntervalOffice() {
+    showDivs((slideIndexOffice += 1), "myslides-office", 2, desktopW);
 }
 
 //onclick functions
@@ -126,6 +130,10 @@ function plusDivs(n) {
 function plusDivsTeam(n) {
     showDivs((slideIndexTeam += n), "myslides-team", 2, false);
     clearInterval(carouselTimerTeam); //stop timer
+}
+function plusDivsOffice(n) {
+    showDivs((slideIndexOffice += n), "myslides-office", 3, false);
+    clearInterval(carouselTimerOffice); //stop timer
 }
 
 function showDivs(counter, className, counterFlag, maxVw) {
@@ -145,8 +153,10 @@ function showDivs(counter, className, counterFlag, maxVw) {
         if (counter > elemList.length) { //if # of elements in the list is shorter than counter val -> reset the counter
             if (counterFlag == 1) { //1 for office gallery
                 slideIndex = 1;
-            } else { //2 for team gallery
-                slideIndexTeam = 1
+            } else if (counterFlag == 2) { //2 for team gallery
+                slideIndexTeam = 1;
+            } else { // 3 for Office gallery
+                slideIndexOffice = 1;
             }
         }
 
@@ -155,13 +165,16 @@ function showDivs(counter, className, counterFlag, maxVw) {
             elemList[i].classList.add('off');
             elemList[i].classList.remove('on-col-center')
         }
-        if (counterFlag == 1) { //always keep counter-1 element switched on
+        //always keep counter-1 element switched on
+        if (counterFlag == 1) { 
             elemList[slideIndex - 1].classList.add('on-col-center');
-        } else {
+        } else if (counterFlag == 2) {
             elemList[slideIndexTeam - 1].classList.add('on-col-center');
+        } else {
+            elemList[slideIndexOffice - 1].classList.add('on-col-center');
         }
     } else { //in case vw > threshold switch on all elements from the office gallery (design specific)
-        if(counterFlag == 1) {
+        if(counterFlag == 1 || counterFlag == 3) {
             for (i = 0; i < elemList.length; i++) {
                 elemList[i].classList.add('on-col-center');
                 elemList[i].classList.remove('off')
@@ -173,13 +186,18 @@ function showDivs(counter, className, counterFlag, maxVw) {
 //instantiate the galleries and timers
 showDivs(slideIndex, "myslides", 1, desktopW);
 showDivs(slideIndexTeam, "myslides-team", 2, false);
+showDivs(slideIndexOffice, "myslides-office", 3, desktopW);
+
 carouselTimer = setInterval(plusDivsInterval, 6000);
 carouselTimerTeam = setInterval(plusDivsIntervalTeam, 6000);
+carouselTimerOffice = setInterval(plusDivsIntervalOffice, 6000);
 
 //Reload the page when viewport gets resized
 window.onresize = function(){ 
     location.reload(); 
-    showDivs(slideIndex, "myslides", 1, desktopW); //if vw < maxVw display all office gallery elements
+    //if vw < maxVw display all office gallery elements
+    showDivs(slideIndex, "myslides", 1, desktopW);
+    showDivs(slideIndexOffice, "myslides-office", 3, desktopW);
 }
 
 // Smooth scroll handler //     

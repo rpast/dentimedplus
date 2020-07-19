@@ -932,7 +932,7 @@ a, a:hover, a:visited, a:link, a:active {
   }
 }
 
-.myslides .picture-slider .stopper-box, .services .services-wrapper .card-wrapper .service-card .picture-slider .stopper-box {
+.myslides .stopper-box, .services .services-wrapper .card-wrapper .service-card .stopper-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -951,22 +951,22 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides .picture-slider .stopper-box, .services .services-wrapper .card-wrapper .service-card .picture-slider .stopper-box {
+  .myslides .stopper-box, .services .services-wrapper .card-wrapper .service-card .stopper-box {
     display: none;
   }
 }
 
-.myslides .picture-slider .stopper-box .stop-icon, .services .services-wrapper .card-wrapper .service-card .picture-slider .stopper-box .stop-icon {
+.myslides .stopper-box .stop-icon, .services .services-wrapper .card-wrapper .service-card .stopper-box .stop-icon {
   width: 15px;
   margin: 4px;
 }
 
-.myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box {
+.gallery-text-box {
   margin: 3rem 1.8rem 3rem 1.8rem;
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box {
+  .gallery-text-box {
     margin: 3rem 0.5rem 3rem 0.5rem;
   }
 }
@@ -977,7 +977,7 @@ a, a:hover, a:visited, a:link, a:active {
   }
 }
 
-.myslides-team, .prices-card {
+.myslides-team, .prices-card, .dentimed-gallery {
   background-color: white;
   width: 85vw;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
@@ -985,7 +985,7 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides-team, .prices-card {
+  .myslides-team, .prices-card, .dentimed-gallery {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -996,18 +996,18 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 @media screen and (min-width: 1400px) {
-  .myslides-team, .prices-card {
+  .myslides-team, .prices-card, .dentimed-gallery {
     width: 60vw;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides-team .picture-slider, .prices-card .picture-slider {
+  .myslides-team .picture-slider, .prices-card .picture-slider, .dentimed-gallery .picture-slider {
     margin: 2rem 1rem 2rem 3rem;
   }
 }
 
-.myslides-team .picture-slider .stopper-box, .prices-card .picture-slider .stopper-box {
+.myslides-team .picture-slider .stopper-box, .prices-card .picture-slider .stopper-box, .dentimed-gallery .picture-slider .stopper-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1025,27 +1025,27 @@ a, a:hover, a:visited, a:link, a:active {
           align-items: center;
 }
 
-.myslides-team .picture-slider .stopper-box .stop-icon, .prices-card .picture-slider .stopper-box .stop-icon {
+.myslides-team .picture-slider .stopper-box .stop-icon, .prices-card .picture-slider .stopper-box .stop-icon, .dentimed-gallery .picture-slider .stopper-box .stop-icon {
   width: 15px;
   margin: 4px;
 }
 
-.myslides-team .gallery-text-box, .prices-card .gallery-text-box {
+.myslides-team .gallery-text-box, .prices-card .gallery-text-box, .dentimed-gallery .gallery-text-box {
   margin: 3rem 1.8rem 3rem 1.8rem;
   min-width: 40%;
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides-team .gallery-text-box, .prices-card .gallery-text-box {
+  .myslides-team .gallery-text-box, .prices-card .gallery-text-box, .dentimed-gallery .gallery-text-box {
     margin: 3rem;
   }
 }
 
-.myslides, .services .services-wrapper .card-wrapper .service-card, .myslides-team, .prices-card {
+.myslides, .services .services-wrapper .card-wrapper .service-card, .myslides-team, .prices-card, .dentimed-gallery {
   margin-bottom: 4rem;
 }
 
-.myslides .picture-slider, .services .services-wrapper .card-wrapper .service-card .picture-slider, .myslides-team .picture-slider, .prices-card .picture-slider {
+.myslides .picture-slider, .services .services-wrapper .card-wrapper .service-card .picture-slider, .myslides-team .picture-slider, .prices-card .picture-slider, .dentimed-gallery .picture-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1065,7 +1065,7 @@ a, a:hover, a:visited, a:link, a:active {
   max-height: 90%;
 }
 
-.myslides .picture-slider img.picture-team, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-team, .myslides-team .picture-slider img.picture-team, .prices-card .picture-slider img.picture-team {
+.myslides .picture-slider img.picture-team, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-team, .myslides .picture-slider img.picture-office, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-office, .myslides-team .picture-slider img.picture-team, .prices-card .picture-slider img.picture-team, .dentimed-gallery .picture-slider img.picture-team, .myslides-team .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-office, .services .services-wrapper .card-wrapper .service-card .myslides-team .picture-slider img.picture-office, .prices-card .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-office, .services .services-wrapper .card-wrapper .service-card .prices-card .picture-slider img.picture-office, .dentimed-gallery .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-office, .services .services-wrapper .card-wrapper .service-card .dentimed-gallery .picture-slider img.picture-office, .myslides-team .picture-slider img.picture-office, .prices-card .picture-slider img.picture-office, .dentimed-gallery .picture-slider img.picture-office {
   width: 100%;
   height: auto;
   min-width: 250px;
@@ -1079,7 +1079,11 @@ a, a:hover, a:visited, a:link, a:active {
   transition: transform 300ms, -webkit-transform 300ms;
 }
 
-.myslides .picture-slider img.picture, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture, .myslides-team .picture-slider img.picture, .prices-card .picture-slider img.picture {
+.myslides .picture-slider img.picture-office, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-office, .myslides-team .picture-slider img.picture-office, .prices-card .picture-slider img.picture-office, .dentimed-gallery .picture-slider img.picture-office {
+  min-width: 200px;
+}
+
+.myslides .picture-slider img.picture, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture, .myslides-team .picture-slider img.picture, .prices-card .picture-slider img.picture, .dentimed-gallery .picture-slider img.picture {
   width: 100%;
   height: auto;
   max-width: 450px;
@@ -1088,12 +1092,12 @@ a, a:hover, a:visited, a:link, a:active {
           transform: scale(0.96);
 }
 
-.myslides .picture-slider img.picture-team:hover, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-team:hover, .myslides-team .picture-slider img.picture-team:hover, .prices-card .picture-slider img.picture-team:hover {
+.myslides .picture-slider img.picture-team:hover, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-team:hover, .myslides .picture-slider img.picture-office:hover, .services .services-wrapper .card-wrapper .service-card .picture-slider img.picture-office:hover, .myslides-team .picture-slider img.picture-team:hover, .prices-card .picture-slider img.picture-team:hover, .dentimed-gallery .picture-slider img.picture-team:hover, .myslides-team .picture-slider img.picture-office:hover, .prices-card .picture-slider img.picture-office:hover, .dentimed-gallery .picture-slider img.picture-office:hover {
   -webkit-transform: scale(0.92);
           transform: scale(0.92);
 }
 
-.myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box {
+.myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box, .dentimed-gallery .gallery-text-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1112,32 +1116,32 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 @media screen and (min-width: 640px) {
-  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box {
+  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box, .dentimed-gallery .gallery-text-box {
     max-width: 70%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box {
+  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box, .dentimed-gallery .gallery-text-box {
     font-size: 0.9rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box {
+  .myslides .gallery-text-box, .services .services-wrapper .card-wrapper .service-card .gallery-text-box, .myslides-team .gallery-text-box, .prices-card .gallery-text-box, .dentimed-gallery .gallery-text-box {
     font-size: 1rem;
   }
 }
 
-.myslides .gallery-text-box p, .services .services-wrapper .card-wrapper .service-card .gallery-text-box p, .myslides-team .gallery-text-box p, .prices-card .gallery-text-box p {
+.myslides .gallery-text-box p, .services .services-wrapper .card-wrapper .service-card .gallery-text-box p, .myslides-team .gallery-text-box p, .prices-card .gallery-text-box p, .dentimed-gallery .gallery-text-box p {
   margin: 0 0 1.5rem 0;
 }
 
-.myslides .gallery-text-box h2, .services .services-wrapper .card-wrapper .service-card .gallery-text-box h2, .myslides-team .gallery-text-box h2, .prices-card .gallery-text-box h2 {
+.myslides .gallery-text-box h2, .services .services-wrapper .card-wrapper .service-card .gallery-text-box h2, .myslides-team .gallery-text-box h2, .prices-card .gallery-text-box h2, .dentimed-gallery .gallery-text-box h2 {
   margin: 0 0 1rem 0;
 }
 
-.myslides .gallery-text-box a, .services .services-wrapper .card-wrapper .service-card .gallery-text-box a, .myslides-team .gallery-text-box a, .prices-card .gallery-text-box a {
+.myslides .gallery-text-box a, .services .services-wrapper .card-wrapper .service-card .gallery-text-box a, .myslides-team .gallery-text-box a, .prices-card .gallery-text-box a, .dentimed-gallery .gallery-text-box a {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1424,6 +1428,133 @@ a, a:hover, a:visited, a:link, a:active {
 
 .prices-card .prices-table tr td {
   padding: 0.5rem 0.5rem;
+}
+
+.dentimed-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 60vh;
+  max-height: 700px;
+  background-color: #4d447d;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dentimed-gallery .slogan::before {
+  font-family: 'FontAwesome';
+  content: "\f10d";
+  color: #f18b6227;
+  font-size: 1rem;
+  z-index: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .dentimed-gallery .slogan::before {
+    font-size: 5rem;
+  }
+}
+
+.dentimed-gallery .slogan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.2rem 0 0 0;
+  height: 30%;
+  color: #fafafa;
+  max-width: 800px;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 0.04rem;
+}
+
+.dentimed-gallery .slogan h3 {
+  z-index: 2;
+}
+
+.dentimed-gallery .slogan::after {
+  font-family: 'FontAwesome';
+  content: "\f10e";
+  color: #f18b6227;
+  font-size: 1rem;
+  z-index: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .dentimed-gallery .slogan::after {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dentimed-gallery .dentimed-gallery-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.myslides-office {
+  margin: 0 1rem 0 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .myslides-office {
+    margin: 0 2rem 0 0;
+  }
+}
+
+.myslides-office .picture-slider {
+  margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .myslides-office .picture-slider .stopper-box {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .myslides-office:last-child {
+    margin: 0;
+  }
 }
 
 .top-margin {
