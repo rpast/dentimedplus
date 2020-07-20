@@ -132,7 +132,7 @@ function plusDivsTeam(n) {
     clearInterval(carouselTimerTeam); //stop timer
 }
 function plusDivsOffice(n) {
-    showDivs((slideIndexOffice += n), "myslides-office", 3, false);
+    showDivs((slideIndexOffice += n), "myslides-office", 3, desktopW);
     clearInterval(carouselTimerOffice); //stop timer
 }
 
