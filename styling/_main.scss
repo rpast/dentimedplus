@@ -587,19 +587,19 @@ a, a:hover, a:visited, a:link, a:active {
     @extend .myslides-team;
     @include flex-djacai(column, center, center, center);
     width: 100vw;
-    height: 60vh;
+    height: 80vh;
     max-height: 700px;
     background-color: $dent-main-background;
     box-shadow: none;
     
-    .slogan::before { 
-        // position: relative;
-        // left: -80px;
-        // top: 60px;
+    .slogan::before {
+        position: relative;
+        left: 50px;
+        top: 60px;
         font-family: 'FontAwesome';
         content: "\f10d";
         color: $dent-cinnamon-trans;
-        font-size: 1rem;
+        font-size: 3rem;
         z-index: 0;
         @include desktop {
             font-size: 5rem;
@@ -607,27 +607,30 @@ a, a:hover, a:visited, a:link, a:active {
     }
     .slogan {
         @include flex-djacai(row, center, center, center);
-        margin: 0.2rem 0 0 0;
-        height: 30%;
         color: $font-col-light;
+        margin: 2rem 0 0 0;
         max-width: 800px;
         text-align: center;
-        font-weight: 100;
-        letter-spacing: 0.04rem;
-        h3 {
-            // position: inherit;
-            // text-align: center;
+        @include s-tablet-w {
+            margin: 3rem 0 0 0;
+        }
+        & h3 {
             z-index: 2;
+            min-width: 300px;
+            max-width: 400px;
+            letter-spacing: 0.1rem;
+            font-size: 1.3rem;
+            font-weight: 100;
         }
     }
     .slogan::after { 
-        // position: relative;
-        // left: 80px;
-        // top: -60px;
+        position: relative;
+        left: -50px;
+        top: -60px;
         font-family: 'FontAwesome';
         content: "\f10e";
         color: $dent-cinnamon-trans;
-        font-size: 1rem;
+        font-size: 3rem;
         z-index: 0;
         @include desktop {
             font-size: 5rem;
