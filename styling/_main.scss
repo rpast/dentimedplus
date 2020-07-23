@@ -39,6 +39,9 @@ a, a:hover, a:visited, a:link, a:active {
 .on-col-center {
     @include flex-djacai(column, center, center, center);
 }
+.on-col-start {
+    @include flex-djacai(column, center, center, flex-start);
+}
 .full-height {
     height: 100vh;
 }
@@ -131,7 +134,7 @@ a, a:hover, a:visited, a:link, a:active {
 .navbar {
     transition: background-color 0.6s ease;
     position: fixed;
-    z-index: 2;
+    z-index: 999;
     top: 0;
     height: 50px;
     width: 100vw;
@@ -569,21 +572,21 @@ a, a:hover, a:visited, a:link, a:active {
 .prices-card {
     @extend .myslides-team;
     @include flex-djacai(column, center, center, center);
-    & .prices-table {
-        @extend .employee-hours;
-        margin: 1rem 0;
-        //box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
-        margin: 1.8rem;
-        //max-width: 1500px;
-        @include desktop {
-            width: 60%;
-        }
-        & tr th {
-            padding: 0.8rem 0.5rem;
-        }
-        & tr td {
-            padding: 0.5rem 0.5rem;
-        }
+}
+.prices-table {
+    @extend .employee-hours;
+    margin: 1rem 0;
+    //box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
+    margin: 1.8rem;
+    //max-width: 1500px;
+    @include desktop {
+        width: 60%;
+    }
+    & tr th {
+        padding: 0.8rem 0.5rem;
+    }
+    & tr td {
+        padding: 0.5rem 0.5rem;
     }
 }
 
@@ -667,6 +670,12 @@ a, a:hover, a:visited, a:link, a:active {
     }
 }
 
+.contact {
+    @include flex-djacai(column, center, center, center);
+    @include desktop {
+        @include flex-djacai(row, center, center, center);
+    }
+}
 
 .top-margin {
     margin-top: 4rem;
@@ -696,15 +705,56 @@ h4 {
 
 .contact-box {
     @extend .myslides-team;
-    @include flex-djacai(column, center, center, center);
-    // width: 300px;
-    // max-width: 400px;
-    // padding: 1em 1em 1em 2em;    
-    // margin: 0em 0em 4rem 0em;
-    // box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, .3);
+    display: none;
+    & .contact-content {
+        @include flex-djacai(column, center, center, center);
+        margin: 1.5rem;
+        p, h4 {
+            margin: 0;
+        }
+    }
     & table {
-        width: 100%;
-        font-size: 0.85em;
+        @extend .prices-table;
+    }
+}
+
+.contact-details-desktop {
+    @include desktop {
+        @include flex-djacai(column, flex-start, flex-start, center);
+        margin: 1.5rem;
+        box-shadow: none;
+        p, h4 {
+            margin: 1rem 0 0 0;
+        }
+    }
+    & .desktop-mail {
+        margin: 1rem 0 0 0;
+        display: none;
+        @include desktop {
+            @include flex-djacai(column, center, center, flex-start);
+        }
+    }
+}
+.contact-hours {
+    @include flex-djacai(column, center, center, center);
+    order: 1;
+    @include desktop {
+        width: 30vw;
+        order: 3;
+    }
+}
+.contact-phone {
+    @include flex-djacai(column, center, center, center);
+    order: 2;
+    @include desktop {
+        display: none;
+    }
+}
+.contact-mail {
+    @include flex-djacai(column, center, center, center);
+    order: 3;
+    @include desktop {
+        display: none;
     }
 }
 
