@@ -174,8 +174,7 @@ a, a:hover, a:visited, a:link, a:active {
 }
 #ham-icon {
     fill: white;
-    height: 3vh;
-    min-height: 35px;
+    height: 35px;
 }
 .hamburger-on { //toggler
     display: flex;
@@ -458,7 +457,7 @@ a, a:hover, a:visited, a:link, a:active {
     color: black;
     line-height: 3rem;
     height: 100%;
-    margin-bottom: $section-bottom-margin;
+    //margin-bottom: $section-bottom-margin;
     @include desktop {
         height: auto;
     }
@@ -553,10 +552,15 @@ a, a:hover, a:visited, a:link, a:active {
 }
 
 .prices {
+    padding: 4rem 0;
     @include flex-djacai(column, center, center, center);
-    margin-bottom: $section-bottom-margin;
+    background-image: url('../static/Hinterrhein.svg');
+    //background-repeat: none;
+    background-size: cover;
+    //margin-bottom: $section-bottom-margin;
     & .about-header-prices {
         @extend .about-header;
+        margin: 0;
         @include desktop {
             display: flex;
         }
@@ -679,13 +683,6 @@ h4 {
     font-size: 1.3em;
 }
 
-table {
-    line-height: 2em;
-}
-td {
-    padding: 0 2em 0 0;
-}
-
 .map {
     margin-top: 2rem;
     width: 100vw;
@@ -698,11 +695,13 @@ td {
 }
 
 .contact-box {
-    width: 300px;
-    max-width: 400px;
-    padding: 1em 1em 1em 2em;    
-    margin: 0em 0em 4rem 0em;
-    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, .3);
+    @extend .myslides-team;
+    @include flex-djacai(column, center, center, center);
+    // width: 300px;
+    // max-width: 400px;
+    // padding: 1em 1em 1em 2em;    
+    // margin: 0em 0em 4rem 0em;
+    // box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, .3);
     & table {
         width: 100%;
         font-size: 0.85em;
