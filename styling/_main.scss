@@ -289,6 +289,13 @@ a, a:hover, a:visited, a:link, a:active {
         }
     }
 }
+.about-header-contact {
+    @extend .about-header;
+    display: none;
+    @include desktop {
+        display: flex;
+    }
+}
 
 .office-wrapper {
     @include desktop {
@@ -594,11 +601,10 @@ a, a:hover, a:visited, a:link, a:active {
     @extend .myslides-team;
     @include flex-djacai(column, center, center, center);
     width: 100vw;
-    height: 80vh;
-    max-height: 700px;
+    height: 90vh;
+    max-height: 800px;
     background-color: $dent-main-background;
     box-shadow: none;
-    
     .slogan::before {
         position: relative;
         left: 50px;
@@ -672,8 +678,20 @@ a, a:hover, a:visited, a:link, a:active {
 
 .contact {
     @include flex-djacai(column, center, center, center);
-    @include desktop {
-        @include flex-djacai(row, center, center, center);
+    & .contact-wrapper {
+        // @include flex-djacai(column, center, center, center);
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr 30px 1fr;
+            grid-template-rows: auto;
+            column-gap: 1rem;
+            grid-template-areas: 
+                "phone phone . hours"
+                "phone phone . hours"
+                "email email . hours";
+            width: 60vw;
+            margin: 2rem 0 0 0;
+        }
     }
 }
 
@@ -702,60 +720,64 @@ h4 {
     width: 100px;
     margin: 1em 0 1em 0;
 }
+#calendar-icon {
+    @include desktop {
+        width: 150px;
+    }
+}
 
 .contact-box {
     @extend .myslides-team;
-    display: none;
+    margin-bottom: 2rem;
+    //display: none;
+    @include desktop {
+        box-shadow: none;
+        width: auto;
+    }
     & .contact-content {
         @include flex-djacai(column, center, center, center);
         margin: 1.5rem;
-        p, h4 {
-            margin: 0;
+        @include desktop {
+            margin: 1rem;
+        }
+        p {
+            margin-bottom: 0.2rem;
+        }
+        h4 {
+            margin-bottom: 0.5rem;
+            @include desktop {
+                width: 400px;
+            }
         }
     }
     & table {
         @extend .prices-table;
     }
 }
-
-.contact-details-desktop {
-    @include desktop {
-        @include flex-djacai(column, flex-start, flex-start, center);
-        margin: 1.5rem;
-        box-shadow: none;
-        p, h4 {
-            margin: 1rem 0 0 0;
-        }
-    }
-    & .desktop-mail {
-        margin: 1rem 0 0 0;
-        display: none;
-        @include desktop {
-            @include flex-djacai(column, center, center, flex-start);
-        }
-    }
-}
 .contact-hours {
     @include flex-djacai(column, center, center, center);
-    order: 1;
-    @include desktop {
-        width: 30vw;
-        order: 3;
-    }
+    grid-area: hours;
+    align-self: stretch;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
 }
 .contact-phone {
     @include flex-djacai(column, center, center, center);
-    order: 2;
+    grid-area: phone;
+    align-self: stretch;
+}
+.contact-mail {
+    @include flex-djacai(column, center, center, center);
+    grid-area: email;
+    align-self: stretch;
+}
+.contact-us-mobile {
+    display: flex;
     @include desktop {
         display: none;
     }
 }
-.contact-mail {
-    @include flex-djacai(column, center, center, center);
-    order: 3;
-    @include desktop {
-        display: none;
-    }
+.contact-email-text {
+    @include flex-djacai(column, flex-start, flex-start, flex-start);
 }
 
 .button {
