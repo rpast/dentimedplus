@@ -1,0 +1,82 @@
+#menu {
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    background-color: rgba(255,255,255,1);
+    position: fixed;
+    z-index: 3;
+    & .wrapper-menu {
+        //margin-top: 10rem;
+        height: 100vh;
+        @include flex-djacai(column, center, center, center);
+        & a {
+            color: black;
+            font-size: 1.5em;
+            @include link-decor(uppercase, 0.2rem);
+            margin-bottom: 2em;
+        }
+    }
+}
+
+//TODO create icon positioning mixin!
+//Style menu icon
+.menu__icon {
+    margin: 1rem 1.5rem 0.5rem auto;
+    
+    svg {
+        fill: black;
+        height: 5vh;
+        min-height: 35px;
+    }
+}
+
+.nav {
+    transition: background-color 0.6s ease;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    height: 70px;
+    width: 100vw;
+    
+    &__logo {
+        flex-direction: row;
+        margin: 0 1rem 0 2rem;
+        & img {
+            width: 40px;
+        }
+    }
+    &__icon{
+        margin: 1rem 1.5rem 0.5rem auto;
+        
+        @include s-tablet-w {
+            margin: 0rem;
+        }
+        & svg {
+            fill: white;
+            height: 5vh;
+            min-height: 35px;
+        }
+    }
+    & a {
+        @include flex-djacai(row,center,center,center)
+    }
+    &__links {
+        display: none;
+        margin: 0 2rem 0 3rem;
+        @include s-tablet-w {
+            @include flex-djacai(row, space-between, center, center);
+            width: 100vw;
+            color: rgb(255,255,255);
+            & a {
+                color: inherit;
+                transition: box-shadow 0.3s ease;
+                min-width: 80px;
+                @include link-decor(uppercase, 0.2rem);
+                padding: 1rem;
+            }
+            & a:hover {
+                box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+            }
+        }
+    }
+}

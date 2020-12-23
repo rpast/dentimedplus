@@ -10,12 +10,12 @@
 
   <body>
     <!-- ######### MENU & NAV SECTION START ######### -->
-    <div id="menu-wrapper" class="wrapper-off">
-      <!-- TODO: change 'icon-flexbox' name to sth more meaningful (its hamburger-close menu) -->
-      <div class="icon-flexbox">
+    <div id="menu" class="is-off">
+
+      <div class="menu__icon">
         <a href="javascript:void(0);" onclick="toggle('hamburger')">
           <?xml version="1.0" encoding="iso-8859-1"?>
-          <svg version="1.1" id="close-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+          <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
             <g>
               <path d="M0,0v60h60V0H0z M58,58H2V2h56V58z"/>
               <polygon points="16.009,45.405 30.151,31.263 44.293,45.405 45.707,43.991 31.565,29.849 45.707,15.707 44.293,14.293 
@@ -36,14 +36,16 @@
     </div>
 
     <!-- Navbar section -->
-    <nav id="navbar" class="navbar navbar-on navbar-transparent">
+    <nav class="nav is-nav is-trans">
         
       <!-- Logo small -->
-      <a id="logo" class="logo" href="#hero">
-          <img src="static/dlogo-cin.png" alt="DentimedPlus Logo">
-      </a>
+      <div class="nav__logo is-off">
+        <a href="#hero">
+            <img src="static/dlogo-cin.png" alt="DentimedPlus Logo">
+        </a>
+      </div>
       <!-- Navbar menu items -->
-      <div class="navbar-links">  
+      <div class="nav__links">  
           <a href="#offices">Gabinety</a>
           <a href="#team">Zespół</a>
           <a href="#services">Usługi</a>
@@ -51,11 +53,11 @@
           <a href="#contact">Kontakt</a>
       </div>
 
-      <!-- hamburger menu svg icon
-      Rename ham-icon-box to sth more meaningful linked to wrapper icon -->
-      <div class="ham-icon-box">
+      <!-- hamburger menu svg icon -->
+      <div class="nav__icon">
+
         <a href="javascript:void(0);" onclick="toggle('hamburger')">
-          <svg id="ham-icon" class="hamburger-on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58"><rect x="9" y="12" width="40" height="2"/><rect x="9" y="28" width="40" height="2"/><rect x="9" y="44" width="40" height="2"/><path d="M0 0v58h58V0H0zM56 56H2V2h54V56z"/></svg>
+          <svg class="nav__icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58"><rect x="9" y="12" width="40" height="2"/><rect x="9" y="28" width="40" height="2"/><rect x="9" y="44" width="40" height="2"/><path d="M0 0v58h58V0H0zM56 56H2V2h54V56z"/></svg>
         </a>
       </div>
       

@@ -1,34 +1,3 @@
-// IMPORT SECTION
-@import "./variables";
-@import "./funmix";
-
-
-// SCSS selector styling starts here
-*, *::before, *::after {box-sizing: inherit;}
-
-
-html {
-    font-size: 18px;
-    box-sizing: content-box;
-    font-family: $dent-font-body;
-    & h1, h2, h3, h4 {
-        font-family: $dent-font-head;
-    }
-    @include smartphone-w {
-        font-size: 16px;
-    }
-    @include l-tablet-w {
-        font-size: 16px;
-    }
-    @include desktop {
-        font-size: 18px;
-    }
-}
-
-a, a:hover, a:visited, a:link, a:active {
-    text-decoration: none;
-}
-
 // Set up the mobile menu navigation
 .off {
     display: none;
@@ -46,72 +15,27 @@ a, a:hover, a:visited, a:link, a:active {
     height: 100vh;
 }
 
-#menu-wrapper {
-    height: 100vh;
-    width: 100vw;
-    color: black;
-    background-color: rgba(255,255,255,1);
-    position: fixed;
-    z-index: 3;
-    & .wrapper-menu {
-        //margin-top: 10rem;
-        height: 100vh;
-        @include flex-djacai(column, center, center, center);
-        & a {
-            color: black;
-            font-size: 1.5em;
-            @include link-decor(uppercase, 0.2rem);
-            margin-bottom: 2em;
-        }
-    }
-}
-.icon-flexbox, .icon-serv-flexbox {
-    & #close-icon, #close-serv-icon {
-        fill: black;
-        height: 3vh;
-        min-height: 35px;
-    }
-    & #close-serv-icon { //Specific margin for services description
-        margin-top: 1rem;
-    }
-}
-.icon-flexbox {
-    margin: 0.5rem 1.5rem 0.5rem auto;
-}
+// .menu__icon, .icon-serv-flexbox {
+//     & #close-icon, #close-serv-icon {
+//         fill: black;
+//         height: 3vh;
+//         min-height: 35px;
+//     }
+//     & #close-serv-icon { //Specific margin for services description
+//         margin-top: 1rem;
+//     }
+// }
+
 .icon-serv-flexbox {
     margin: 0 1.5rem 0.5rem auto;
     @include l-desktop {
         display: none;
     }
 }
-.wrapper-on { //toggler
-    @include flex-djacai(column, flex-start, center, center);
-    transition: display 0.6s ease;
-}
-.wrapper-off { //toggler
-    display: none;
-}
 
-.navbar-links {
-    display: none;
-    margin: 0 2rem 0 3rem;
-    @include s-tablet-w {
-        @include flex-djacai(row, space-between, center, center);
-        width: 100vw;
-        color: rgb(255,255,255);
-        & a {
-            font-size: 16px;
-            color: inherit;
-            transition: box-shadow 0.3s ease;
-            min-width: 80px;
-            @include link-decor(uppercase, 0.2rem);
-            padding: 1rem;
-        }
-        & a:hover {
-            box-shadow: 0 2px 2px rgba(0,0,0,0.25);
-        }
-    }
-}
+
+
+
 .call-us-nav {
     display: none;
     visibility: hidden;
@@ -131,70 +55,12 @@ a, a:hover, a:visited, a:link, a:active {
     margin: 1rem;
 }
 
-.navbar {
-    transition: background-color 0.6s ease;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    height: 50px;
-    width: 100vw;
-}
-.navbar-on { //toggler
-    display: flex;
-    align-items: center;
-}
-.navbar-off { //toggler
-    display: none;
-}
-.navbar-solid { //toggler
-    background-color: rgba(255,255,255,1);
-    justify-content: space-evenly;
-}
-.navbar-solid::after { //display cinnamon bar
-    @extend .navbar;
-    content: " ";
-    top: 50px;
-    background-color: $dent-cinnamon;
-    height: 6px;
-    opacity: 1;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .3);
-}
-.navbar-transparent { //toggler
 
-    background-color: rgba(255,255,255,0);
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-    justify-content: center;
-}
 
-.ham-icon-box{
-    margin: 0.5rem 1.5rem 0.5rem auto;
-    @include s-tablet-w {
-        margin: 0rem;
-    }
-    & a {
-        @include flex-djacai(row,center,center,center)
-    }
-}
-#ham-icon {
-    fill: white;
-    height: 35px;
-}
-.hamburger-on { //toggler
-    display: flex;
-    @include s-tablet-w {
-        display: none
-    }
-}
-.hamburger-off { //toggler
-    display: none;
-}
 
-.logo {
-    width: 40px;
-    display: none;
-    flex-direction: row;
-    margin: 0 1rem 0 2rem;
-}
+
+
+
 
 //Section styling
 .margins {

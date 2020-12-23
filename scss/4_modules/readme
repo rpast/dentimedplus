@@ -1,0 +1,21 @@
+4_modules reusable little bits of code. 
+
+- cards
+- bars
+- buttons
+- lists
+- tables
+
+##
+Naming convention - BEM. A module dictates a namespace in which all elements and modifiers reside. This helps to decrease css specificity by avoiding class nesting.
+
+For SCSS syntax use:
+.module {
+    color: red;
+    &--big {
+        font-size: $big;
+    }
+    &__subpart {
+        border: 1px;
+    }
+}

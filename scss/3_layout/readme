@@ -1,0 +1,10 @@
+3_layout folder hold style for major sections of the page.
+
+- header
+- main content and sections within
+- footer
+- sidebar
+- navbar maybe
+
+##
+You want to define utility classes that you will extend later in modules or style something quickly on the page. The naming convention is to put 'l' at the begining.

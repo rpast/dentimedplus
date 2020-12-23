@@ -8,9 +8,7 @@ const desktopW = 1024;
 // Toggle between adding and removing the "responsive" //
 // class to topnav when the user clicks on the icon //
 
-var menu = document.querySelector("#menu-wrapper");
-var nav = document.querySelector("#navbar");
-//var icon = document.querySelector("#menu-icon");
+var menu = document.querySelector("#menu");
 
 var cardWrapper = document.querySelector("#services-card-wrapper")
 
@@ -36,24 +34,20 @@ function switcher(element, state, onState, offState) {
 
 // Activate menu wrapper
 //TODO: refactor with toggle() function
-function toggle(element) {
-    if(element == 'hamburger') {
+function toggle(elem) {
+    if(elem == 'hamburger') {
         //if menu is visible
-        if(menu.classList.contains('wrapper-on')) {
-            menu.classList.remove('wrapper-on');
-            menu.classList.add('wrapper-off');
-            nav.classList.remove('navbar-off');
-            nav.classList.add('navbar-on');
-            //icon.classList.remove('hamburger-off');
-            //icon.classList.add('hamburger-on');
+        if(menu.classList.contains('is-menu')) {
+            menu.classList.remove('is-menu');
+            menu.classList.add('is-off');
+            myNav.classList.remove('is-off');
+            myNav.classList.add('is-nav');
         //if menu is hidden
-        } else if(menu.classList.contains('wrapper-off')) {
-            menu.classList.remove('wrapper-off');
-            menu.classList.add('wrapper-on');
-            nav.classList.remove('navbar-on');
-            nav.classList.add('navbar-off');
-            //icon.classList.remove('hamburger-on');
-            //icon.classList.add('hamburger-off');
+        } else if(menu.classList.contains('is-off')) {
+            menu.classList.remove('is-off');
+            menu.classList.add('is-menu');
+            myNav.classList.remove('is-nav');
+            myNav.classList.add('is-off');
         }
     } else { 
         //Set behavior to close service object
@@ -75,11 +69,11 @@ function toggle(element) {
 
 // Style toggler for navbar //
 //TODO: refactor variables
-var myNav = document.querySelector(".navbar");
-var myLogo = document.querySelector(".logo");
-var myLinks = document.querySelector(".navbar-links")
+var myNav = document.querySelector(".nav");
+var myLogo = document.querySelector(".nav__logo");
+var myLinks = document.querySelector(".nav__links")
 var myCall = document.querySelector(".call-us-nav")
-var myHamburger = document.querySelector("#ham-icon");
+var myHamburger = document.querySelector(".nav__icon__svg");
 
 var clientH = document.documentElement.clientHeight / 15;
 
@@ -88,18 +82,20 @@ window.onscroll = function () {
     var scrolledVal2 = document.documentElement.scrollTop;
 
     if (scrolledVal1 >= clientH || scrolledVal2 >= clientH) {
-        myNav.classList.add("navbar-solid");
-        myNav.classList.remove("navbar-transparent");
-        myLogo.style.display = "flex";
+        myNav.classList.add("is-solid");
+        myNav.classList.remove("is-trans");
+        myLogo.classList.add('is-flex');
+        myLogo.classList.remove('is-off');
         myCall.style.visibility = "visible";
-        this.myLinks.style.color = "rgb(0,0,0)";
+        myLinks.style.color = "rgb(0,0,0)";
         myHamburger.style.fill = "rgba(0,0,0,1)";
     } else {
-        myNav.classList.add("navbar-transparent");
-        myNav.classList.remove("navbar-solid");
-        myLogo.style.display = "none";
+        myNav.classList.add("is-trans");
+        myNav.classList.remove("is-solid");
+        myLogo.classList.remove('is-flex');
+        myLogo.classList.add('is-off');
         myCall.style.visibility = "hidden";
-        this.myLinks.style.color = "rgb(255,255,255)"
+        myLinks.style.color = "rgb(255,255,255)"
         myHamburger.style.fill = "rgba(255,255,255,1)";
     }
 };

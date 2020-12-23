@@ -1,3 +1,22 @@
-@import "./normalize";
-@import "./variables";
+//INDEX file
+
+//UTILS
+@import "./0_utils/01-variables";
+@import "./0_utils/02-functions";
+@import "./0_utils/03-mixins";
+
+//EXTERNAL
+@import "./1_external/11-normalize";
+
+//BASE
+@import "./2_base/21-base";
+
+//LAYOUT
+
+//MODULES
+@import "./4_modules/41-modules";
+
+//STATE
+@import "./5_state/51-state";
+
 @import "./main";

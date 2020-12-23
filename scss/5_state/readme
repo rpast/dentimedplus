@@ -1,0 +1,20 @@
+5_state is for styling that defines the interactivity and current state of the element
+
+classes like:
+- is-on
+- is-hidden
+- is-selected
+- is-blinking
+etc.
+
+SCSS syntax example:
+
+.nav {
+    display: flex;
+    &__item {
+        color: black;
+        $.is-selected {
+            color: red;
+        }
+    }
+}
