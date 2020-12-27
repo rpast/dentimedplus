@@ -35,3 +35,14 @@ $wide-screen: "(min-width: #{$max-breakpoint-fontsize}px)";
 $stopper-width: 15px;
 $stopper-margin: 4px;
 $section-bottom-margin: 4rem;
+
+//NAVBAR VARIABLES
+//Hamburger icon
+$icon-margins: 0.75rem 1.5rem 0.5rem auto;
+$svg-h: 6vh;
+$svg-minh: 35px;
+//Logo 
+$logo-margins: 0 1rem 0 2rem;
+$logo-size: 40px;
+//Phone icon
+$nav-phone-size: 30px;

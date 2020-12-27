@@ -1,12 +1,13 @@
-#menu {
+//MOBILE MENU SPACE
+.menu {
     height: 100vh;
     width: 100vw;
     color: black;
     background-color: rgba(255,255,255,1);
     position: fixed;
     z-index: 3;
-    & .wrapper-menu {
-        //margin-top: 10rem;
+    overscroll-behavior: contain;
+    &__links {
         height: 100vh;
         @include flex-djacai(column, center, center, center);
         & a {
@@ -16,66 +17,123 @@
             margin-bottom: 2em;
         }
     }
-}
-
-//TODO create icon positioning mixin!
-//Style menu icon
-.menu__icon {
-    margin: 1rem 1.5rem 0.5rem auto;
-    
-    svg {
-        fill: black;
-        height: 5vh;
-        min-height: 35px;
+    &__icon {
+        @include icon-margins($icon-margins);
+        svg {
+            @include svg-size($svg-h, $svg-minh);
+            fill: black;
+        }
     }
 }
 
+// NAVIGATION BAR
 .nav {
-    transition: background-color 0.6s ease;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    height: 70px;
-    width: 100vw;
-    
-    &__logo {
-        flex-direction: row;
-        margin: 0 1rem 0 2rem;
+    @extend .l-nav;
+    &__wrap {
+        width: 100%;
+        @include flex-djacai(row, center, center, center);
+    }
+    &__logo, &__logo-white {
+        margin: $logo-margins;
         & img {
-            width: 40px;
+            width: $logo-size;
         }
     }
     &__icon{
-        margin: 1rem 1.5rem 0.5rem auto;
-        
+        @include icon-margins($icon-margins);
         @include s-tablet-w {
-            margin: 0rem;
+            //margin: 0rem;
+            display: none;
         }
         & svg {
+            @include svg-size($svg-h, $svg-minh);
             fill: white;
-            height: 5vh;
-            min-height: 35px;
         }
-    }
-    & a {
-        @include flex-djacai(row,center,center,center)
     }
     &__links {
         display: none;
         margin: 0 2rem 0 3rem;
         @include s-tablet-w {
-            @include flex-djacai(row, space-between, center, center);
-            width: 100vw;
+            display: flex;
             color: rgb(255,255,255);
             & a {
                 color: inherit;
                 transition: box-shadow 0.3s ease;
-                min-width: 80px;
+                min-width: 75px;
                 @include link-decor(uppercase, 0.2rem);
                 padding: 1rem;
             }
             & a:hover {
                 box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+            }
+        }
+    }
+    &__tel {
+        display: none;
+        min-width: 200px;
+        font-size: 20px;
+        @include desktop {
+            @include flex-djacai(row, flex-start, center, center);
+        }
+        &__phone-icon {
+        width: $nav-phone-size;
+        margin: 0 1rem;
+        }
+    }
+}
+
+//HERO SECTION MODULES
+.hero {
+    @extend .l-hero;
+    
+    &-text {
+        @include flex-djacai(column, center, center, center);
+        width: 100%;
+        height: 100%;
+        // @include fixed-margins(hero-s);
+        // @include s-tablet-w {
+        //     @include fixed-margins(hero-m);
+        // }
+        // @include l-tablet-w {
+        //     @include fixed-margins(hero-l);
+        // }
+        // @include tall-smartphone {
+        //     @include fixed-margins(hero-s-tall);
+        // }
+        & h1 {
+            font-size: 3.8rem;
+            @include tall-smartphone {
+                font-size: 4.2rem;
+            }
+            @include s-tablet-w {
+                min-width: 400px;
+                font-size: 4.8rem;
+            }
+            @include l-tablet-w {
+                min-width: 600px;
+                font-size: 5.8rem;
+            }
+            @include desktop {
+                min-width: 700px;
+                font-size: 6.8rem;
+            }
+        }
+        & .slogan {
+            margin: 0 0 2rem 0;
+        }
+        & .call-us {
+            @include flex-djacai(row, none, none, none);
+            min-width: 300px;
+            margin: 5rem 0 0 0;
+            & #phone-hero {
+                fill: white;
+                margin: 0 2rem 2rem 1rem;
+                width: 35%;
+                max-width: 200px;
+            }
+            & .call-us-text {
+                font-size: 1.25em;
+                margin: 0 0 2em 0;
             }
         }
     }

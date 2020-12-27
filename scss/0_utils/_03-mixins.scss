@@ -89,3 +89,13 @@
     text-transform: $case;
     letter-spacing: $spacing;
 }
+
+//NAVBAR
+@mixin icon-margins($values) {
+    margin: $values;
+}
+
+@mixin svg-size($h, $minh) {
+    height: $h;
+    min-height: $minh;
+}

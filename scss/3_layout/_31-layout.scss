@@ -1,0 +1,36 @@
+//NAV 
+.l-nav { 
+    transition: background-color 0.6s ease;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    height: 70px;
+    width: 100vw;
+}
+
+//SECTIONS
+//TODO: refactor!
+.margins {
+    @include fixed-margins(section);
+    @include s-tablet-w {
+        margin: 0rem 2.5em 0em 2.5em;
+    }
+    @media screen and (min-width: $desktop) {
+        margin: 0rem 3.5em 0em 3.5em;
+    }
+}
+
+//HERO LAYOUT
+.l-hero {
+    color: $font-col-light;
+    height: 100vh;
+    background-color: $dent-main-background;
+    background-size: initial;
+    // margin-bottom: $section-bottom-margin;
+    // @include smartphone-h {
+    //     height: 640px;
+    // }
+    // @include tablet-h {
+    //     height: 900px;
+    // }
+}

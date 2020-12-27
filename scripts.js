@@ -8,7 +8,8 @@ const desktopW = 1024;
 // Toggle between adding and removing the "responsive" //
 // class to topnav when the user clicks on the icon //
 
-var menu = document.querySelector("#menu");
+var menu = document.querySelector(".menu");
+var body = document.getElementsByTagName('body')
 
 var cardWrapper = document.querySelector("#services-card-wrapper")
 
@@ -71,8 +72,9 @@ function toggle(elem) {
 //TODO: refactor variables
 var myNav = document.querySelector(".nav");
 var myLogo = document.querySelector(".nav__logo");
+var myLogoW = document.querySelector('.nav__logo-white');
 var myLinks = document.querySelector(".nav__links")
-var myCall = document.querySelector(".call-us-nav")
+var myCall = document.querySelector(".nav__tel")
 var myHamburger = document.querySelector(".nav__icon__svg");
 
 var clientH = document.documentElement.clientHeight / 15;
@@ -86,7 +88,9 @@ window.onscroll = function () {
         myNav.classList.remove("is-trans");
         myLogo.classList.add('is-flex');
         myLogo.classList.remove('is-off');
-        myCall.style.visibility = "visible";
+        myLogoW.classList.add('is-off');
+        myLogoW.classList.remove('is-flex');
+        myCall.classList.remove('is-hidden');
         myLinks.style.color = "rgb(0,0,0)";
         myHamburger.style.fill = "rgba(0,0,0,1)";
     } else {
@@ -94,7 +98,9 @@ window.onscroll = function () {
         myNav.classList.remove("is-solid");
         myLogo.classList.remove('is-flex');
         myLogo.classList.add('is-off');
-        myCall.style.visibility = "hidden";
+        myLogoW.classList.remove('is-off');
+        myLogoW.classList.add('is-flex');
+        myCall.classList.add('is-hidden');
         myLinks.style.color = "rgb(255,255,255)"
         myHamburger.style.fill = "rgba(255,255,255,1)";
     }
