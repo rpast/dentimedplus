@@ -1,5 +1,6 @@
 //MOBILE MENU SPACE
 .menu {
+    @include flex-djacai(column, flex-start, center, center);
     height: 100vh;
     width: 100vw;
     color: black;
@@ -9,6 +10,7 @@
     overscroll-behavior: contain;
     &__links {
         height: 100vh;
+        display: flex; 
         @include flex-djacai(column, center, center, center);
         & a {
             color: black;
@@ -31,6 +33,7 @@
     @extend .l-nav;
     &__wrap {
         width: 100%;
+        display: flex;
         @include flex-djacai(row, center, center, center);
     }
     &__logo, &__logo-white {
@@ -73,6 +76,7 @@
         min-width: 200px;
         font-size: 20px;
         @include desktop {
+            display: flex;
             @include flex-djacai(row, flex-start, center, center);
         }
         &__phone-icon {
@@ -87,6 +91,7 @@
     @extend .l-hero;
     
     &-text {
+        display: flex;
         @include flex-djacai(column, center, center, center);
         width: 100%;
         height: 100%;
@@ -122,6 +127,7 @@
             margin: 0 0 2rem 0;
         }
         & .call-us {
+            display: flex;
             @include flex-djacai(row, none, none, none);
             min-width: 300px;
             margin: 5rem 0 0 0;

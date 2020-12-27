@@ -77,7 +77,7 @@
 }
 
 @mixin flex-djacai($direction, $j-content, $a-content, $a-items) {
-    display: flex;
+    //display: flex;
     flex-direction: $direction;
     justify-content: $j-content;
     align-content: $a-content;

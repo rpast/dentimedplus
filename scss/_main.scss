@@ -3,12 +3,15 @@
     display: none;
 }
 .on-row-start {
+    display: flex;
     @include flex-djacai(row, flex-start, center, center);
 }
 .on-col-center {
+    display: flex;
     @include flex-djacai(column, center, center, center);
 }
 .on-col-start {
+    display: flex;
     @include flex-djacai(column, center, center, flex-start);
 }
 .full-height {
@@ -44,6 +47,7 @@
 
 
 #about-us {
+    display: flex;
     @include flex-djacai(column, center, flex-start, center);
 }
 
@@ -70,6 +74,7 @@
 
 .office-wrapper {
     @include desktop {
+        display: flex;
         @include flex-djacai(row, center, center, center);
         width: 65vw;
         max-width: 3000px; //prevent from being too large on HD screens
@@ -89,6 +94,7 @@
     @include desktop {
         height: 71vh;
         max-height: 700px;
+        display: flex;
         @include flex-djacai(column, center, center, center);   
     }
 }
@@ -100,6 +106,7 @@
         width: 100%;
     }
     .stopper-box {
+        display: flex;
         @include flex-djacai(row, center, center, center);
         @include desktop {
             display: none;
@@ -142,6 +149,7 @@
             margin: 2rem 1rem 2rem 3rem;
         }
         .stopper-box {
+            display: flex;
             @include flex-djacai(row, center, center, center);
             .stop-icon {
                 width: $stopper-width;
@@ -161,6 +169,7 @@
 .myslides, .myslides-team {
     margin-bottom: $section-bottom-margin;
     & .picture-slider {
+        display: flex;
         @include flex-djacai(column, center, center, center);
         width: 100%;
         max-height: 90%;
@@ -189,6 +198,7 @@
         }
     }
     & .gallery-text-box {
+        display: flex;
         @include flex-djacai(column, flex-start, flex-start, flex-start);
         @include s-tablet-w {
             max-width: 70%;
@@ -207,6 +217,7 @@
         }
         & a {
             width: 100%;
+            display: flex;
             @include flex-djacai(column, center, center, center);
         }
     } 
@@ -249,10 +260,12 @@
         margin: 0;
     }
     & .services-wrapper {
+        display: flex;
         @include flex-djacai(row, center, space-between, space-between);
         height: 100%;
         position: relative;
         & .serv-links {
+            display: flex;
             @include flex-djacai(column, center, center, flex-start);
             padding: 3.5rem 0;
             @include desktop {
@@ -296,6 +309,7 @@
             @include desktop {
                 position: unset;
                 height: auto;
+                display: flex;
                 @include flex-djacai(column, flex-start, center, center);
                 width: 100%;
             }
@@ -334,6 +348,7 @@
 
 .prices {
     padding: 4rem 0;
+    display: flex;
     @include flex-djacai(column, center, center, center);
     background-image: url('../static/Hinterrhein.svg');
     //background-repeat: none;
@@ -349,6 +364,7 @@
 }
 .prices-card {
     @extend .myslides-team;
+    display: flex;
     @include flex-djacai(column, center, center, center);
 }
 .prices-table {
@@ -370,6 +386,7 @@
 
 .dentimed-gallery {
     @extend .myslides-team;
+    display: flex;
     @include flex-djacai(column, center, center, center);
     width: 100vw;
     height: 90vh;
@@ -390,6 +407,7 @@
         }
     }
     .slogan {
+        display: flex;
         @include flex-djacai(row, center, center, center);
         color: $font-col-light;
         margin: 2rem 0 0 0;
@@ -422,6 +440,7 @@
     }
     .dentimed-gallery-wrapper {
         @include desktop {
+            display: flex;
             @include flex-djacai(row, center, center, center);
         }
     }
@@ -448,6 +467,7 @@
 }
 
 .contact {
+    display: flex;
     @include flex-djacai(column, center, center, center);
     & .contact-wrapper {
         // @include flex-djacai(column, center, center, center);
@@ -506,6 +526,7 @@ h4 {
         width: auto;
     }
     & .contact-content {
+        display: flex;
         @include flex-djacai(column, center, center, center);
         margin: 1.5rem;
         @include desktop {
@@ -526,12 +547,14 @@ h4 {
     }
 }
 .contact-hours {
+    display: flex;
     @include flex-djacai(column, center, center, center);
     grid-area: hours;
     align-self: stretch;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
 }
 .contact-phone {
+    display: flex;
     @include flex-djacai(column, center, center, center);
     grid-area: phone;
     align-self: stretch;
@@ -548,6 +571,7 @@ h4 {
     }
 }
 .contact-email-text {
+    display: flex;
     @include flex-djacai(column, flex-start, flex-start, flex-start);
 }
 

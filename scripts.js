@@ -9,7 +9,8 @@ const desktopW = 1024;
 // class to topnav when the user clicks on the icon //
 
 var menu = document.querySelector(".menu");
-var body = document.getElementsByTagName('body')
+var body = document.getElementsByTagName('body')[0];
+var html = document.getElementsByTagName('html')[0];
 
 var cardWrapper = document.querySelector("#services-card-wrapper")
 
@@ -38,17 +39,23 @@ function switcher(element, state, onState, offState) {
 function toggle(elem) {
     if(elem == 'hamburger') {
         //if menu is visible
-        if(menu.classList.contains('is-menu')) {
-            menu.classList.remove('is-menu');
+        if(menu.classList.contains('is-flex')) {
+            menu.classList.remove('is-flex');
             menu.classList.add('is-off');
             myNav.classList.remove('is-off');
-            myNav.classList.add('is-nav');
+            myNav.classList.add('is-flex');
+            //Allow scrolling
+            body.classList.remove('is-fixed');
+            html.classList.remove('is-fixed');
         //if menu is hidden
         } else if(menu.classList.contains('is-off')) {
             menu.classList.remove('is-off');
-            menu.classList.add('is-menu');
-            myNav.classList.remove('is-nav');
+            menu.classList.add('is-flex');
+            myNav.classList.remove('is-flex');
             myNav.classList.add('is-off');
+            //Prevent from scrolling
+            body.classList.add('is-fixed');
+            html.classList.add('is-fixed');
         }
     } else { 
         //Set behavior to close service object
@@ -105,6 +112,18 @@ window.onscroll = function () {
         myHamburger.style.fill = "rgba(255,255,255,1)";
     }
 };
+
+//Prevent scrolling while mobile menu element is-on
+// if(menu.classList.contains('is-flex')) {
+//     window.addEventListener("scroll", preventMotion, false);
+//     window.addEventListener("touchmove", preventMotion, false);
+// }
+
+// function preventMotion(event) {
+//     window.scrollTo(0, 0);
+//     event.preventDefault();
+//     event.stopPropagation();
+// }
 
 // Gallery switcher handlers - carousel //
 //TODO: Fix 'clear interval'!

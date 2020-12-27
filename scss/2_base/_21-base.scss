@@ -2,10 +2,17 @@
     box-sizing: inherit;
 }
 
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
 html {
     font-size: 18px;
     box-sizing: content-box;
     font-family: $dent-font-body;
+    //overflow: hidden;
     & h1, h2, h3, h4 {
         font-family: $dent-font-head;
     }

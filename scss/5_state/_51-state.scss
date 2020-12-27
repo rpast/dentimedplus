@@ -1,8 +1,8 @@
 .is-fixed {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
-.is-off { //toggler
+.is-off {
     display: none;
 }
 
@@ -14,18 +14,18 @@
     visibility: hidden;
 }
 
-.is-menu { //toggler
+.is-menu {
     @include flex-djacai(column, flex-start, center, center);
     transition: display 0.6s ease;
 }
 
-// Navbard toggling classes
-.is-trans { //toggler
+// Navbar toggling classes
+.is-trans {
     background-color: rgba(255,255,255,0);
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
-.is-solid { //toggler
+.is-solid {
     background-color: rgba(255,255,255,1);
     //justify-content: center;
     &::after { //display cinnamon bar
