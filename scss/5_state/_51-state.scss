@@ -1,7 +1,9 @@
-.is-fixed {
+//Interaction switchers
+.is-fixed { //hide scrolling
     overflow: hidden;
 }
 
+//Display switchers
 .is-off {
     display: none;
 }
@@ -14,9 +16,28 @@
     visibility: hidden;
 }
 
+//Flexbox orientation switchers
+.is-col-cent {
+    @include flex-djacai(column, center, center, center);
+}
+.is-col-start {
+    @include flex-djacai(column, center, center, flex-start);
+}
+
+//Color switchers
+.is-light {
+    fill: $font-col-light;
+    color: $font-col-light;
+
+}
+
+.is-dark {
+    fill: $font-col-dark;
+    color: $font-col-dark;
+}
+
 .is-menu {
     @include flex-djacai(column, flex-start, center, center);
-    transition: display 0.6s ease;
 }
 
 // Navbar toggling classes
@@ -31,10 +52,10 @@
     &::after { //display cinnamon bar
         @extend .nav;
         content: " ";
-        top: 70px;
+        top: $nav-height;
         background-color: $dent-cinnamon;
-        height: 5px;
+        height: $nav-bbar-height;
         opacity: 1;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .3);
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, .3);
     }
 }

@@ -1,29 +1,56 @@
-// Palete
-$font-col-light: rgb(250, 250, 250);
-$dent-cinnamon: #f18b62;
+// ##### PALETE #####
+$font-col-light: rgb(250, 250, 250); //USED
+$font-col-dark:  rgb(5, 5, 5); //USED
+$dent-cinnamon:  #f08080; //lightcoral //USED
+// $dent-cinnamon: #f18b62;
 $dent-cinnamon-light: rgb(236, 205, 192);
 $dent-cinnamon-trans: #f18b621c;
 $dent-marine-light:  rgba(85, 82, 250, 0.15);
 $dent-aqua: #b4d4db;
-$dent-main-background: #4d447d;
+$lavender-plus: #494274; //USED
 // navbar
 $dent-nav-dark: rgba(179, 89, 54, 0.8);
 $dent-nav-light: rgba(85, 82, 250, 0.26);
 
-// Fonts 
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&family=Open+Sans&display=swap');
-$dent-font-head: 'Abhaya Libre', serif;
-$dent-font-body: 'Open Sans', sans-serif;
 
+// ##### TYPOGRAPHY #####
+//Font face
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&family=Open+Sans&display=swap'); //USED
+$dent-font-head: 'Abhaya Libre', serif; //USED
+$dent-font-body: 'Open Sans', sans-serif; //USED
+
+//Font size
+
+//Major-third for mobiles
+$m-title-fsize: 2.488rem; //39.81px //USED
+$m-header-fsize: 1.44rem; //23.04px //USED
+$m-span-fsize: 1.2rem; //19.20px //USED
+$m-default-fsize: 1rem; //16px //USED
+$m-second-fsize: 0.833rem; //13.33px //USED
+
+//Perfect-fourth for desktop
+$d-title-fsize: 4.209rem; //67.34px //USED
+$d-header-fsize: 1.777rem; //28.43px //USED
+$d-span-fsize: 1.333rem; //21.33px //USED
+$d-default-fsize: 1rem; //16px //USED
+$d-second-fsize: 0.75rem; //12px //USED
+
+//Other
+$line-height: 1.75; //USED
+
+// ##### RESPONSIVENESS ##### 
 //Breakpoints
-$phone: 500px; 
-$phone-height: 639px;
-$s-tablet: 640px;
-$l-tablet: 820px;
-$desktop: 1024px;
-$l-desktop: 1400px;
+//Widths
+$phone: 425px; 
 
-//breakpoints for displaying hero banner on tall phones
+$tablet: 768px;
+$desktop: 1024px; 
+$l-desktop: 1400px; // large desktop screen
+
+//Heights
+$phone-height: 639px;
+
+//Vars for displaying hero banner on tall phones
 $tall-phone-height: 680px;
 $tall-phone-width: 374px;
 
@@ -34,15 +61,26 @@ $wide-screen: "(min-width: #{$max-breakpoint-fontsize}px)";
 //Varia
 $stopper-width: 15px;
 $stopper-margin: 4px;
-$section-bottom-margin: 4rem;
+
 
 //NAVBAR VARIABLES
 //Hamburger icon
-$icon-margins: 0.75rem 1.5rem 0.5rem auto;
-$svg-h: 6vh;
-$svg-minh: 35px;
+$nav-elem-margins: 1rem; //USED
+$svg-h: 4vh; //USED
+$svg-minh: 35px; //USED
 //Logo 
-$logo-margins: 0 1rem 0 2rem;
-$logo-size: 40px;
+$logo-size: 35px; //USED
 //Phone icon
-$nav-phone-size: 30px;
+$nav-phone-size: 30px; //USED
+//NAV height
+$nav-height: 63px; //USED
+$nav-bbar-height: 3px; //USED
+
+//SECTIONS
+$section-bottom-margin: 2rem; //USED
+$d-section-width: 65vw; //section width for small pcs USED
+$ld-section-width: 60vw; //section width for large pcs USED
+
+$office-card-max-w: 480px;
+$office-card-text-w: 420px;
+$card-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);

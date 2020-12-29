@@ -6,27 +6,62 @@ body
 {
     margin: 0;
     padding: 0;
+    overflow-x: hidden; //get rid of h scrollbar 100vh/vw issue
 }
 
 html {
-    font-size: 18px;
     box-sizing: content-box;
     font-family: $dent-font-body;
-    //overflow: hidden;
-    & h1, h2, h3, h4 {
+    font-style: normal;
+    line-height: $line-height;
+    font-size: $m-default-fsize; //16px default
+    & h1 {
         font-family: $dent-font-head;
+        //Define responsive font sizes for Header
+        font-size: $m-title-fsize;
+        // @include tall-smartphone {
+        //     font-size: 3.2rem;
+        // }
+        // @include s-tablet-w {
+        //     min-width: 400px;
+        //     font-size: 3.8rem;
+        // }
+        // @include l-tablet-w {
+        //     min-width: 600px;
+        //     font-size: 4.8rem; //76px
+        // }
+        @include desktop {
+            font-size: $d-title-fsize;
+        }
     }
-    @include smartphone-w {
-        font-size: 16px;
+    & h2, h3, h4 {
+        font-size: $m-header-fsize;
+        font-family: $dent-font-head;
+        @include desktop {
+            font-size: $d-header-fsize;
+        }
     }
-    @include l-tablet-w {
-        font-size: 16px;
-    }
-    @include desktop {
-        font-size: 18px;
+    // @include smartphone-w {
+    //     font-size: 14px;
+    // }
+    // @include l-tablet-w {
+    //     font-size: 16px;
+    // }
+    // @include desktop {
+    //     font-size: 18px;
+    // }
+
+    & span { //
+        color: $dent-cinnamon;
+        font-size: $m-span-fsize;
+        @include desktop {
+            font-size: $d-span-fsize;
+        }
     }
 }
 
+//Default links
 a, a:hover, a:visited, a:link, a:active {
     text-decoration: none;
+    color: $font-col-dark;
 }

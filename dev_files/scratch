@@ -1,23 +1,160 @@
-var myNav = document.querySelector(".navbar");
-var myLogo = document.querySelector(".logo");
-var myLinks = document.querySelector(".navbar-links")
-var myCall = document.querySelector(".call-us-nav")
-var myHamburger = document.querySelector("#menu-icon");
+//MOBILE MENU SPACE
+.menu {
+    @include flex-djacai(column, flex-start, center, center);
+    height: 100%;
+    width: 100%;
+    color: $font-col-dark;
+    background-color: rgba(255,255,255,1);
+    position: fixed;
+    z-index: 3;
+    overscroll-behavior: contain;
+    &__links {
+        height: 100vh;
+        display: flex; 
+        @include flex-djacai(column, center, center, center);
+        & a {
+            font-size: 1.5em;
+            @include link-decor(uppercase, 0.2rem);
+            margin-bottom: 2em;
+        }
+    }
+    &__icon {
+        @include icon-margins($icon-margins);
+        svg {
+            @include svg-size($svg-h, $svg-minh);
+            fill: black;
+        }
+    }
+}
 
-	if (scrolledVal1 >= clientH || scrolledVal2 >= clientH) {
-		myNav.style.backgroundColor = "rgba(255,255,255,1)";
-		myNav.style.boxShadow = "0px 3px 10px 0px rgba(0, 0, 0, .5)";
-		myNav.style.justifyContent = "space-evenly";
-		myLogo.style.display = "flex";
-		myCall.style.visibility = "visible";
-		this.myLinks.style.color = "rgb(0,0,0)";
-		myHamburger.style.fill = "rgba(0,0,0,1)";
-	} else {
-		myNav.style.backgroundColor = "rgba(255,255,255,0)";
-		myNav.style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0)";
-		myNav.style.justifyContent = "center";
-		myLogo.style.display = "none";
-		myCall.style.visibility = "hidden";
-		this.myLinks.style.color = "rgb(255,255,255)"
-		myHamburger.style.fill = "rgba(255,255,255,1)";
-	}
+// NAVIGATION BAR
+.nav {
+    @extend .l-nav;
+    &__wrap {
+        width: 100%;
+        display: flex;
+        @include flex-djacai(row, center, center, center);
+    }
+    &__logo, &__logo-white {
+        margin: $logo-margins;
+        & img {
+            width: $logo-size;
+        }
+    }
+    &__icon{
+        @include icon-margins($icon-margins);
+        @include s-tablet-w {
+            //margin: 0rem;
+            display: none;
+        }
+        & svg {
+            @include svg-size($svg-h, $svg-minh);
+            fill: white;
+        }
+    }
+    &__links {
+        display: none;
+        margin: 0 2rem 0 3rem;
+        @include s-tablet-w {
+            display: flex;
+            & a {
+                color: inherit;
+                transition: box-shadow 0.3s ease;
+                min-width: 75px;
+                @include link-decor(uppercase, 0.2rem);
+                padding: 1rem;
+            }
+            & a:hover {
+                box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+            }
+        }
+    }
+    &__tel {
+        display: none;    
+        @include desktop {
+            display: flex;
+        }
+        &__wrap {
+            min-width: 200px;
+            font-size: 20px;
+            @include flex-djacai(row, flex-start, center, center);
+            & p {
+                color: $font-col-dark;
+            }
+            &__phone-icon {
+            width: $nav-phone-size;
+            margin: 0 1rem;
+            }
+        }
+    }
+}
+
+//HERO SECTION MODULES
+.hero {
+    @extend .l-hero;
+    &__img { //Floating image in the background
+        @include desktop {
+            width: 400px;
+            height: 100%;
+            background-image: url('../static/hero-girl.png');
+            opacity: 0.15;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position-y: bottom;
+            z-index: 0;
+            position: absolute; 
+            bottom: 0; 
+            right: 12%; 
+        }
+    }
+    &__text {
+        display: flex;
+        z-index: 1;
+        position: relative;
+        @include flex-djacai(column, center, center, center);
+        // width: 100%;
+        height: 100%;
+        margin: 0 2em;
+        @include desktop{
+            margin: 0;
+        }
+        & span {
+            color: $dent-cinnamon;
+        }
+        // @include fixed-margins(hero-s);
+        // @include s-tablet-w {
+        //     @include fixed-margins(hero-m);
+        // }
+        // @include l-tablet-w {
+        //     @include fixed-margins(hero-l);
+        // }
+        // @include tall-smartphone {
+        //     @include fixed-margins(hero-s-tall);
+        // }
+    }
+    &__call-wr { //Wrapper for call-us shout out
+        @include flex-djacai(row, center, none, none);
+        &__box {
+            display: flex;
+            width: 100%;
+            @include flex-djacai(row, flex-start, center, center);
+            min-width: 250px;
+            margin: 5rem 0 0 0;
+            & #phone-hero {
+                fill: white;
+                margin: 0 2rem 2rem 1rem;
+                width: 35%;
+                max-width: 100px;
+            }
+            &__text {
+                margin: 0 0 2rem 0rem;
+                font-size: $m-span-fsize;
+                font-weight: 500;
+                @include desktop {
+                    font-size: $d-span-fsize;
+                    margin: 0 0 2rem 1rem;
+                }
+            }
+        }
+    }
+}

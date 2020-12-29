@@ -1,36 +1,40 @@
 //NAV 
-.l-nav { 
+.l-nav {
+    @include flex-djacai(row, space-around, center, center);
+    display: flex;
+    color: $font-col-light;
     transition: background-color 0.6s ease;
     position: fixed;
     z-index: 999;
     top: 0;
-    height: 70px;
-    width: 100vw;
-}
-
-//SECTIONS
-//TODO: refactor!
-.margins {
-    @include fixed-margins(section);
-    @include s-tablet-w {
-        margin: 0rem 2.5em 0em 2.5em;
-    }
-    @media screen and (min-width: $desktop) {
-        margin: 0rem 3.5em 0em 3.5em;
-    }
+    height: $nav-height;
+    width: 100%;
 }
 
 //HERO LAYOUT
 .l-hero {
+    display: flex;
+    @include flex-djacai(column, center, center, center);
     color: $font-col-light;
+    background-color: $lavender-plus;
     height: 100vh;
-    background-color: $dent-main-background;
-    background-size: initial;
-    // margin-bottom: $section-bottom-margin;
-    // @include smartphone-h {
-    //     height: 640px;
+    margin-bottom: $section-bottom-margin;
+
+    //Resize when in mobile horizontal position
+    @include smartphone-h {
+        height: 540px;
+    }
+}
+
+//SECTIONS
+.l-about {
+    display: flex;
+    @include flex-djacai(column, center, flex-start, center);
+    // @include fixed-margins(section);
+    // @include s-tablet-w {
+    //     margin: 0rem 2.5em 0em 2.5em;
     // }
-    // @include tablet-h {
-    //     height: 900px;
+    // @media screen and (min-width: $desktop) {
+    //     margin: 0rem 3.5em 0em 3.5em;
     // }
 }

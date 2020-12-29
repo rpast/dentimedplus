@@ -6,13 +6,8 @@
         @content;
     }
 }
-@mixin s-tablet-w {
-    @media screen and (min-width: $s-tablet) {
-        @content;
-    }
-}
-@mixin l-tablet-w {
-    @media screen and (min-width: $l-tablet) {
+@mixin tablet-w {
+    @media screen and (min-width: $tablet) {
         @content;
     }
 }
@@ -21,7 +16,6 @@
         @content;
     }
 }
-
 @mixin l-desktop {
     @media screen and (min-width: $l-desktop) {
         @content
@@ -91,10 +85,6 @@
 }
 
 //NAVBAR
-@mixin icon-margins($values) {
-    margin: $values;
-}
-
 @mixin svg-size($h, $minh) {
     height: $h;
     min-height: $minh;

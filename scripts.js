@@ -57,7 +57,7 @@ function toggle(elem) {
             body.classList.add('is-fixed');
             html.classList.add('is-fixed');
         }
-    } else { 
+    } else { //Used for services!
         //Set behavior to close service object
         if(element.classList.contains('on-row-start')) {
             switcher(cardWrapper, 0, 'on-row-start', 'off');
@@ -78,11 +78,11 @@ function toggle(elem) {
 // Style toggler for navbar //
 //TODO: refactor variables
 var myNav = document.querySelector(".nav");
-var myLogo = document.querySelector(".nav__logo");
-var myLogoW = document.querySelector('.nav__logo-white');
-var myLinks = document.querySelector(".nav__links")
-var myCall = document.querySelector(".nav__tel")
-var myHamburger = document.querySelector(".nav__icon__svg");
+var myLogo = document.querySelector(".nav__wr__logo");
+var myLogoW = document.querySelector('.nav__wr__logo-white');
+var myLinks = document.querySelector(".nav__wr__links")
+var myCall = document.querySelector(".nav__wr__tel__wr")
+var myHamburger = document.querySelector(".nav__wr__icon__svg");
 
 var clientH = document.documentElement.clientHeight / 15;
 
@@ -97,9 +97,12 @@ window.onscroll = function () {
         myLogo.classList.remove('is-off');
         myLogoW.classList.add('is-off');
         myLogoW.classList.remove('is-flex');
-        myCall.classList.remove('is-hidden');
-        myLinks.style.color = "rgb(0,0,0)";
-        myHamburger.style.fill = "rgba(0,0,0,1)";
+        myLinks.classList.add("is-dark");
+        myLinks.classList.remove("is-light");
+        myCall.classList.remove('is-off');
+        myCall.classList.add('is-flex')
+        myHamburger.classList.add('is-dark');
+        myHamburger.classList.remove('is-light');
     } else {
         myNav.classList.add("is-trans");
         myNav.classList.remove("is-solid");
@@ -107,9 +110,12 @@ window.onscroll = function () {
         myLogo.classList.add('is-off');
         myLogoW.classList.remove('is-off');
         myLogoW.classList.add('is-flex');
-        myCall.classList.add('is-hidden');
-        myLinks.style.color = "rgb(255,255,255)"
-        myHamburger.style.fill = "rgba(255,255,255,1)";
+        myLinks.classList.add("is-light");
+        myLinks.classList.remove("is-dark");
+        myCall.classList.add('is-off');
+        myCall.classList.remove('is-flex');
+        myHamburger.classList.add('is-light');
+        myHamburger.classList.remove('is-dark');
     }
 };
 
@@ -127,6 +133,7 @@ window.onscroll = function () {
 
 // Gallery switcher handlers - carousel //
 //TODO: Fix 'clear interval'!
+
 //floor counter values
 var slideIndex = 1; 
 var slideIndexTeam = 1;
@@ -134,7 +141,7 @@ var slideIndexOffice = 1;
 
 //interval functions -> used to instantiate timer 
 function plusDivsInterval() {
-    showDivs((slideIndex += 1), "myslides", 1, desktopW);
+    showDivs((slideIndex += 1), "about__office__slides", 1, desktopW);
 }
 function plusDivsIntervalTeam() {
     showDivs((slideIndexTeam += 1), "myslides-team", 2, false);
@@ -145,7 +152,7 @@ function plusDivsIntervalOffice() {
 
 //onclick functions
 function plusDivs(n) {
-    showDivs((slideIndex += n), "myslides", 1, desktopW);
+    showDivs((slideIndex += n), "about__office__slides", 1, desktopW);
     clearInterval(carouselTimer); //stop timer
 }
 function plusDivsTeam(n) {
@@ -183,29 +190,32 @@ function showDivs(counter, className, counterFlag, maxVw) {
 
         //Toggle classes on list elements
         for (i = 0; i < elemList.length; i++) {
-            elemList[i].classList.add('off');
-            elemList[i].classList.remove('on-col-center')
+            elemList[i].classList.add('is-off');
+            elemList[i].classList.remove('is-flex', 'is-col-cent')
         }
         //always keep counter-1 element switched on
         if (counterFlag == 1) { 
-            elemList[slideIndex - 1].classList.add('on-col-center');
+            elemList[slideIndex - 1].classList.add('is-flex', 'is-col-cent');
+            elemList[slideIndex - 1].classList.remove('is-off');
         } else if (counterFlag == 2) {
-            elemList[slideIndexTeam - 1].classList.add('on-col-center');
+            elemList[slideIndexTeam - 1].classList.add('is-flex', 'is-col-cent');
+            elemList[slideIndex - 1].classList.remove('is-off');
         } else {
-            elemList[slideIndexOffice - 1].classList.add('on-col-center');
+            elemList[slideIndexOffice - 1].classList.add('is-flex', 'is-col-cent');
+            elemList[slideIndex - 1].classList.remove('is-off');
         }
     } else { //in case vw > threshold switch on all elements from the office gallery (design specific)
         if(counterFlag == 1 || counterFlag == 3) {
             for (i = 0; i < elemList.length; i++) {
-                elemList[i].classList.add('on-col-center');
-                elemList[i].classList.remove('off')
+                elemList[i].classList.add('is-flex', 'is-col-cent');
+                elemList[i].classList.remove('is-off')
             }
         }
     }
 };
 
 //instantiate the galleries and timers
-showDivs(slideIndex, "myslides", 1, desktopW);
+showDivs(slideIndex, "about__office__slides", 1, desktopW);
 showDivs(slideIndexTeam, "myslides-team", 2, false);
 showDivs(slideIndexOffice, "myslides-office", 3, desktopW);
 
@@ -217,7 +227,7 @@ carouselTimerOffice = setInterval(plusDivsIntervalOffice, 6000);
 window.onresize = function(){ 
     location.reload(); 
     //if vw < maxVw display all office gallery elements
-    showDivs(slideIndex, "myslides", 1, desktopW);
+    showDivs(slideIndex, "about__office__slides", 1, desktopW);
     showDivs(slideIndexOffice, "myslides-office", 3, desktopW);
 }
 
@@ -247,3 +257,16 @@ const io = new IntersectionObserver(function(entries, io) {
 }, options);
 
 io.observe(servicesSection);
+
+//find overflows
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+    document.querySelectorAll('*'),
+    function(el) {
+        if (el.offsetWidth > docWidth) {
+            console.log(el);
+            console.log('overflow!')
+        }
+    }
+);

@@ -1,88 +1,12 @@
-// Set up the mobile menu navigation
-.off {
-    display: none;
-}
-.on-row-start {
-    display: flex;
-    @include flex-djacai(row, flex-start, center, center);
-}
-.on-col-center {
-    display: flex;
-    @include flex-djacai(column, center, center, center);
-}
-.on-col-start {
-    display: flex;
-    @include flex-djacai(column, center, center, flex-start);
-}
-.full-height {
-    height: 100vh;
-}
-
-// .menu__icon, .icon-serv-flexbox {
-//     & #close-icon, #close-serv-icon {
-//         fill: black;
-//         height: 3vh;
-//         min-height: 35px;
-//     }
-//     & #close-serv-icon { //Specific margin for services description
-//         margin-top: 1rem;
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#about-us {
-    display: flex;
-    @include flex-djacai(column, center, flex-start, center);
-}
-
-.about-header {
-    @media screen and (min-width: $desktop) {
-        display: none;
-    }
-    & h2 {
-        font-size: 2.3rem;
-        letter-spacing: 0.04rem;
-        margin: 0 0 1.5rem 0;
-        @include s-tablet-w {
-            margin: 0.25rem 0 1.5rem 0;
-        }
-    }
-}
 .about-header-contact {
-    @extend .about-header;
+    @extend .about__office__header;
     display: none;
     @include desktop {
         display: flex;
     }
 }
 
-.office-wrapper {
-    @include desktop {
-        display: flex;
-        @include flex-djacai(row, center, center, center);
-        width: 65vw;
-        max-width: 3000px; //prevent from being too large on HD screens
-    }
-    @include l-desktop {
-        width: 60vw;
-    }
-}
+
 
 .team-wrapper {
     margin: 0;
@@ -96,39 +20,6 @@
         max-height: 700px;
         display: flex;
         @include flex-djacai(column, center, center, center);   
-    }
-}
-
-.myslides {
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
-    width: 85vw;
-    @include desktop {
-        width: 100%;
-    }
-    .stopper-box {
-        display: flex;
-        @include flex-djacai(row, center, center, center);
-        @include desktop {
-            display: none;
-        }
-        & .stop-icon {
-            width: $stopper-width;
-            margin: $stopper-margin;
-        } 
-    }
-}
-
-
-.gallery-text-box {
-    margin: 3rem 1.8rem 3rem 1.8rem;
-    @include desktop {
-        margin: 3rem 0.5rem 3rem 0.5rem;
-    }
-}
-
-.first-office {
-    @include desktop {
-        margin-right: 2rem;
     }
 }
 
@@ -166,62 +57,7 @@
     }
 }
 
-.myslides, .myslides-team {
-    margin-bottom: $section-bottom-margin;
-    & .picture-slider {
-        display: flex;
-        @include flex-djacai(column, center, center, center);
-        width: 100%;
-        max-height: 90%;
-        & img.picture-team {
-            width: 100%;
-            height: auto;
-            min-width: 250px;
-            max-width: 380px;
-            margin-bottom: 1em;
-            transform: scale(.96);
-            transition: transform 300ms;
-        }
-        & img.picture-office {
-            @extend .picture-team;
-            min-width: 200px;
-        }
-        & img.picture { 
-            width: 100%;
-            height: auto;
-            max-width: 450px;
-            margin: 1rem 0;
-            transform: scale(.96);
-        }
-        & img.picture-team:hover {
-            transform: scale(.92);
-        }
-    }
-    & .gallery-text-box {
-        display: flex;
-        @include flex-djacai(column, flex-start, flex-start, flex-start);
-        @include s-tablet-w {
-            max-width: 70%;
-        }
-        @include desktop {
-            font-size: 0.9rem;
-        }
-        @include l-desktop {
-            font-size: 1rem;
-        }
-        & p {
-            margin: 0 0 1.5rem 0;
-        }
-        & h2 {
-            margin: 0 0 1rem 0;
-        }
-        & a {
-            width: 100%;
-            display: flex;
-            @include flex-djacai(column, center, center, center);
-        }
-    } 
-}
+
 .employee-hours {
     font-size: 0.8rem;
     text-align: left;
@@ -254,12 +90,12 @@
         height: auto;
     }
     & .serv-bar {
-        width: 100vw;
+        width: 100%;
         height: 6px;
-        background-color: $dent-cinnamon;
         margin: 0;
     }
     & .services-wrapper {
+        
         display: flex;
         @include flex-djacai(row, center, space-between, space-between);
         height: 100%;
@@ -289,7 +125,7 @@
             & a {
                 @include link-decor(none, 0.1rem);
                 color: black;
-                font-family: $dent-font-head;
+                //font-family: $dent-font-head;
                 font-weight: 1000;
                 font-size: 1.2rem;
 
@@ -314,7 +150,7 @@
                 width: 100%;
             }
             & .service-card {
-                @extend .myslides;
+                @extend .about__office__slides;
                 position: relative;
                 flex-direction: column;
                 height: 90%;
@@ -355,7 +191,7 @@
     background-size: cover;
     //margin-bottom: $section-bottom-margin;
     & .about-header-prices {
-        @extend .about-header;
+        @extend .about__office__header;
         margin: 0;
         @include desktop {
             display: flex;
@@ -388,10 +224,10 @@
     @extend .myslides-team;
     display: flex;
     @include flex-djacai(column, center, center, center);
-    width: 100vw;
+    width: 100%;
     height: 90vh;
     max-height: 800px;
-    background-color: $dent-main-background;
+    background-color: $lavender-plus;
     box-shadow: none;
     .slogan::before {
         position: relative;
@@ -413,12 +249,12 @@
         margin: 2rem 0 0 0;
         max-width: 800px;
         text-align: center;
-        @include s-tablet-w {
+        @include tablet-w {
             margin: 3rem 0 0 0;
         }
         & h3 {
             z-index: 2;
-            min-width: 300px;
+            //min-width: 300px;
             max-width: 400px;
             letter-spacing: 0.1rem;
             font-size: 1.3rem;
@@ -484,21 +320,6 @@
             margin: 2rem 0 0 0;
         }
     }
-}
-
-.top-margin {
-    margin-top: 4rem;
-    @include l-tablet-w {
-        margin-top: 5rem;
-    }
-}
-
-h3 {
-    font-size: 1.5em;
-}
-
-h4 {
-    font-size: 1.3em;
 }
 
 .map {
@@ -575,19 +396,4 @@ h4 {
     @include flex-djacai(column, flex-start, flex-start, flex-start);
 }
 
-.button {
-    @include link-decor(uppercase, 0.2rem);
-    //min-width: 100px;
-    font-size: 16px;
-    margin: 3rem 0rem 1rem 0rem;
-    padding: 1rem 1rem;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
-    border: 1px solid black;
-    border-radius: 3px;
-    color: black;
-}
-.button:hover {
-    transform: scale(.95);
-    transition: transform 300ms, box-shadow 300ms;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
-}
+
