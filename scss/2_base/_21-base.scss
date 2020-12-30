@@ -7,6 +7,7 @@ body
     margin: 0;
     padding: 0;
     overflow-x: hidden; //get rid of h scrollbar 100vh/vw issue
+    width: 100%;
 }
 
 html {
@@ -34,24 +35,22 @@ html {
             font-size: $d-title-fsize;
         }
     }
-    & h2, h3, h4 {
-        font-size: $m-header-fsize;
+    & h2, h3 {
+        font-size: $m-sheader-fsize;
         font-family: $dent-font-head;
         @include desktop {
-            font-size: $d-header-fsize;
+            font-size: $d-sheader-fsize;
         }
     }
-    // @include smartphone-w {
-    //     font-size: 14px;
-    // }
-    // @include l-tablet-w {
-    //     font-size: 16px;
-    // }
-    // @include desktop {
-    //     font-size: 18px;
-    // }
+    & h4 {
+        font-size: $m-span-fsize;
+        font-family: $dent-font-head;
+        @include desktop {
+            font-size: $d-span-fsize;
+        }
+    }   
 
-    & span { //
+    & span {
         color: $dent-cinnamon;
         font-size: $m-span-fsize;
         @include desktop {

@@ -143,8 +143,8 @@
         @include desktop {
             width: 400px;
             height: 100%;
-            background-image: url('../static/hero-girl.png');
-            opacity: 0.15;
+            // background-image: url(../static/hero-girl.png);
+            // opacity: 0.5;
             background-size: contain;
             background-repeat: no-repeat;
             background-position-y: bottom;
@@ -157,17 +157,17 @@
 
 }
 
-//ABOUT US SECTION MODULES
+//ABOUT US SECTION 
+//OFFICES
 .about__office {
-    //margin-bottom: $section-bottom-margin;
-    @include desktop {
+    @include tablet-w{
         display: flex;
         @include flex-djacai(row, center, center, center);
-        width: $d-section-width;
-        max-width: 3000px; //prevent from being too large on HD screens
+        //width: $d-section-width;
+        //max-width: 3000px; //prevent from being too large on HD screens
     }
     @include l-desktop {
-        width: $ld-section-width;
+        //width: $ld-section-width;
     }
 
     &__header {
@@ -183,9 +183,8 @@
     &__slides {
         box-shadow: $card-shadow;
         width: 85vw;
-        max-width: $office-card-max-w;
-        @include desktop {
-            width: 100%;
+        @include tablet-w{
+            width: 40vw;
         }
         @include l-desktop {
             height: 900px;
@@ -195,12 +194,13 @@
             display: flex;
             @include flex-djacai(column, center, center, center);
             width: 100%;
-            & img { 
-                width: 100%;
-                height: auto;
-                max-width: 450px;
-                margin: 1rem 0;
-                transform: scale(.96);
+            &__pic { 
+                // width: 100%;
+                // height: auto;
+                // max-width: 400px;
+                // margin: 1rem 0;
+                // transform: scale(.96);
+                @include pic-behavior();
             }
             &__stops {
                 display: flex;
@@ -221,7 +221,7 @@
             margin: 1rem;
             @include desktop {
                 width: $office-card-text-w;
-                margin: 3rem;
+                margin: 1rem 2rem 2rem 2rem;
             }
                 & a {
                 width: 100%;
@@ -246,94 +246,265 @@
     box-shadow: 0 0px 0px rgba(0,0,0,0.25);
 }
 
-//FLAG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//TEAM
 .about__team {
+    @include flex-djacai(column, center, center, center);
+    display: flex;
     margin: 0;
-    padding: 4rem 0 2rem 0;
-    background-image: url('../static/Hinterrhein.svg');
-    //background-repeat: none;
+    padding: 2rem 0 2rem 0;
+    background-image: url('../static/background-color.svg');
+    background-repeat: none;
     background-size: cover;
-    width: 100vw;
-    @include desktop {
-        height: 71vh;
-        max-height: 700px;
+    width: 100%;
+    & h2 {
+        @include tablet-w {
+            display: none;
+        }
+    }
+    &__wr {
+        @include flex-djacai(column, center, center, center);
         display: flex;
-        @include flex-djacai(column, center, center, center);   
+        &__slides {
+            @include flex-djacai(column, flex-start, center, center);
+            background-color: white;
+            box-shadow: $card-shadow;
+            height: 900px;
+            width: 100%;
+            @include tablet-w {
+                margin: 1rem;
+                padding: 0 0 2rem 0;
+                flex-direction: row;
+                height: auto;
+            }
+            &__slider {
+                
+                &__pic {
+                    @include pic-behavior();
+                }
+                &__stop {
+                    display: flex;
+                    @include flex-djacai(row, center, center, center);
+                    & img {
+                        width: $stopper-width;
+                        margin: $stopper-margin;
+                    }
+                }
+            }
+            &__text {  
+                width: 100%;              
+                &__wr {
+                    width: 100%;
+                    margin: 0 1rem;
+                    & h3 {
+                        margin: 2rem 0 1rem 0;
+                    }
+                    @include desktop {
+                        margin: 3rem;
+                    }
+                    &__hours {
+                        @include table();
+                    }
+                }
+            }
+        }
     }
 }
 
-.team-wrapper {
-    
+//SERVICES
+.services {
+    @extend .l-about;
+    &__bar {
+        background-color: $lavender-plus;
+        width: 100vw;
+        height: 3px;
+    }
+    &__wr {
+
+        @include flex-djacai(column, flex-start, center, center);
+        display: flex;
+        position: relative;
+        height: 100%;
+        @include desktop {
+            height: 600px;
+        }
+        &__links {
+            display: flex;
+            @include flex-djacai(column, center, center, center);
+            padding: 3rem 0 3rem 0;
+
+            & ul li {
+                list-style-type: none; 
+            }
+            & ul li:before { 
+                font-family: 'FontAwesome';
+                content: "\f058";
+                color: $lavender-plus;
+                margin-right: 0.5rem;
+                font-size: $m-span-fsize;
+                @include desktop {
+                    font-size: $d-span-fsize;
+                }
+            }
+            & a {
+                @include link-decor(none, 0.1rem);
+                font-family: $dent-font-head;
+                font-size: $m-span-fsize;
+                line-height: 2.5;
+                @include desktop {
+                    font-size: $d-span-fsize;
+                }
+            }
+            & a:hover {
+                color: $dent-cinnamon;
+            }
+        }
+
+        &__card {
+            //@include flex-djacai(column, center, center, center);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 4;
+            background-color: white;
+            &__serv {
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                flex-direction: column;
+                @extend .l-standard-w;
+                position: relative;
+                box-shadow: $card-shadow;
+                //Make fixed element scrollable
+                overflow-y: scroll;
+                max-height: 100%;
+                &__icon {
+                    height: $nav-height;
+                    display: flex;
+                    @include flex-djacai(row, flex-end, center, center);
+                    & a {
+                        & svg {
+                            color: $font-col-dark;
+                            @include svg-size($svg-h,$svg-minh);
+                            margin: $nav-elem-margins;
+                        }
+                    }
+                }
+                /// FLAG!!!!!!!!!!!!!
+                /// TODO: Make overflow hidden on background element
+                /// when fixed element is on
+                /// fix personel card texts on mobile
+                /// fix basic width of elements on resizing!
+                &__text {
+                    
+                    & p {
+                        margin: 0 1.5rem 1rem 1.5rem;
+                    }
+                    & h4 {
+                        margin: 0 auto 0.5rem 1.5rem;
+                        @include l-desktop {
+                            margin: 2rem auto 0.5rem 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.services-margin {
+    margin: 6rem 0 0 2rem;
 }
 
-
-.stopper-box {
+//DENTIMED GALLERY
+.gallery {
+    //@extend .about__team__wr__slides;
+    display: flex;
+    @include flex-djacai(column, center, center, center);
+    width: 100%;
+    height: 60vh;
+    //max-height: 600px;
+    background-color: $lavender-plus;
+    box-shadow: none;
+    &__wr {
+        @include desktop {
             display: flex;
             @include flex-djacai(row, center, center, center);
+        }
+        // &__slides {
+        //     display: none;
+        // }
+    }
+    .slogan::before {
+        position: relative;
+        left: 50px;
+        top: 60px;
+        font-family: 'FontAwesome';
+        content: "\f10d";
+        color: $font-col-light;
+        font-size: 3rem;
+        z-index: 0;
+        opacity: 0.2;
+        @include desktop {
+            font-size: 5rem;
+        }
+    }
+    .slogan {
+        display: flex;
+        @include flex-djacai(row, center, center, center);
+        margin: 2rem 0 0 0;
+        max-width: 800px;
+        text-align: center;
+        @include tablet-w {
+            margin: 3rem 0 0 0;
+        }
+        & h3 {
+            z-index: 2;
+            //min-width: 300px;
+            max-width: 400px;
+            letter-spacing: 0.1rem;
+            font-size: 1.3rem;
+            font-weight: 100;
+        }
+    }
+    .slogan::after { 
+        position: relative;
+        left: -50px;
+        top: -60px;
+        font-family: 'FontAwesome';
+        content: "\f10e";
+        color: $font-col-light;
+        font-size: 3rem;
+        z-index: 0;
+        opacity: 0.2;
+        @include desktop {
+            font-size: 5rem;
+        }
+    }
+}
+.picture-office {
+    width: 300px;
+    margin: 0 0 2rem 0;
+}
+.stopper-box {
+    @include desktop {
+        display: none;
+    }
+}
+.gallery__wr__slides {
+    margin: 0 1rem 0 1rem;
+    @include desktop {
+        margin: 0 2rem 0 0;
+    }
+    .picture-slider {
+        margin: 0;
+        .stopper-box {
             @include desktop {
                 display: none;
             }
-            & .stop-icon {
-                width: $stopper-width;
-                margin: $stopper-margin;
-            } 
         }
-.first-office {
-    @include desktop {
-        margin-right: 2rem;
     }
 }
-.picture-team {
-    width: 100%;
-    height: auto;
-    min-width: 250px;
-    max-width: 380px;
-    margin-bottom: 1em;
-    transform: scale(.96);
-    transition: transform 300ms;
-}
-.picture-team:hover {
-    transform: scale(.92);
-}
-.picture-office {
-    @extend .picture-team;
-    min-width: 200px;
-}
-
-.gallery-text-box {
-    margin: 3rem 1.8rem 3rem 1.8rem;
+.myslides-office:last-child {
     @include desktop {
-        margin: 3rem 0.5rem 3rem 0.5rem;
+        margin: 0;
     }
 }
-
-.about__office__slides, .myslides-team {
-    
-    &__text, & .gallery-text-box {
-        // 
-        
-        // @include tablet-w {
-        //     max-width: 70%;
-        // }
-        // @include desktop {
-        //     font-size: 0.9rem;
-        // }
-        // @include l-desktop {
-        //     font-size: 1rem;
-        // }
-        // & p {
-        //     margin: 0 0 1.5rem 0;
-        // }
-        // & h2 {
-        //     margin: 0 0 1rem 0;
-        // }
-        // & a {
-        //     width: 100%;
-        //     display: flex;
-        //     @include flex-djacai(column, center, center, center);
-        // }
-    } 
-}
-
-
-

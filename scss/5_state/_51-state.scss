@@ -16,6 +16,13 @@
     visibility: hidden;
 }
 
+.is-desk {
+    display: none;
+    @include desktop {
+        display: flex;
+    }
+}
+
 //Flexbox orientation switchers
 .is-col-cent {
     @include flex-djacai(column, center, center, center);

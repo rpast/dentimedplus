@@ -5,7 +5,7 @@ $dent-cinnamon:  #f08080; //lightcoral //USED
 // $dent-cinnamon: #f18b62;
 $dent-cinnamon-light: rgb(236, 205, 192);
 $dent-cinnamon-trans: #f18b621c;
-$dent-marine-light:  rgba(85, 82, 250, 0.15);
+$dent-marine-light:  #5552fa26; //USED
 $dent-aqua: #b4d4db;
 $lavender-plus: #494274; //USED
 // navbar
@@ -21,16 +21,27 @@ $dent-font-body: 'Open Sans', sans-serif; //USED
 
 //Font size
 
-//Major-third for mobiles
-$m-title-fsize: 2.488rem; //39.81px //USED
-$m-header-fsize: 1.44rem; //23.04px //USED
-$m-span-fsize: 1.2rem; //19.20px //USED
-$m-default-fsize: 1rem; //16px //USED
-$m-second-fsize: 0.833rem; //13.33px //USED
+//Minor-third for mobiles
+// $m-title-fsize: 2.488rem; //39.81px //USED
+// $m-header-fsize: 1.728rem; //27.65px //USED
+// $m-sheader-fsize: 1.44rem; //23.04px //USED
+// $m-span-fsize: 1.2rem; //19.20px //USED
+// $m-default-fsize: 1rem; //16px //USED
+// $m-second-fsize: 0.833rem; //13.33px //USED
+
+
+//Major-second for mobiles
+$m-title-fsize: 2.488rem; //USED - adjusted
+$m-header-fsize: 1.424rem; ///USED
+$m-sheader-fsize: 1.266rem; //USED
+$m-span-fsize: 1.125rem; //USED
+$m-default-fsize: 1rem; //USED
+$m-second-fsize: 0.889rem; //USED
 
 //Perfect-fourth for desktop
 $d-title-fsize: 4.209rem; //67.34px //USED
-$d-header-fsize: 1.777rem; //28.43px //USED
+$d-header-fsize: 2.369rem; //37.90px //USED
+$d-sheader-fsize: 1.777rem; //28.43px //USED;
 $d-span-fsize: 1.333rem; //21.33px //USED
 $d-default-fsize: 1rem; //16px //USED
 $d-second-fsize: 0.75rem; //12px //USED
@@ -81,6 +92,6 @@ $section-bottom-margin: 2rem; //USED
 $d-section-width: 65vw; //section width for small pcs USED
 $ld-section-width: 60vw; //section width for large pcs USED
 
-$office-card-max-w: 480px;
-$office-card-text-w: 420px;
+//$office-card-max-w: 480px;
+$office-card-text-w: 300px;
 $card-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);

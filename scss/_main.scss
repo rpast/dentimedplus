@@ -8,185 +8,17 @@
 
 
 
-.team-wrapper {
-    margin: 0;
-    padding: 4rem 0 4rem 0;
-    background-image: url('../static/Hinterrhein.svg');
-    //background-repeat: none;
-    background-size: cover;
-    width: 100vw;
-    @include desktop {
-        height: 71vh;
-        max-height: 700px;
-        display: flex;
-        @include flex-djacai(column, center, center, center);   
-    }
-}
-
-.myslides-team {
-    background-color: white;
-    width: 85vw;
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
-    @include desktop {
-        flex-direction: row;
-        margin-bottom: 0;
-        width: 65vw;
-    }
-    @include l-desktop {
-        width: 60vw;
-    }
-    & .picture-slider {
-        @include desktop {
-            margin: 2rem 1rem 2rem 3rem;
-        }
-        .stopper-box {
-            display: flex;
-            @include flex-djacai(row, center, center, center);
-            .stop-icon {
-                width: $stopper-width;
-                margin: $stopper-margin;
-            }
-        }
-    }
-    & .gallery-text-box {
-        margin: 3rem 1.8rem 3rem 1.8rem;
-        min-width: 40%;
-        @include desktop {
-            margin: 3rem;
-        }
-    }
-}
 
 
-.employee-hours {
-    font-size: 0.8rem;
-    text-align: left;
-    border-spacing: 0;
-    border-collapse: collapse;
-    & tr th {
-        text-transform: uppercase;
-        padding-bottom: 1rem;
-    }
-    & tr td {
-        padding: 0.2rem 1rem 0 0;
-    }
-    & tr:nth-child(even) {
-            background-color: $dent-marine-light;
-        }
-    & tr td:nth-child(odd) {
-        padding-left: 1rem;
-    }
-    & tr td:nth-child(even) {
-        min-width: 100px;
-    }
-}
 
-.services{
-    color: black;
-    line-height: 3rem;
-    height: 100%;
-    //margin-bottom: $section-bottom-margin;
-    @include desktop {
-        height: auto;
-    }
-    & .serv-bar {
-        width: 100%;
-        height: 6px;
-        margin: 0;
-    }
-    & .services-wrapper {
-        
-        display: flex;
-        @include flex-djacai(row, center, space-between, space-between);
-        height: 100%;
-        position: relative;
-        & .serv-links {
-            display: flex;
-            @include flex-djacai(column, center, center, flex-start);
-            padding: 3.5rem 0;
-            @include desktop {
-                height: auto;
-                margin: 0 0 0 6rem;
-                width: 50%;
-            }
-            & ul li {
-                list-style-type: none; 
-            }
-            & ul li:before { 
-                font-family: 'FontAwesome';
-                content: "\f058";
-                color: $dent-cinnamon;
-                margin-right: 1rem;
-                font-size: 1rem;
-                @include desktop {
-                    font-size: 1.5rem;
-                }
-            }
-            & a {
-                @include link-decor(none, 0.1rem);
-                color: black;
-                //font-family: $dent-font-head;
-                font-weight: 1000;
-                font-size: 1.2rem;
 
-                @include l-desktop {
-                    font-size: 1.5rem;
-                }
-            }
-            & a:hover {
-                color: $dent-cinnamon;
-            }
-        }
-        & .card-wrapper {
-            position: absolute;
-            z-index: 1;
-            height: inherit;
-            background-color: white;
-            @include desktop {
-                position: unset;
-                height: auto;
-                display: flex;
-                @include flex-djacai(column, flex-start, center, center);
-                width: 100%;
-            }
-            & .service-card {
-                @extend .about__office__slides;
-                position: relative;
-                flex-direction: column;
-                height: 90%;
 
-                @include desktop {
-                    width: 70%;
-                    max-width: 800px;
-                    margin: 4.5rem 0 3.5rem 0rem;
-                    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
-                }
-                @include l-desktop {
-                    margin: 4.5rem 4.5rem 3.5rem 4.5rem;
-                }
-                & p {
-                    margin: 0 1.5rem 1rem 1.5rem;
-                    line-height: 1.5rem;
-                }
-                & h2 {
-                    margin: 0 auto 0.5rem 1.5rem;
-                    @include l-desktop {
-                        margin: 2rem auto 0.5rem 1.5rem;
-                    }
-                }
-            }
-        }
-    }
-}
-.services-margin {
-    margin: 6rem 0 0 2rem;
-}
 
 .prices {
     padding: 4rem 0;
     display: flex;
     @include flex-djacai(column, center, center, center);
-    background-image: url('../static/Hinterrhein.svg');
+    background-image: url('../static/background-color-rev.svg');
     //background-repeat: none;
     background-size: cover;
     //margin-bottom: $section-bottom-margin;
@@ -199,12 +31,12 @@
     }
 }
 .prices-card {
-    @extend .myslides-team;
+    @extend .about__team__wr__slides;
     display: flex;
     @include flex-djacai(column, center, center, center);
 }
 .prices-table {
-    @extend .employee-hours;
+    @extend .about__team__wr__slides__text__wr__hours;
     margin: 1rem 0;
     //box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
     margin: 1.8rem;
@@ -220,87 +52,9 @@
     }
 }
 
-.dentimed-gallery {
-    @extend .myslides-team;
-    display: flex;
-    @include flex-djacai(column, center, center, center);
-    width: 100%;
-    height: 90vh;
-    max-height: 800px;
-    background-color: $lavender-plus;
-    box-shadow: none;
-    .slogan::before {
-        position: relative;
-        left: 50px;
-        top: 60px;
-        font-family: 'FontAwesome';
-        content: "\f10d";
-        color: $dent-cinnamon-trans;
-        font-size: 3rem;
-        z-index: 0;
-        @include desktop {
-            font-size: 5rem;
-        }
-    }
-    .slogan {
-        display: flex;
-        @include flex-djacai(row, center, center, center);
-        color: $font-col-light;
-        margin: 2rem 0 0 0;
-        max-width: 800px;
-        text-align: center;
-        @include tablet-w {
-            margin: 3rem 0 0 0;
-        }
-        & h3 {
-            z-index: 2;
-            //min-width: 300px;
-            max-width: 400px;
-            letter-spacing: 0.1rem;
-            font-size: 1.3rem;
-            font-weight: 100;
-        }
-    }
-    .slogan::after { 
-        position: relative;
-        left: -50px;
-        top: -60px;
-        font-family: 'FontAwesome';
-        content: "\f10e";
-        color: $dent-cinnamon-trans;
-        font-size: 3rem;
-        z-index: 0;
-        @include desktop {
-            font-size: 5rem;
-        }
-    }
-    .dentimed-gallery-wrapper {
-        @include desktop {
-            display: flex;
-            @include flex-djacai(row, center, center, center);
-        }
-    }
-}
 
-.myslides-office {
-    margin: 0 1rem 0 1rem;
-    @include desktop {
-        margin: 0 2rem 0 0;
-    }
-    .picture-slider {
-        margin: 0;
-        .stopper-box {
-            @include desktop {
-                display: none;
-            }
-        }
-    }
-}
-.myslides-office:last-child {
-    @include desktop {
-        margin: 0;
-    }
-}
+
+
 
 .contact {
     display: flex;
@@ -339,7 +93,7 @@
 }
 
 .contact-box {
-    @extend .myslides-team;
+    @extend .about__team__wr__slides;
     margin-bottom: 2rem;
     //display: none;
     @include desktop {

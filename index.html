@@ -106,7 +106,7 @@
     </nav>
 
     <!-- ######### HERO BANER SECTION START ######### -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero l-margin-bottom">
 
       <div class='hero__text'>
         <!-- First hero text box -->
@@ -146,23 +146,22 @@
 
     <!-- ######### ABOUT US SECTION START ######### -->
 
-    <!-- TODO change margins to sth more meaningful -->
     <section id="about-us" class="l-about">
-
+      <h2 class='l-head'>O nas</h2>
       <!-- Offices box start -->
-      <div class="about__office">
+      <div class="about__office l-standard-w">
 
         <!-- Section header -->
-        <div class="about__office__header">
+        <!-- <div class="about__office__header">
             <h2>Nasze gabinety</h2>  
-        </div>
+        </div> -->
         
         <!-- Offices gallery #1 -->
         <div class="about__office__slides is-flex is-col-cent first-office" onclick="plusDivs(1)">
 
           <!-- Start dynamic part -->
           <div class="about__office__slides__slider">
-            <img src="static/brown-trench-coat-on-wooden-rack-821357.jpg"></img>
+            <img class='about__office__slides__slider__pic' src="static/brown-trench-coat-on-wooden-rack-821357.jpg"></img>
 
             <div class="about__office__slides__slider__stops">
                 <img src="static/stop-filled.png" alt="">
@@ -172,7 +171,7 @@
           </div>
           
           <div class="about__office__slides__text">
-            <h3>Gabinet ul. Na Barciach</h3>
+            <h3>Gabinet<br>Na Barciach</h3>
             <p>Zapraszamy do Gabinetu na ul. Na Barciach 14/III (Prądnik Czerwony), znajdującego się z tyłu budynku.</p>
             <a href="#map">
                 <div class="button">
@@ -188,7 +187,7 @@
 
           <!-- Start dynamic part -->
           <div class="about__office__slides__slider">
-              <img src="static/brown-wooden-center-table-584399.jpg"></img>
+              <img class='about__office__slides__slider__pic' src="static/brown-wooden-center-table-584399.jpg"></img>
 
               <div class="about__office__slides__slider__stops">
                   <img src="static/stop.png" alt="">
@@ -197,7 +196,7 @@
           </div>
               
           <div class="about__office__slides__text">
-            <h3>Gabinet os. Kościuszkowskie </h3>
+            <h3>Gabinet<br>os. Kościuszkowskie </h3>
             <p>Zapraszamy do Gabinetu na os. Kościuszkowskim 6 (Czyżyny), w przełączce między klatką 11 a 12.</p>
             <a href="#map">
               <div class="button">
@@ -210,260 +209,388 @@
       <!-- End of offices box -->
       </div>
 
-      <!-- FLAG!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
       <!-- Team box start -->
       <div id="team" class="about__team">
-
+        <!-- <h2>Nasz zespół</h2> -->
         <!-- Wrapper for team carousel -->
-        <div class="slides-wrapper">
-          <div class="about-header is-col-cent">
-              <h2>Nasz Zespół</h2>
-          </div>
+        <div class="about__team__wr l-standard-w">
 
           <!-- Employee slide #1 -->
           <!-- Team gallery -->
-          <div class="myslides-team is-flex is-col-cent">
+          <div class="about__team__wr__slides is-flex">
 
-            <div class="about__office__slides__slider">
-              <img class="picture-team" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)"></img>
+            <div class="about__team__wr__slides__slider">
+              <img class="about__team__wr__slides__slider__pic" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)"></img>
               
-              <div class="stopper-box">
-                  <img class="stop-icon" src="static/stop-filled.png" alt="">
-                  <img class="stop-icon" src="static/stop.png" alt="">
-                  <img class="stop-icon" src="static/stop.png" alt="">
-                  <img class="stop-icon" src="static/stop.png" alt="">
-                  <img class="stop-icon" src="static/stop.png" alt="">
+              <div class="about__team__wr__slides__slider__stop">
+                  <img src="static/stop-filled.png" alt="">
+                  <img src="static/stop.png" alt="">
+                  <img src="static/stop.png" alt="">
+                  <img src="static/stop.png" alt="">
+                  <img src="static/stop.png" alt="">
+                  <img src="static/stop.png" alt="">
+                  <img src="static/stop.png" alt="">
+                  <img src="static/stop.png" alt="">
+                  <img src="static/stop.png" alt="">
+                  <img src="static/stop.png" alt="">
               </div>
             </div>
 
-            <div class="gallery-text-box">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
+            <div class="about__team__wr__slides__text">
+              <div class='about__team__wr__slides__text__wr'>
+                <h3>Anna Nowak</h3>
+                <h4>Specjalista Stomatologii Zachowawczej</h4>
 
-              <table class="employee-hours">
+                <span>ul. Na Barciach</span>
+                <table class="about__team__wr__slides__text__wr__hours">
+                    <tr>
+                        <th span=2>Godziny przyjęć</th>
+                    </tr>
+                    <tr>
+                        <td>Pon</td>
+                        <td>14:00 - 19:00</td>
+                    </tr>
+                    <tr>
+                        <td>Pt.</td>
+                        <td>09:00 - 14:00</td>
+                    </tr>
+                </table>
+
+                <span>os. Kościuszkowskie</span> 
+                <table class="about__team__wr__slides__text__wr__hours">
                   <tr>
-                      <th>Godziny przyjęć</th>
-                  </tr>
-                  <tr>
-                      <td>Poniedziałek</td>
-                      <td>09:00 - 15:00</td>
+                      <th span=2>Godziny przyjęć</th>
                   </tr>
                   <tr>
                       <td>Wtorek</td>
-                      <td>09:00 - 15:00</td>
+                      <td>14:00 - 19:00</td>
                   </tr>
-                  <tr>
-                      <td>Środa</td>
-                      <td>09:00 - 15:00</td>
-                  </tr>
-                  <tr>
-                      <td>Czwartek</td>
-                      <td>09:00 - 15:00</td>
-                  </tr>
-                  <tr>
-                      <td>Piątek</td>
-                      <td>09:00 - 15:00</td>
-                  </tr>
-                  <tr>
-                      <td>Sobota</td>
-                      <td>09:00 - 15:00</td>
-                  </tr>
-              </table>
+                </table>
+              </div>
             </div>
           </div>
 
           <!-- Next boxes are hidden by default and being switched by js script -->
           <!-- Employee slide #2 -->
-          <div class="myslides-team is-off">
+          <div class="about__team__wr__slides is-off">
 
-            <div class="about__office__slides__slider">
-              <img class="picture-team" src="static/woman-in-black-scoop-neck-shirt-smiling-38554.jpg" onclick="plusDivsTeam(1)">
-              <div class="stopper-box">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop-filled.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
+            <div class="about__team__wr__slides__slider">
+              <img class="about__team__wr__slides__slider__pic" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)">
+              <div class="about__team__wr__slides__slider__stop">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop-filled.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
               </div>
             </div>
 
-            <div class="gallery-text-box">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <table class="employee-hours">
-                <tr>
-                    <th>Godziny przyjęć</th>
-                </tr>
-                <tr>
-                    <td>Poniedziałek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Wtorek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Środa</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Czwartek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Piątek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Sobota</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-              </table>
+            <div class="about__team__wr__slides__text">
+              <div class='about__team__wr__slides__text__wr'>
+                <h3>Beata Górska</h3>
+                <h4>Specjalista Stomatologii Zachowawczej</h4>
+                <span>os. Kościuszkowskie</span>
+                <table class="about__team__wr__slides__text__wr__hours">
+                  <tr>
+                      <th span=2>Godziny przyjęć</th>
+                  </tr>
+                  <tr>
+                      <td>Pon.</td>
+                      <td>14:00 - 19:00</td>
+                  </tr>
+                  <tr>
+                      <td>Śr.</td>
+                      <td>14:00 - 19:00</td>
+                  </tr>
+                  <tr>
+                      <td>Czw.</td>
+                      <td>14:00 - 19:00</td>
+                  </tr>
+                </table>
+              </div>  
             </div>
           </div>
 
           <!-- Employee slide #3 -->
-          <div class="myslides-team is-off">
+          <div class="about__team__wr__slides is-off">
 
-            <div class="about__office__slides__slider">
-              <img class="picture-team" src="static/adult-beard-boy-casual-220453.jpg" onclick="plusDivsTeam(1)">
-              <div class="stopper-box">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop-filled.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
+            <div class="about__team__wr__slides__slider">
+              <img class="about__team__wr__slides__slider__pic" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)">
+              <div class="about__team__wr__slides__slider__stop">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop-filled.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
               </div>
             </div>
 
-            <div class="gallery-text-box">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <table class="employee-hours">
-                <tr>
-                    <th>Godziny przyjęć</th>
-                </tr>
-                <tr>
-                    <td>Poniedziałek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Wtorek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Środa</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Czwartek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Piątek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Sobota</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-              </table>
+            <div class="about__team__wr__slides__text">
+              <div class='about__team__wr__slides__text__wr'>
+                <h3>Łucja Gawin</h3>
+                <h4>Lekarz Dentysta</h4>
+                <span>ul. Na Barciach</span>
+                <table class="about__team__wr__slides__text__wr__hours">
+                  <tr>
+                      <th span=2>Godziny przyjęć</th>
+                  </tr>
+                  <tr>
+                      <td>Wt.</td>
+                      <td>09:30 - 15:00</td>
+                  </tr>
+                  <tr>
+                      <td>Śr.</td>
+                      <td>14:00 - 20:00</td>
+                  </tr>
+                  <tr>
+                      <td>Czw.</td>
+                      <td>09:30 - 15:00</td>
+                  </tr>
+                  <tr>
+                      <td>Pt.</td>
+                      <td>14:00 - 20:00</td>
+                  </tr>
+                  <tr>
+                      <td>Co 2ga sob.</td>
+                      <td>09:30 - 15:00</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
 
           <!-- Employee slide #4 -->
-          <div class="myslides-team is-off">
+          <div class="about__team__wr__slides is-off">
 
-            <div class="about__office__slides__slider">
-              <img class="picture-team" src="static/woman-in-white-medical-robe-3714743.jpg" onclick="plusDivsTeam(1)">
-              <div class="stopper-box">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop-filled.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
+            <div class="about__team__wr__slides__slider">
+              <img class="about__team__wr__slides__slider__pic" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)">
+              <div class="about__team__wr__slides__slider__stop">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop-filled.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
               </div>
             </div>
 
-            <div class="gallery-text-box">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-              <table class="employee-hours">
-                <tr>
-                    <th>Godziny przyjęć</th>
-                </tr>
-                <tr>
-                    <td>Poniedziałek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Wtorek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Środa</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Czwartek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Piątek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Sobota</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-              </table>
+            <div class="about__team__wr__slides__text">
+              <div class='about__team__wr__slides__text__wr'>
+                <h3>Sylwia Żujewska</h3>
+                <h4>Lekarz Dentysta</h4>
+                <span>ul. Na Barciach</span>
+                <table class="about__team__wr__slides__text__wr__hours">
+                  <tr>
+                      <th span=2>Godziny przyjęć</th>
+                  </tr>
+                  <tr>
+                      <td>Śr.</td>
+                      <td>15:00 - 20:00</td>
+                  </tr>
+                  <tr>
+                      <td>Czw.</td>
+                      <td>15:00 - 20:00</td>
+                  </tr>
+                  <tr>
+                      <td>Co 2ga sob.</td>
+                      <td>09:00 - 13:00</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
 
           <!-- Employee slide #5 -->
-          <div class="myslides-team is-off">
-            <div class="about__office__slides__slider">
-              <img class="picture-team" src="static/women-s-white-and-black-button-up-collared-shirt-774909.jpg" onclick="plusDivsTeam(1)">
-              <div class="stopper-box">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop.png" alt="">
-                <img class="stop-icon" src="static/stop-filled.png" alt="">
+          <div class="about__team__wr__slides is-off">
+            <div class="about__team__wr__slides__slider">
+              <img class="about__team__wr__slides__slider__pic" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)">
+              <div class="about__team__wr__slides__slider__stop">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop-filled.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
               </div>
             </div>
 
-            <div class="gallery-text-box">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-              <table class="employee-hours">
-                <tr>
-                    <th>Godziny przyjęć</th>
-                </tr>
-                <tr>
-                    <td>Poniedziałek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Wtorek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Środa</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Czwartek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Piątek</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>Sobota</td>
-                    <td>09:00 - 15:00</td>
-                </tr>
-              </table>
+            <div class="about__team__wr__slides__text">
+              <div class='about__team__wr__slides__text__wr'>
+                <h3>Anna Kaczor</h3>
+                <h4>Lekarz Dentysta</h4>
+                <span>ul. Na Barciach</span>
+                <table class="about__team__wr__slides__text__wr__hours">
+                  <tr>
+                      <th span=2>Godziny przyjęć</th>
+                  </tr>
+                  <tr>
+                      <td>Wt.</td>
+                      <td>15:00 - 20:00</td>
+                  </tr>
+                  <tr>
+                      <td>Czw.</td>
+                      <td>15:00 - 20:00</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Employee slide #6 -->
+          <div class="about__team__wr__slides is-off">
+            <div class="about__team__wr__slides__slider">
+              <img class="about__team__wr__slides__slider__pic" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)">
+              <div class="about__team__wr__slides__slider__stop">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop-filled.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+              </div>
+            </div>
+
+            <div class="about__team__wr__slides__text">
+              <div class='about__team__wr__slides__text__wr'>
+                <h3>Anna Kowalska</h3>
+                <h4>Specjalista Ortodoncji</h4>
+                <span>Na Barciach co 2gi tydzień.</span>
+                <table class="about__team__wr__slides__text__wr__hours">
+                  <tr>
+                      <th colspan=2>Godziny przyjęć:</th>
+                  </tr>
+                  <tr>
+                      <td>Wt.</td>
+                      <td>15:00 - 19:00</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Employee slide #7 -->
+          <div class="about__team__wr__slides is-off">
+            <div class="about__team__wr__slides__slider">
+              <img class="about__team__wr__slides__slider__pic" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)">
+              <div class="about__team__wr__slides__slider__stop">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop-filled.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+              </div>
+            </div>
+
+            <div class="about__team__wr__slides__text">
+              <div class='about__team__wr__slides__text__wr'>
+                <h3>Justyna Gajewska</h3>
+                <p>Higienistka</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Employee slide #8 -->
+          <div class="about__team__wr__slides is-off">
+            <div class="about__team__wr__slides__slider">
+              <img class="about__team__wr__slides__slider__pic" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)">
+              <div class="about__team__wr__slides__slider__stop">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop-filled.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+              </div>
+            </div>
+
+            <div class="about__team__wr__slides__text">
+              <div class='about__team__wr__slides__text__wr'>
+                <h3>Ewelina Kołodziejczyk</h3>
+                <p>Asystentka</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Employee slide #9 -->
+          <div class="about__team__wr__slides is-off">
+            <div class="about__team__wr__slides__slider">
+              <img class="about__team__wr__slides__slider__pic" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)">
+              <div class="about__team__wr__slides__slider__stop">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop-filled.png" alt="">
+                <img src="static/stop.png" alt="">
+              </div>
+            </div>
+
+            <div class="about__team__wr__slides__text">
+              <div class='about__team__wr__slides__text__wr'>
+                <h3>Magdalena Gawlik</h3>
+                <p>Asystentka</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Employee slide #10 -->
+          <div class="about__team__wr__slides is-off">
+            <div class="about__team__wr__slides__slider">
+              <img class="about__team__wr__slides__slider__pic" src="static/man-having-dental-check-up-3845765.jpg" onclick="plusDivsTeam(1)">
+              <div class="about__team__wr__slides__slider__stop">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop.png" alt="">
+                <img src="static/stop-filled.png" alt="">
+              </div>
+            </div>
+
+            <div class="about__team__wr__slides__text">
+              <div class='about__team__wr__slides__text__wr'>
+                <h3>Barbara Zgłobik</h3>
+                <p>Asystentka</p>
+              </div>
             </div>
           </div>
         <!-- Wrapper for team carousel end-->
@@ -474,12 +601,16 @@
     </section>
     
     <!-- ######### SERVICES US SECTION START ######### -->
-    <section id="services" class="about services">
+    <section id="services" class="services ">
       <!-- Colored bar separator -->
-      <!-- <div class="serv-bar"></div> -->
+      <div class="services__bar l-margin-bottom"></div>
       <!-- Services links -->
-      <div class="services-wrapper">
-        <div class="serv-links">
+      <div class="services__wr l-standard-w">
+
+        <h2 class='l-head'>Zakres usług</h2>
+
+        <div class="services__wr__links">
+
           <ul>
             <li>
               <a href="javascript:void(0);" onclick="toggle(profilaktyka)">Profilaktyka</a>
@@ -497,21 +628,23 @@
               <a href="javascript:void(0);" onclick="toggle(korony)">Korony porcelanowe</a>
             </li>
             <li>
+              <a href="javascript:void(0);" onclick="toggle(protezy)">Protezy</a>
+            </li>
+            <li>
               <a href="javascript:void(0);" onclick="toggle(chirurgia)">Chirurgia</a>
             </li>
           </ul>
         </div>
 
         <!-- Services cards are hidden by default and toggled by js function -->
-        <!-- TODO fix close icon -->
-        <div id="services-card-wrapper" class="card-wrapper is-flex is-col-cent">
+        <div id="services__wr__card" class="services__wr__card is-flex is-col-cent">
 
           <!-- Service #1 -->
-          <div id="profilaktyka" class="service-card is-off">
-            <div class="icon-serv-flexbox">
+          <div id="profilaktyka" class="services__wr__card__serv is-off">
+            <div class="services__wr__card__serv__icon">
               <a href="javascript:void(0);" onclick="toggle(profilaktyka)">
                 <?xml version="1.0" encoding="iso-8859-1"?>
-                <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
                   <g>
                     <path d="M0,0v60h60V0H0z M58,58H2V2h56V58z"/>
@@ -521,16 +654,22 @@
                 </svg>
               </a>
             </div>
-            <h2>Profilaktyka</h2>
-            <p>ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis distinctio odit assumenda officia, eius neque quibusdam, quisquam provident nisi magnam itaque ratione qui velit? Harum ut enim sequi libero tempore.</p>
+            <div class="services__wr__card__serv__text">
+              <p><span>Profilaktyka stomatologiczna </span> 
+              <p>to zabiegi mające na celu zapobieganie powstawaniu próchnicy i chorób przyzębia takie jak:</p>
+              <p><strong>Scaling</strong> – usunięcie kamienia nazębnego (który stanowi siedlisko bakterii) za pomocą ultradźwięków. Zabieg scalingu jest pierwszym zabiegiem, jaki powinno się wykonać, zanim przystąpi się do leczenia zębów.</p>
+              <p><strong>Piaskowanie</strong> – usunięcie przebarwień, osadu, resztek kamienia za pomocą mikropiasku i wody pod ciśnieniem.</p>
+              <p><strong>Fluoryzacja</strong> - zabieg mający na celu wzmocnienie tkanki zębów poprzez wbudowanie w jego strukturę fluoru. Zabieg fluoryzacji można wykonać na kilka sposobów min. poprzez regularne lakierowanie zębów lakierem z fluorem, fluoryzację na łyżkach specjalnym żelem lub pianką.</p>
+              <p><strong>Lakowanie</strong> -to zabieg polegający na wypełnieniu zdrowych bruzd zębów trzonowych i przedtrzonowych przez lak szczelinowy, czyli substancję uzupełniającą w celu zapobiegania powstawaniu w tych miejscach próchnicy. Lakowanie wykonuje się w zębach stałych, najczęściej w szóstkach u dzieci.</p>
+            </div>
           </div>
 
           <!-- Service #2 -->
-          <div id="endodoncja" class="service-card is-off">
-            <div class="icon-serv-flexbox">
+          <div id="endodoncja" class="services__wr__card__serv is-off">
+            <div class="services__wr__card__serv__icon">
               <a href="javascript:void(0);" onclick="toggle(endodoncja)">
                 <?xml version="1.0" encoding="iso-8859-1"?>
-                <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
                   <g>
                     <path d="M0,0v60h60V0H0z M58,58H2V2h56V58z"/>
@@ -540,29 +679,44 @@
                 </svg>
               </a>
             </div>
-            <h2>Endodoncja</h2>
-            <p>ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis distinctio odit assumenda officia, eius neque quibusdam, quisquam provident nisi magnam itaque ratione qui velit? Harum ut enim sequi libero tempore.</p>
+            <div class="services__wr__card__serv__text">
+              <p><span>Leczenie kanałowe pierwotne</span></p> 
+              <p>Polega na usunięciu z kanałów miazgi, poszerzeniu kanałów specjalnymi narzędziami, intensywne płukanie specjalnymi środkami, mające na celu zdezynfekowanie kanałów i zabicie bakterii odpowiadających za stan zapalny. Następnie kanały wypełnia się szczelnie odpowiednim materiałem i odbudowuje ząb.</p> 
+              <p>Ząb leczony kanałowo powinno się kontrolować 6 m-cy po zakończeniu leczenia oraz raz w roku podczas przeglądu stomatologicznego, poprzez wykonanie zdjecia rtg i ocenę tkanek otaczających korzenie zęba.</p>
+              <p>W naszym gabinecie leczenie kanałowe wykonujemy w powiększeniu tj. Pod mikroskopem endodontycznym, w osłonie z koferdamu, z użyciem ultradźwięków, narzędzi maszynowych, gutaperki na zimno i ciepło.</p>
+            </div>
           </div>
 
           <!-- Service #3 -->
-          <div id="ortodoncja" class="service-card is-off">
-            <div class="icon-serv-flexbox">
+          <div id="ortodoncja" class="services__wr__card__serv is-off">
+            <div class="services__wr__card__serv__icon">
               <a href="javascript:void(0);" onclick="toggle(ortodoncja)">
                 <?xml version="1.0" encoding="iso-8859-1"?>
-                <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 abou44.293,45.405 45.707,43.991 31.565,29.849 45.707,15.707 44.293,14.293 30.151,28.435 16.009,14.293 14.595,15.707 28.737,29.849 14.595,43.991 	"/>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                  <g>
+                    <path d="M0,0v60h60V0H0z M58,58H2V2h56V58z"/>
+                    <polygon points="16.009,45.405 30.151,31.263 44.293,45.405 45.707,43.991 31.565,29.849 45.707,15.707 44.293,14.293 
+                    30.151,28.435 16.009,14.293 14.595,15.707 28.737,29.849 14.595,43.991 	"/>
+                  </g>
                 </svg>
               </a>
             </div>
-            <h2>Ortodoncja</h2>
-            <p>ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis distinctio odit assumenda officia, eius neque quibusdam, quisquam provident nisi magnam itaque ratione qui velit? Harum ut enim sequi libero tempore.</p>
+            <div class="services__wr__card__serv__text">
+              <p><span>Ortodoncja</p></span>
+              <p>Zajmuje się profilaktyką i leczeniem wad zgryzu.</p>
+              <p>Leczenie wad zgryzu polega na wykonaniu indywidualnego aparatu ortodontycznego. Do zębów mlecznych stosowane są aparaty ruchome, łatwe do wyjmowania, które później zastępowane są stałymi.</p>
+              <p><strong>Aparaty stałe</strong> zakłada się na okres 18-30 miesięcy. Istnieją aparaty zewnętrzne i wewnętrzne, niewidoczne z zewnątrz. O konieczności noszenia aparatów świadczyć może nadmierne ścieranie się zębów, zgrzytanie zębami, odsłanianie się szyjek zębowych oraz odkładający się kamień.  Czasem potrzebne jest zamontowanie<strong>mini-implantów ortodontycznych.</strong></p>
+              <p>Przy niewielkich wadach zgryzu można zastosować mniej inwazyjne metody tj.<strong> Clear Aligner</strong>. Są to specjalne przezroczyste nakładki, które nie przeszkadzają w mówieniu i są łatwe do wyjmowania, można stosować je więc codziennie, w każdych warunkach. Jest to świetna alternatywa dla standardowych metod leczenia, gdyż znacznie skraca ich czas. </p>
+            </div>
           </div>
 
           <!-- Service #4 -->
-          <div id="estetyczna" class="service-card is-off">
-            <div class="icon-serv-flexbox">
+          <div id="estetyczna" class="services__wr__card__serv is-off">
+            <div class="services__wr__card__serv__icon">
               <a href="javascript:void(0);" onclick="toggle(estetyczna)">
                 <?xml version="1.0" encoding="iso-8859-1"?>
-                <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
                   <g>
                   <path d="M0,0v60h60V0H0z M58,58H2V2h56V58z"/>
@@ -572,16 +726,27 @@
                   abou    </svg>
               </a>
             </div>
-            <h2>Stomatologia estetyczna</h2>
-            <p>ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis distinctio odit assumenda officia, eius neque quibusdam, quisquam provident nisi magnam itaque ratione qui velit? Harum ut enim sequi libero tempore.</p>
+            <div class="services__wr__card__serv__text">
+              <p><span>Stomatologia estetyczna</span></p>
+              <p>To wszelkie zabiegi mające na celu poprawę wyglądu zębów i uśmiechu.</p> 
+              <p>Do zabiegów, które wpływają na estetykę uśmiechu można zaliczyć:</p>
+                <ul>
+                <li>Wybielanie – domowe za pomocą indywidualnie wykonanych nakładek oraz gabinetowe pod lampą wybielającą beyond.</li>
+                <li>Estetyczne światłoutwardzalne wypełnienia kompozytowe.</li>
+                <li>Inlay, onlay, overlay kompozytowe lub ceramiczne.</li>
+                <li>Licówki ceramiczne – cienkie porcelanowe nakładki, które zmieniają kształt i kolor zębów.</li>
+                <li>Korony i mosty porcelanowe.</li> 
+                <li>Implanty.</li>
+              </ul>
+            </div>
           </div>
 
           <!-- Service #5 -->
-          <div id="korony" class="service-card is-off">
-            <div class="icon-serv-flexbox">
+          <div id="korony" class="services__wr__card__serv is-off">
+            <div class="services__wr__card__serv__icon">
               <a href="javascript:void(0);" onclick="toggle(korony)">
                 <?xml version="1.0" encoding="iso-8859-1"?>
-                <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
                     <g>
                     <path d="M0,0v60h60V0H0z M58,58H2V2h56V58z"/>
@@ -591,16 +756,46 @@
                 </svg>
               </a>
             </div>
-            <h2>Korony porcelanowe</h2>
-            <p>ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis distinctio odit assumenda officia, eius neque quibusdam, quisquam provident nisi magnam itaque ratione qui velit? Harum ut enim sequi libero tempore.</p>
+            <div class="services__wr__card__serv__text">
+              <p><span>Korony porcelanowe</span></p>
+              <p>To uzupełnienia protetyczne rekonstruujące koronę kliniczną zęba. Są stosowane przy rekonstrukcji zębów żywych oraz leczonych kanałowo.  Mocuje się je także na implantach.</p> 
+              <p>W przypadku całkowicie zniszczonych koron zębów z prawidłowo wyleczonymi korzeniami, można zastosować odbudowę na<strong> wkładach koronowo - korzeniowych</strong>. W zależności od wskazań mogą być to wkłady indywidualne metalowe lub z włókien szklanych.</p>
+              <p>Na tak zamontowane wkłady cementuje się na stałe<strong> korony lub mosty protetyczne.</strong></p>
+              <p><strong>Korony protetyczne</strong> mogą być wykonane na podbudowie metalowej  lub cyrkonowej oraz pełnoceramiczne.</p> 
+              <p><strong>Korony pełnoceramiczne</strong> wytwarza się z wysoce wytrzymałej porcelany.  Są niezwykle wytrzymałe, odpowiednie dla pojedynczych zębów, ale także dla całych grup.</p> 
+              <p><strong>Korony cyrkonowe</strong> wykonywane są na podbudowie cyrkonowej, a licowane ostatecznie ceramiką.</p> 
+            </div>
           </div>
 
           <!-- Service #6 -->
-          <div id="chirurgia" class="service-card is-off">
-            <div class="icon-serv-flexbox">
+          <div id="protezy" class="services__wr__card__serv is-off">
+            <div class="services__wr__card__serv__icon">
+              <a href="javascript:void(0);" onclick="toggle(protezy)">
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                    <g>
+                    <path d="M0,0v60h60V0H0z M58,58H2V2h56V58z"/>
+                    <polygon points="16.009,45.405 30.151,31.263 44.293,45.405 45.707,43.991 31.565,29.849 45.707,15.707 44.293,14.293 
+                    30.151,28.435 16.009,14.293 14.595,15.707 28.737,29.849 14.595,43.991 	"/>
+                    </g>
+                </svg>
+              </a>
+            </div>
+            <div class="services__wr__card__serv__text">
+              <p><span>Protezy</span></p>
+              <p>W przypadku bardzo rozległych braków zębowych, których nie możemy odbudować za pomocą mostów oraz implantów wykonuje się protezy.</p>
+              <p>Wyróżnia się<strong> protezy akrylowe</strong>, całkowite - które uzupełniają całkowite bezzębie oraz protezy akrylowe częściowe – przy brakach częściowych.</p>
+              <p>Przy odpowiednich warunkach, można uzupełnić braki za pomocą<strong> protez szkieletowych</strong>, które wykonane są z bardzo cienkiego metalu, akrylowych zębów i klamer z podparciami. Takie rozwiązanie zapobiega zanikowi kości i ucisku dziąsła oraz zapewnia stabilne utrzymanie protezy. Protezy szkieletowe mogą opierać się za pomocą niewidocznych zatrzasków, dzięki czemu rozwiązanie to staje się bardziej estetyczne.</p>
+            </div>
+          </div>
+
+          <!-- Service #7 -->
+          <div id="chirurgia" class="services__wr__card__serv is-off">
+            <div class="services__wr__card__serv__icon">
               <a href="javascript:void(0);" onclick="toggle(chirurgia)">
                 <?xml version="1.0" encoding="iso-8859-1"?>
-                <svg version="1.1" id="close-serv-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
                   <g>
                   <path d="M0,0v60h60V0H0z M58,58H2V2h56V58z"/>
@@ -610,8 +805,19 @@
                 </svg>
               </a>
             </div>
-            <h2>Chirurgia</h2>
-            <p>ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis distinctio odit assumenda officia, eius neque quibusdam, quisquam provident nisi magnam itaque ratione qui velit? Harum ut enim sequi libero tempore.</p>
+            <div class="services__wr__card__serv__text">
+              <p><span>Chirurgia</span></p>
+              <p>Chirurgia stomatologiczna obejmuje:</p>
+              <ul>
+                <li>Usuwanie zębów mlecznych i stałych tzw. Ekstrakcja.</li>
+                <li>Usuwanie zębów zatrzymanych, w szczególności zatrzymanych ósemek.</li>
+                <li>Hemisekcja, resekcja szczytów korzeni zębów.</li>
+                <li>Implanty</li>
+                <li>Usunięcie zęba z natychmiastową implantacją.</li>
+                <li>Sterowana regeneracja kości.</li>
+              </ul>
+              <p>Zabiegi chirurgiczne przeprowadza się w miejscowym znieczuleniu.</p>
+            </div>
           </div>
 
         <!-- End of service card wrapper -->
@@ -619,7 +825,7 @@
 
       <!-- End of services wrapper -->
       </div>
-      <!-- <div class="serv-bar"></div> -->
+      <div class="services__bar"></div>
     </section>
 
     <!-- ######### PRICES SECTION START ######### -->
@@ -663,13 +869,13 @@
 
     <!-- ######### GALLERY SECTION START ######### -->
     <section>
-      <!-- Why so many divs here? -->
-      <!-- TODO refactor -->
-      <div class="dentimed-gallery">
 
-        <div class="dentimed-gallery-wrapper">
-          <div class="myslides-office is-flex is-col-cent">
-            <div class="about__office__slides__slider">
+      <div class="gallery">
+
+        <div class="gallery__wr l-standard-w">
+
+          <div class="gallery__wr__slides is-flex is-col-cent">
+            <div class="picture-slider">
               <img class="picture-office" src="static/dentimedplus-photos/dmed1.JPG" onclick="plusDivsOffice(1)"></img>
               <div class="stopper-box">
                 <img class="stop-icon" src="static/stop-filled-light.png" alt="">
@@ -679,8 +885,8 @@
             </div>
           </div>
           
-          <div class="myslides-office is-off">
-            <div class="about__office__slides__slider">
+          <div class="gallery__wr__slides is-off">
+            <div class="picture-slider">
               <img class="picture-office" src="static/dentimedplus-photos/dmed2.JPG" onclick="plusDivsOffice(1)"></img>
               <div class="stopper-box">
                 <img class="stop-icon" src="static/stop-light.png" alt="">
@@ -690,8 +896,8 @@
             </div>
           </div>
           
-          <div class="myslides-office is-off">
-            <div class="about__office__slides__slider">
+          <div class="gallery__wr__slides is-off">
+            <div class="picture-slider">
               <img class="picture-office" src="static/dentimedplus-photos/dmed3.JPG" onclick="plusDivsOffice(1)"></img>
               <div class="stopper-box">
                 <img class="stop-icon" src="static/stop-light.png" alt="">
@@ -703,7 +909,7 @@
         </div>
 
         <div class="slogan">
-          <h3>Kompetencje, dobra atmosfera i odpowiedzialność. To sprawia, że pacjenci chętnie do nas wracają.</h3>
+          <span>Kompetencje, dobra atmosfera i odpowiedzialność.<br>To sprawia, że pacjenci chętnie do nas wracają.</span>
         </div>
 
       </div>
@@ -853,7 +1059,7 @@
       </div>
     </section>
 
-    <!-- ######### CONTACT SECTION START ######### -->
+    <!-- ######### MAP ######### -->
     <section id="map">
       <iframe class="map" id="googlemap dentimed plus location" title="googlemap dentimed plus location" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=16wOL-cdgwRRLY8cBKU2dHEcaMGGrly5j&z=12" allowfullscreen></iframe>
     </section>

@@ -3,7 +3,7 @@
 // Const & Vars //
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-const desktopW = 1024;
+const desktopW = 768;
 
 // Toggle between adding and removing the "responsive" //
 // class to topnav when the user clicks on the icon //
@@ -12,16 +12,17 @@ var menu = document.querySelector(".menu");
 var body = document.getElementsByTagName('body')[0];
 var html = document.getElementsByTagName('html')[0];
 
-var cardWrapper = document.querySelector("#services-card-wrapper")
+var cardWrapper = document.querySelector("#services__wr__card")
 
 var profilaktyka = document.querySelector("#profilaktyka")
 var endodoncja = document.querySelector("#endodoncja")
 var ortodoncja = document.querySelector("#ortodoncja")
 var estetyczna = document.querySelector("#estetyczna")
 var korony = document.querySelector("#korony")
+var protezy = document.querySelector("#protezy")
 var chirurgia = document.querySelector("#chirurgia")
 
-var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, chirurgia]
+var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, protezy, chirurgia]
 
 function switcher(element, state, onState, offState) {
     //selected element gets switched. state = 1 switch-on, = 0 switch off.
@@ -59,18 +60,19 @@ function toggle(elem) {
         }
     } else { //Used for services!
         //Set behavior to close service object
-        if(element.classList.contains('on-row-start')) {
-            switcher(cardWrapper, 0, 'on-row-start', 'off');
-            switcher(element, 0, 'on-row-start', 'off');
+        if(elem.classList.contains('is-flex')) {
+            switcher(cardWrapper, 0, 'is-flex', 'is-off');
+            switcher(elem, 0, 'is-flex', 'is-off');
         } else {
+            console.log(elem)
             //Switch off all the active objects in the DOM
             for(i=0; i<servicesList.length; i++) {
                 var item = servicesList[i];
-                switcher(item, 0, 'on-row-start', 'off');
+                switcher(item, 0, 'is-flex', 'is-off');
             }
             //Switch on element
-            switcher(cardWrapper, 1, 'on-row-start', 'off');
-            switcher(element, 1, 'on-row-start', 'off');
+            switcher(cardWrapper, 1, 'is-flex', 'is-off');
+            switcher(elem, 1, 'is-flex', 'is-off');
         }
     }
 };
@@ -144,10 +146,10 @@ function plusDivsInterval() {
     showDivs((slideIndex += 1), "about__office__slides", 1, desktopW);
 }
 function plusDivsIntervalTeam() {
-    showDivs((slideIndexTeam += 1), "myslides-team", 2, false);
+    showDivs((slideIndexTeam += 1), "about__team__wr__slides", 2, false);
 }
 function plusDivsIntervalOffice() {
-    showDivs((slideIndexOffice += 1), "myslides-office", 2, desktopW);
+    showDivs((slideIndexOffice += 1), "gallery__wr__slides", 3, desktopW);
 }
 
 //onclick functions
@@ -156,11 +158,11 @@ function plusDivs(n) {
     clearInterval(carouselTimer); //stop timer
 }
 function plusDivsTeam(n) {
-    showDivs((slideIndexTeam += n), "myslides-team", 2, false);
+    showDivs((slideIndexTeam += n), "about__team__wr__slides", 2, false);
     clearInterval(carouselTimerTeam); //stop timer
 }
 function plusDivsOffice(n) {
-    showDivs((slideIndexOffice += n), "myslides-office", 3, desktopW);
+    showDivs((slideIndexOffice += n), "gallery__wr__slides", 3, desktopW);
     clearInterval(carouselTimerOffice); //stop timer
 }
 
@@ -191,24 +193,24 @@ function showDivs(counter, className, counterFlag, maxVw) {
         //Toggle classes on list elements
         for (i = 0; i < elemList.length; i++) {
             elemList[i].classList.add('is-off');
-            elemList[i].classList.remove('is-flex', 'is-col-cent')
+            elemList[i].classList.remove('is-flex');
         }
         //always keep counter-1 element switched on
         if (counterFlag == 1) { 
             elemList[slideIndex - 1].classList.add('is-flex', 'is-col-cent');
             elemList[slideIndex - 1].classList.remove('is-off');
         } else if (counterFlag == 2) {
-            elemList[slideIndexTeam - 1].classList.add('is-flex', 'is-col-cent');
-            elemList[slideIndex - 1].classList.remove('is-off');
+            elemList[slideIndexTeam - 1].classList.add('is-flex');
+            elemList[slideIndexTeam - 1].classList.remove('is-off');
         } else {
             elemList[slideIndexOffice - 1].classList.add('is-flex', 'is-col-cent');
-            elemList[slideIndex - 1].classList.remove('is-off');
+            elemList[slideIndexOffice - 1].classList.remove('is-off');
         }
     } else { //in case vw > threshold switch on all elements from the office gallery (design specific)
         if(counterFlag == 1 || counterFlag == 3) {
             for (i = 0; i < elemList.length; i++) {
-                elemList[i].classList.add('is-flex', 'is-col-cent');
-                elemList[i].classList.remove('is-off')
+                elemList[i].classList.add('is-flex');
+                elemList[i].classList.remove('is-off');
             }
         }
     }
@@ -216,8 +218,8 @@ function showDivs(counter, className, counterFlag, maxVw) {
 
 //instantiate the galleries and timers
 showDivs(slideIndex, "about__office__slides", 1, desktopW);
-showDivs(slideIndexTeam, "myslides-team", 2, false);
-showDivs(slideIndexOffice, "myslides-office", 3, desktopW);
+showDivs(slideIndexTeam, "about__team__wr__slides", 2, false);
+showDivs(slideIndexOffice, "gallery__wr__slides", 3, desktopW);
 
 carouselTimer = setInterval(plusDivsInterval, 6000);
 carouselTimerTeam = setInterval(plusDivsIntervalTeam, 6000);
@@ -228,7 +230,7 @@ window.onresize = function(){
     location.reload(); 
     //if vw < maxVw display all office gallery elements
     showDivs(slideIndex, "about__office__slides", 1, desktopW);
-    showDivs(slideIndexOffice, "myslides-office", 3, desktopW);
+    showDivs(slideIndexOffice, "gallery__wr__slides", 3, desktopW);
 }
 
 // Smooth scroll handler //     
