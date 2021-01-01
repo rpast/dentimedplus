@@ -3,6 +3,10 @@
     overflow: hidden;
 }
 
+.is-scrollable {
+    overflow: scroll;
+}
+
 //Display switchers
 .is-off {
     display: none;
@@ -20,6 +24,16 @@
     display: none;
     @include desktop {
         display: flex;
+    }
+}
+
+.is-first {
+    margin: 0;
+    @include tablet-w {
+        margin: 0 1rem 0 0;
+    }
+    @include desktop {
+        margin: 0 2rem 0 0;
     }
 }
 

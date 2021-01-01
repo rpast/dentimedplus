@@ -61,6 +61,11 @@ $l-desktop: 1400px; // large desktop screen
 //Heights
 $phone-height: 639px;
 
+//Widths
+$m-width: 85vw;
+$d-width: 60vw;
+$ld-width: 45vw;
+
 //Vars for displaying hero banner on tall phones
 $tall-phone-height: 680px;
 $tall-phone-width: 374px;
@@ -71,7 +76,8 @@ $wide-screen: "(min-width: #{$max-breakpoint-fontsize}px)";
 
 //Varia
 $stopper-width: 15px;
-$stopper-margin: 4px;
+$stopper-margin: 6px;
+$stopper-margin-w: 15px;
 
 
 //NAVBAR VARIABLES
@@ -93,5 +99,6 @@ $d-section-width: 65vw; //section width for small pcs USED
 $ld-section-width: 60vw; //section width for large pcs USED
 
 //$office-card-max-w: 480px;
-$office-card-text-w: 300px;
+$office-card-text-w: 250px;
+$office-card-txt-h: 400px;
 $card-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);

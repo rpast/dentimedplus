@@ -3,7 +3,8 @@
 // Const & Vars //
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-const desktopW = 768;
+const desktopW = 1440; //Large screen px threshold
+const tablW = 768; //Tablet px threshold
 
 // Toggle between adding and removing the "responsive" //
 // class to topnav when the user clicks on the icon //
@@ -24,6 +25,7 @@ var chirurgia = document.querySelector("#chirurgia")
 
 var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, protezy, chirurgia]
 
+//Class switching function
 function switcher(element, state, onState, offState) {
     //selected element gets switched. state = 1 switch-on, = 0 switch off.
     if(state == 0) {
@@ -63,6 +65,10 @@ function toggle(elem) {
         if(elem.classList.contains('is-flex')) {
             switcher(cardWrapper, 0, 'is-flex', 'is-off');
             switcher(elem, 0, 'is-flex', 'is-off');
+            if(vw < 768) {
+                //switch on scrolling on body element
+                switcher(body, 1, 'is-scrollable', 'is-fixed')
+            }
         } else {
             console.log(elem)
             //Switch off all the active objects in the DOM
@@ -73,6 +79,11 @@ function toggle(elem) {
             //Switch on element
             switcher(cardWrapper, 1, 'is-flex', 'is-off');
             switcher(elem, 1, 'is-flex', 'is-off');
+            //if screen width is smaller than tablet
+            if(vw < tablW) {
+                //switch off scrolling on body element to avoid double scroll
+                switcher(body, 0, 'is-scrollable', 'is-fixed')
+            }
         }
     }
 };
@@ -143,7 +154,7 @@ var slideIndexOffice = 1;
 
 //interval functions -> used to instantiate timer 
 function plusDivsInterval() {
-    showDivs((slideIndex += 1), "about__office__slides", 1, desktopW);
+    showDivs((slideIndex += 1), "about__office__slides", 1, tablW);
 }
 function plusDivsIntervalTeam() {
     showDivs((slideIndexTeam += 1), "about__team__wr__slides", 2, false);
@@ -154,7 +165,7 @@ function plusDivsIntervalOffice() {
 
 //onclick functions
 function plusDivs(n) {
-    showDivs((slideIndex += n), "about__office__slides", 1, desktopW);
+    showDivs((slideIndex += n), "about__office__slides", 1, tablW);
     clearInterval(carouselTimer); //stop timer
 }
 function plusDivsTeam(n) {
@@ -211,13 +222,14 @@ function showDivs(counter, className, counterFlag, maxVw) {
             for (i = 0; i < elemList.length; i++) {
                 elemList[i].classList.add('is-flex');
                 elemList[i].classList.remove('is-off');
+                elemList[i].classList.remove('is-col-cent');
             }
         }
     }
 };
 
 //instantiate the galleries and timers
-showDivs(slideIndex, "about__office__slides", 1, desktopW);
+showDivs(slideIndex, "about__office__slides", 1, tablW);
 showDivs(slideIndexTeam, "about__team__wr__slides", 2, false);
 showDivs(slideIndexOffice, "gallery__wr__slides", 3, desktopW);
 

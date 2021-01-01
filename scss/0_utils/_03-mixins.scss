@@ -49,26 +49,22 @@
     }
 }
 
-// @mixin margins-vw($top, $right, $bottom, $left, $section) {
-//     margin-top: get-vw($top);
-//     margin-right: get-vw($right);
-//     margin-bottom: get-vw($bottom);
-//     margin-left: get-vw($left);
-// }
-
-@mixin fixed-margins($section) {
-    @if $section == hero-s {
-        margin: 4rem 2rem 0 2rem;
-    } @else if $section == hero-s-tall {
-        margin: 6rem 2rem 0 2rem;
-    } @else if $section == hero-m {
-        margin: 4rem 3rem 0 3rem;
-    } @else if $section == hero-l {
-        margin: 5rem 4rem 0 4rem;
-    } @else if $section == section {
-        margin: 0rem 1.5em 0em 1.5em;
+//Layout 
+@mixin standard-w() {
+    width: 95vw;
+    max-width: 500px;
+    @include tablet-w {
+        width: 600px;
+        max-width: unset;
+    }
+    @include desktop {
+        width: 800px;
+    }
+    @include l-desktop {
+        width: 850px;
     }
 }
+
 
 @mixin flex-djacai($direction, $j-content, $a-content, $a-items) {
     //display: flex;
@@ -129,4 +125,12 @@
     & tr td:nth-child(even) {
         min-width: 100px;
     }
+}
+
+//SLIDE CARD
+@mixin card {
+    @include flex-djacai(column, flex-start, center, center);
+    display: flex;
+    background-color: white;
+    box-shadow: $card-shadow;
 }

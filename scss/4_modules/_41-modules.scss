@@ -181,10 +181,16 @@
     }
 
     &__slides {
+        display: flex;
+        @include flex-djacai(column, flex-start, center, center);
         box-shadow: $card-shadow;
-        width: 85vw;
         @include tablet-w{
+            display: flex;
+            height: 720px;
             width: 40vw;
+        }
+        @include desktop {
+            height: 800px;
         }
         @include l-desktop {
             height: 900px;
@@ -195,17 +201,12 @@
             @include flex-djacai(column, center, center, center);
             width: 100%;
             &__pic { 
-                // width: 100%;
-                // height: auto;
-                // max-width: 400px;
-                // margin: 1rem 0;
-                // transform: scale(.96);
                 @include pic-behavior();
             }
             &__stops {
                 display: flex;
                 @include flex-djacai(row, center, center, center);
-                @include desktop {
+                @include tablet-w{
                     display: none;
                 }
                 & img {
@@ -217,11 +218,11 @@
 
         &__text {
             display: flex;
-            @include flex-djacai(column, flex-start, flex-start, flex-start);   
-            margin: 1rem;
-            @include desktop {
-                width: $office-card-text-w;
-                margin: 1rem 2rem 2rem 2rem;
+            @include flex-djacai(column, space-between, flex-start, flex-start);   
+            margin: 1rem 2rem 2rem 2rem;
+            @include tablet-w{
+                height: $office-card-txt-h;
+                margin: 1rem 3rem 1rem 3rem;
             }
                 & a {
                 width: 100%;
@@ -231,7 +232,6 @@
         }
     }
 }
-
 .button {
     margin: 2rem 0rem 1rem 0rem;
     padding: 1rem 2rem;
@@ -265,36 +265,38 @@
         @include flex-djacai(column, center, center, center);
         display: flex;
         &__slides {
-            @include flex-djacai(column, flex-start, center, center);
-            background-color: white;
-            box-shadow: $card-shadow;
-            height: 900px;
+            @include card();
+            height: 940px;
             width: 100%;
             @include tablet-w {
-                margin: 1rem;
+                margin: 1rem 2rem;
                 padding: 0 0 2rem 0;
                 flex-direction: row;
-                height: auto;
+                height: 500px;
+            }
+            @include desktop {
+                height: 600px;
             }
             &__slider {
-                
                 &__pic {
                     @include pic-behavior();
+                    margin: 1rem 2rem 2rem 2rem;
                 }
                 &__stop {
                     display: flex;
                     @include flex-djacai(row, center, center, center);
                     & img {
                         width: $stopper-width;
-                        margin: $stopper-margin;
+                        margin: 5px;
+                        @include desktop {
+                            margin: $stopper-margin;
+                        }
                     }
                 }
             }
             &__text {  
-                width: 100%;              
+                width: 80%; 
                 &__wr {
-                    width: 100%;
-                    margin: 0 1rem;
                     & h3 {
                         margin: 2rem 0 1rem 0;
                     }
@@ -310,7 +312,7 @@
     }
 }
 
-//SERVICES
+//SERVICES SECTION
 .services {
     @extend .l-about;
     &__bar {
@@ -358,25 +360,40 @@
                 color: $dent-cinnamon;
             }
         }
-
+        //Service cards
         &__card {
             //@include flex-djacai(column, center, center, center);
+            @include card();
             position: fixed;
             top: 0;
             left: 0;
             z-index: 4;
-            background-color: white;
+            @include tablet-w {
+                z-index: 1;
+                position:absolute;
+            }
             &__serv {
-                position: fixed;
+                
+                position: relative;
                 width: 100vw;
                 height: 100vh;
-                flex-direction: column;
-                @extend .l-standard-w;
-                position: relative;
-                box-shadow: $card-shadow;
+                flex-direction: column; 
                 //Make fixed element scrollable
                 overflow-y: scroll;
                 max-height: 100%;
+                @include tablet-w {
+                    width: 600px;
+                    max-width: unset;
+                    height: 490px;
+                    box-shadow: $card-shadow;
+                }
+                @include desktop {
+                    width: 800px;
+                    height: 580px;
+                }
+                @include l-desktop {
+                    width: 850px;
+                }
                 &__icon {
                     height: $nav-height;
                     display: flex;
@@ -389,11 +406,7 @@
                         }
                     }
                 }
-                /// FLAG!!!!!!!!!!!!!
-                /// TODO: Make overflow hidden on background element
-                /// when fixed element is on
-                /// fix personel card texts on mobile
-                /// fix basic width of elements on resizing!
+
                 &__text {
                     
                     & p {
@@ -410,101 +423,239 @@
         }
     }
 }
-.services-margin {
-    margin: 6rem 0 0 2rem;
-}
 
-//DENTIMED GALLERY
-.gallery {
-    //@extend .about__team__wr__slides;
-    display: flex;
+//PRICES SECTION
+.prices {
     @include flex-djacai(column, center, center, center);
-    width: 100%;
-    height: 60vh;
-    //max-height: 600px;
-    background-color: $lavender-plus;
-    box-shadow: none;
-    &__wr {
-        @include desktop {
+    display: flex;
+    padding: 2rem 0;
+    background-image: url('../static/background-color-rev.svg');
+    background-size: cover;
+
+    &__card {
+        @include card();
+        justify-content: center;
+        height: 80%;
+        &__wr { //Wrap table and parahraph together
+            @include flex-djacai(column,center,center,center);
             display: flex;
-            @include flex-djacai(row, center, center, center);
-        }
-        // &__slides {
-        //     display: none;
-        // }
-    }
-    .slogan::before {
-        position: relative;
-        left: 50px;
-        top: 60px;
-        font-family: 'FontAwesome';
-        content: "\f10d";
-        color: $font-col-light;
-        font-size: 3rem;
-        z-index: 0;
-        opacity: 0.2;
-        @include desktop {
-            font-size: 5rem;
-        }
-    }
-    .slogan {
-        display: flex;
-        @include flex-djacai(row, center, center, center);
-        margin: 2rem 0 0 0;
-        max-width: 800px;
-        text-align: center;
-        @include tablet-w {
-            margin: 3rem 0 0 0;
-        }
-        & h3 {
-            z-index: 2;
-            //min-width: 300px;
-            max-width: 400px;
-            letter-spacing: 0.1rem;
-            font-size: 1.3rem;
-            font-weight: 100;
-        }
-    }
-    .slogan::after { 
-        position: relative;
-        left: -50px;
-        top: -60px;
-        font-family: 'FontAwesome';
-        content: "\f10e";
-        color: $font-col-light;
-        font-size: 3rem;
-        z-index: 0;
-        opacity: 0.2;
-        @include desktop {
-            font-size: 5rem;
-        }
-    }
-}
-.picture-office {
-    width: 300px;
-    margin: 0 0 2rem 0;
-}
-.stopper-box {
-    @include desktop {
-        display: none;
-    }
-}
-.gallery__wr__slides {
-    margin: 0 1rem 0 1rem;
-    @include desktop {
-        margin: 0 2rem 0 0;
-    }
-    .picture-slider {
-        margin: 0;
-        .stopper-box {
-            @include desktop {
-                display: none;
+            width: 90%;
+            margin-bottom: $section-bottom-margin;
+            &__table {
+                @include table();
+                & tr th {
+                    padding: 1rem 0.5rem;
+                    @include desktop {
+                        padding: 1rem 2rem 1rem 1rem;
+                    }
+                }
+                & tr td {
+                    padding: 0.5rem 0.5rem;
+                    @include desktop {
+                        padding: 1rem 2rem;
+                    }
+                }
+            }
+            & p {
+                font-size: $m-second-fsize;
             }
         }
     }
 }
-.myslides-office:last-child {
+
+//DENTIMED GALLERY
+.gallery {
+    display: flex;
+    @include flex-djacai(column, flex-start, center, center);
+    background-image: url(../static/back-geom.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: none;
+    height: 700px;
+    @include tablet-w {
+        height: 900px;
+    }
+    @include l-desktop {
+        height: 700px;
+    }
+    &__wr {
+        margin: 2rem 0 4rem 0;
+        @include l-desktop {
+            display: flex;
+            @include flex-djacai(row, space-between, center, center);
+            margin: 4rem 0 4rem 0;
+        }
+        &__slides {
+            margin: 0 1rem 0 1rem;
+            @include l-desktop {
+                display: flex;
+            }
+            &__slider {
+                //margin: 0;
+                &__pic {
+                    width: 90vw;
+                    max-width: 500px;
+                    margin: 2rem 0;
+                    @include l-desktop {
+                        width: 300px;
+                    }
+                }
+
+                .stopper-box {
+                    display: flex;
+                    @include flex-djacai(row, center, center, center);
+                    @include l-desktop {
+                        display: none;
+                    }
+                    & img {
+                        width: $stopper-width;
+                        margin: 0 $stopper-margin-w 0 0;
+                    }
+                }
+            }
+        }
+        &__slogan {
+            display: flex;
+            @include flex-djacai(row, center, center, center);
+            margin: 2rem 0 0 0;
+            width: 300px;
+            text-align: center;
+            @include desktop {
+                width: 500px;
+                //margin: 3rem 0 0 0;
+            }
+            & h3 {
+                z-index: 2;
+                //min-width: 300px;
+                max-width: 400px;
+                letter-spacing: 0.1rem;
+                font-size: 1.3rem;
+                font-weight: 100;
+            }
+        }
+    }
+    
+}
+.gallery__wr__slogan::before {
+    position: relative;
+    left: 30px;
+    top: 60px;
+    font-family: 'FontAwesome';
+    content: "\f10d";
+    color: $font-col-light;
+    font-size: 3rem;
+    z-index: 0;
+    opacity: 0.05;
     @include desktop {
-        margin: 0;
+        font-size: 4rem;
+        top: 50px;
+        left: 50px;
     }
 }
+.gallery__wr__slogan::after { 
+    position: relative;
+    left: -30px;
+    top: -60px;
+    font-family: 'FontAwesome';
+    content: "\f10e";
+    color: $font-col-light;
+    font-size: 3rem;
+    z-index: 0;
+    opacity: 0.05;
+    @include desktop {
+        font-size: 4rem;
+        top: -50px;
+        left: -50px;
+    }
+}
+
+//CONTACT
+//FLAG!!!!!!!!!!!!!!!!!!!!!!!!
+.contact {
+    @extend .l-about; //flex center
+    & .contact-wrapper {
+    }
+}
+
+.map {
+    margin-top: 2rem;
+    width: 100vw;
+    height: 60vh;
+}
+
+#calendar-icon, .phone-icon, #plane-icon {
+    width: 100px;
+    margin: 1em 0 1em 0;
+}
+#calendar-icon {
+    @include desktop {
+        width: 150px;
+    }
+}
+
+.contact-box {
+    @extend .about__team__wr__slides;
+    margin-bottom: 2rem;
+    //display: none;
+    @include desktop {
+        box-shadow: none;
+        width: auto;
+    }
+    & .contact-content {
+        display: flex;
+        @include flex-djacai(column, center, center, center);
+        margin: 1.5rem;
+        @include desktop {
+            margin: 1rem;
+        }
+        p {
+            margin-bottom: 0.2rem;
+        }
+        h4 {
+            margin-bottom: 0.5rem;
+            @include desktop {
+                width: 400px;
+            }
+        }
+    }
+    & table {
+        @extend .prices__card__wr__table;
+    }
+}
+.contact-hours {
+    display: flex;
+    @include flex-djacai(column, center, center, center);
+    grid-area: hours;
+    align-self: stretch;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
+}
+
+.contact-phone {
+    display: flex;
+    @include flex-djacai(column, center, center, center);
+    grid-area: phone;
+    align-self: stretch;
+}
+.contact-mail {
+    @include flex-djacai(column, center, center, center);
+    grid-area: email;
+    align-self: stretch;
+}
+
+.contact-us-mobile {
+    display: flex;
+    @include desktop {
+        display: none;
+    }
+}
+.contact-email-text {
+    display: flex;
+    @include flex-djacai(column, flex-start, flex-start, flex-start);
+}
+
+
+
+
+///FLAG!!!!!!!!!!!!!!!!!!!!!
+///Resize page and inspect layout
+///

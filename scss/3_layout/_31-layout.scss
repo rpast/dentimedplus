@@ -36,13 +36,7 @@
 
 //UTILITIES
 .l-standard-w {
-    width: 85vw;
-    @include desktop {
-        width: 60vw;
-    }
-    @include l-desktop {
-        width: 45vw;
-    }
+    @include standard-w();
 }
 
 .l-head { //Headers 
