@@ -40,6 +40,7 @@
 }
 
 .l-head { //Headers 
+    text-align: center;
     font-size: $m-header-fsize;
     margin: 1rem 0 1rem 0;
     @include desktop {
@@ -59,5 +60,14 @@
     @include tablet-w {
         margin-right: 2rem;
     }
+}
+
+.l-anchor { //Define anchor for internal links
+    position: absolute;
+    top: -60px;
+}
+.l-anchor-team { //Special anchor for team
+    position: absolute;
+    top: 920px;
 }
 

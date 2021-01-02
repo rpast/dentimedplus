@@ -1,9 +1,0 @@
-@mixin head-face {
-    font-family: 'FreightText Pro ';
-    src: local('FreightText Pro  Black Regular'), local('FreightText-Pro--Black-Regular'),
-        url('/static/fonts/freight/FreightTextProBlack-Regular.woff2') format('woff2'),
-        url('/static/fonts/freight/FreightTextProBlack-Regular.woff') format('woff'),
-        url('/static/fonts/freight/FreightTextProBlack-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}

@@ -23,6 +23,8 @@ var korony = document.querySelector("#korony")
 var protezy = document.querySelector("#protezy")
 var chirurgia = document.querySelector("#chirurgia")
 
+
+
 var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, protezy, chirurgia]
 
 //Class switching function
@@ -177,6 +179,22 @@ function plusDivsOffice(n) {
     clearInterval(carouselTimerOffice); //stop timer
 }
 
+
+function pickMember(index) {
+    var i;
+    var elemList = document.getElementsByClassName('about__team__wr__slides'); //catch all related elements
+    clearInterval(carouselTimerTeam); //stop timer
+    //Toggle classes on list elements
+    for (i = 0; i < elemList.length; i++) { // Switch off all elements
+        elemList[i].classList.add('is-off');
+        elemList[i].classList.remove('is-flex');
+    }
+    elemList[index].classList.add('is-flex'); //switch on targeted element
+    elemList[index].classList.remove('is-off');
+    slideIndexTeam = index+1; //set team index value to be used by showDivs()
+}
+
+
 function showDivs(counter, className, counterFlag, maxVw) {
     //Function overview:
         //a simple gallery switcher
@@ -188,7 +206,6 @@ function showDivs(counter, className, counterFlag, maxVw) {
 
     var i;
     var elemList = document.getElementsByClassName(className);
-    //console.log('elemList length '+elemList.length)
     
     if(vw < maxVw || maxVw == false) {
         if (counter > elemList.length) { //if # of elements in the list is shorter than counter val -> reset the counter
@@ -200,7 +217,6 @@ function showDivs(counter, className, counterFlag, maxVw) {
                 slideIndexOffice = 1;
             }
         }
-
         //Toggle classes on list elements
         for (i = 0; i < elemList.length; i++) {
             elemList[i].classList.add('is-off');
@@ -273,14 +289,25 @@ const io = new IntersectionObserver(function(entries, io) {
 io.observe(servicesSection);
 
 //find overflows
-var docWidth = document.documentElement.offsetWidth;
+// var docWidth = document.documentElement.offsetWidth;
 
-[].forEach.call(
-    document.querySelectorAll('*'),
-    function(el) {
-        if (el.offsetWidth > docWidth) {
-            console.log(el);
-            console.log('overflow!')
-        }
-    }
-);
+// [].forEach.call(
+//     document.querySelectorAll('*'),
+//     function(el) {
+//         if (el.offsetWidth > docWidth) {
+//             console.log(el);
+//             console.log('overflow!')
+//         }
+//     }
+// );
+
+//Find embeded google map bar 
+
+//var gBar = innerDoc.contentWindow.document.querySelector(".i4ew0d-pzNkMb-haAclf")
+
+window.addEventListener("load", function () {
+    var iframe = document.getElementById("map");
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    console.log(iframe.class)
+    console.log(innerDoc)
+})

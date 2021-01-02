@@ -44,9 +44,7 @@ $d-header-fsize: 2.369rem; //37.90px //USED
 $d-sheader-fsize: 1.777rem; //28.43px //USED;
 $d-span-fsize: 1.333rem; //21.33px //USED
 $d-default-fsize: 1rem; //16px //USED
-$d-second-fsize: 0.75rem; //12px //USED
-
-//Other
+$d-second-fsize: 0.75rem; //12        
 $line-height: 1.75; //USED
 
 // ##### RESPONSIVENESS ##### 
@@ -86,7 +84,7 @@ $nav-elem-margins: 1rem; //USED
 $svg-h: 4vh; //USED
 $svg-minh: 35px; //USED
 //Logo 
-$logo-size: 35px; //USED
+$logo-size: 40px; //USED
 //Phone icon
 $nav-phone-size: 30px; //USED
 //NAV height
@@ -102,3 +100,6 @@ $ld-section-width: 60vw; //section width for large pcs USED
 $office-card-text-w: 250px;
 $office-card-txt-h: 400px;
 $card-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
+
+$m-contact-icons-w: 80px;
+$d-contact-icons-w: 100px;

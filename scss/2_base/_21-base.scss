@@ -6,8 +6,15 @@ body
 {
     margin: 0;
     padding: 0;
+    
     overflow-x: hidden; //get rid of h scrollbar 100vh/vw issue
-    width: 100%;
+    width: 100vw;
+}
+
+section {
+    position: relative;
+    margin:0;
+    padding:0;
 }
 
 html {
@@ -20,17 +27,6 @@ html {
         font-family: $dent-font-head;
         //Define responsive font sizes for Header
         font-size: $m-title-fsize;
-        // @include tall-smartphone {
-        //     font-size: 3.2rem;
-        // }
-        // @include s-tablet-w {
-        //     min-width: 400px;
-        //     font-size: 3.8rem;
-        // }
-        // @include l-tablet-w {
-        //     min-width: 600px;
-        //     font-size: 4.8rem; //76px
-        // }
         @include desktop {
             font-size: $d-title-fsize;
         }
@@ -63,4 +59,6 @@ html {
 a, a:hover, a:visited, a:link, a:active {
     text-decoration: none;
     color: $font-col-dark;
+    cursor: pointer;
 }
+

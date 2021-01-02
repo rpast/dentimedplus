@@ -181,8 +181,7 @@
     }
 
     &__slides {
-        display: flex;
-        @include flex-djacai(column, flex-start, center, center);
+        @include card;
         box-shadow: $card-shadow;
         @include tablet-w{
             display: flex;
@@ -466,12 +465,13 @@
 //DENTIMED GALLERY
 .gallery {
     display: flex;
-    @include flex-djacai(column, flex-start, center, center);
+    @include flex-djacai(column, center, center, center);
+    margin-bottom: 2rem;
     background-image: url(../static/back-geom.svg);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: none;
-    height: 700px;
+    height: 720px;
     @include tablet-w {
         height: 900px;
     }
@@ -479,7 +479,10 @@
         height: 700px;
     }
     &__wr {
-        margin: 2rem 0 4rem 0;
+        margin: 2rem 0 2rem 0;
+        @include desktop {
+            margin: 2rem 0 4rem 0;
+        }
         @include l-desktop {
             display: flex;
             @include flex-djacai(row, space-between, center, center);
@@ -495,7 +498,8 @@
                 &__pic {
                     width: 90vw;
                     max-width: 500px;
-                    margin: 2rem 0;
+                    margin: 0 0 1rem 0;
+                    border-radius: 5px;
                     @include l-desktop {
                         width: 300px;
                     }
@@ -517,12 +521,12 @@
         &__slogan {
             display: flex;
             @include flex-djacai(row, center, center, center);
-            margin: 2rem 0 0 0;
+            margin: 1rem 0 0 0;
             width: 300px;
             text-align: center;
             @include desktop {
                 width: 500px;
-                //margin: 3rem 0 0 0;
+                margin: 2rem 0 0 0;
             }
             & h3 {
                 z-index: 2;
@@ -570,92 +574,187 @@
 }
 
 //CONTACT
-//FLAG!!!!!!!!!!!!!!!!!!!!!!!!
 .contact {
     @extend .l-about; //flex center
-    & .contact-wrapper {
+    & h2 {
+        @include desktop {
+            margin-bottom: 4rem;
+        }
     }
-}
-
-.map {
-    margin-top: 2rem;
-    width: 100vw;
-    height: 60vh;
-}
-
-#calendar-icon, .phone-icon, #plane-icon {
-    width: 100px;
-    margin: 1em 0 1em 0;
-}
-#calendar-icon {
-    @include desktop {
-        width: 150px;
-    }
-}
-
-.contact-box {
-    @extend .about__team__wr__slides;
-    margin-bottom: 2rem;
-    //display: none;
-    @include desktop {
-        box-shadow: none;
-        width: auto;
-    }
-    & .contact-content {
+    &__wr {
         display: flex;
         @include flex-djacai(column, center, center, center);
-        margin: 1.5rem;
         @include desktop {
-            margin: 1rem;
+            display: flex;
+            @include flex-djacai(row-reverse, space-between, flex-start, flex-start);
         }
-        p {
-            margin-bottom: 0.2rem;
-        }
-        h4 {
-            margin-bottom: 0.5rem;
+
+        &__hours  {
+            @include card;
+            width: 100%;
+            margin-bottom: 2rem;
             @include desktop {
                 width: 400px;
             }
+            &__wr {
+                display: flex;
+                @include flex-djacai(column, center, center, center);
+                width: 100%;
+                & svg {
+                    @include contact-svg;
+                }
+                
+            }
+            & table {
+                @extend .prices__card__wr__table;
+                & tr td {
+                    padding: 0.5rem 0.5rem;
+                    @include desktop {
+                        padding: 0.5rem 3rem;
+                    }
+                }
+                & tr td:nth-child(odd) {
+                    padding-left: 2rem;
+                }
+                & tr td:nth-child(even) {
+                    padding-right: 2rem;
+                }
+            }
+        }
+        &__contact {
+            @include card;
+            width: 100%;
+            margin-bottom: 1rem;
+            @include desktop {
+                box-shadow: none;
+                width: auto;
+            }
+
+            &__phone-head {
+                display: flex;
+                @include flex-djacai(column, center, center, center);
+                & svg {
+                    @include contact-svg;
+                }
+            }
+            &__phone-text {
+                margin-bottom: 1rem;
+                @include desktop {
+                    margin-bottom: 1rem;
+                }
+                &__bar {
+                    height: 1px;
+                    background-color: $font-col-dark;
+                    margin: 2rem 0 3rem 0;
+                }
+            }
+            &__mail {
+                display: flex;
+                @include flex-djacai(column, center, center, center);
+                &__head {
+                    & svg {
+                        @include contact-svg;
+                    }
+                }
+                &__text {
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                }
+            }
         }
     }
-    & table {
-        @extend .prices__card__wr__table;
+}
+
+//MAP
+.map {
+    display: flex;
+    @include flex-djacai(flex-end, center, center, center);
+    margin-top: 2rem;
+    width: 100vw;
+    height: 60vh;
+    & iframe {
+        height: 100%;
+        border: none;
     }
 }
-.contact-hours {
-    display: flex;
-    @include flex-djacai(column, center, center, center);
-    grid-area: hours;
-    align-self: stretch;
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
-}
 
-.contact-phone {
+//FOOTER
+footer {
     display: flex;
     @include flex-djacai(column, center, center, center);
-    grid-area: phone;
-    align-self: stretch;
-}
-.contact-mail {
-    @include flex-djacai(column, center, center, center);
-    grid-area: email;
-    align-self: stretch;
-}
-
-.contact-us-mobile {
-    display: flex;
-    @include desktop {
-        display: none;
+    background-image: url(../static/back-geom.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: none;
+    & h2 {
+        margin-top: 0;
+    }
+    & p, a {
+        font-size: $m-second-fsize;
+        opacity: 0.9;
+        @include desktop {
+            font-size: $d-second-fsize;
+        }
+    }
+    & .foot-info {
+        display: flex;
+        @include flex-djacai(column, space-between, column, column);
+        margin: 2rem 0 0 0;
+        width: 90%;
+        color: $font-col-light;
+        @include desktop {
+            @include flex-djacai(row, space-between, column, column);
+            width: 80%;
+        }
+        &__general {
+            &__tel-head {
+                margin: 2rem 0 0 0;
+            }
+        }
+        &__hours{
+            &__hours-head {
+                margin: 2rem 0 0 0;
+            }
+            & a {
+                color: $font-col-light;
+            }
+        }
+        &__media{
+            &__fb {
+                display:flex;
+                @include flex-djacai(row, flex-end, center, center);
+                & svg {
+                    width: 40px;
+                    fill: $font-col-light;
+                    margin: 2rem 0;
+                    @include desktop {
+                        margin:0;
+                    }
+                }
+            }
+        }
+    }
+    & .foot-serv {
+        display: flex;
+        @include flex-djacai(column, center, center, center);
+        width: 100vw;
+        background-color: black;
+        opacity: 0.3;
+        color: $font-col-light;
+        &__wr {
+            width:90%;
+            @include desktop {
+                display: flex;
+                @include flex-djacai(row, center, center, center);
+                width:80%;
+            }
+            & a {
+                font-size: $m-second-fsize;
+                color: $font-col-light;
+                @include desktop {
+                    font-size: $d-second-fsize;
+                }
+            }
+        }
     }
 }
-.contact-email-text {
-    display: flex;
-    @include flex-djacai(column, flex-start, flex-start, flex-start);
-}
-
-
-
-
-///FLAG!!!!!!!!!!!!!!!!!!!!!
-///Resize page and inspect layout
-///
