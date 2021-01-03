@@ -40,15 +40,6 @@
 }
 //***
 
-//IMPLEMENT!
-@mixin font-size-vw($size) {
-    font-size: get-vw($size);
-    // Prevent font-size from getting too big
-    @media #{$wide-screen} {
-        font-size: $size;
-    }
-}
-
 //Layout 
 @mixin standard-w() {
     width: 95vw;
@@ -80,10 +71,16 @@
     letter-spacing: $spacing;
 }
 
+
 //NAVBAR
-@mixin svg-size($h, $minh) {
+@mixin icon-size($h) {
     height: $h;
-    min-height: $minh;
+    width: $h;
+}
+
+@mixin icon-details() {
+    color: $font-col-dark;
+    opacity: $i-op;
 }
 
 //ABOUT US 
@@ -137,10 +134,8 @@
 }
 
 //CONTACT
-@mixin contact-svg {
+@mixin contact-icon {
     margin: 1rem 0 1rem 0;
-    width: $m-contact-icons-w;
-    @include desktop {
-        width: $d-contact-icons-w;
-    }
+    color: $font-col-dark;
+    opacity: $i-op;
 }

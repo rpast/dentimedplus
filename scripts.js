@@ -22,10 +22,9 @@ var estetyczna = document.querySelector("#estetyczna")
 var korony = document.querySelector("#korony")
 var protezy = document.querySelector("#protezy")
 var chirurgia = document.querySelector("#chirurgia")
+var regen = document.querySelector("#regen")
 
-
-
-var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, protezy, chirurgia]
+var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, protezy, chirurgia, regen];
 
 //Class switching function
 function switcher(element, state, onState, offState) {
@@ -97,14 +96,14 @@ var myLogo = document.querySelector(".nav__wr__logo");
 var myLogoW = document.querySelector('.nav__wr__logo-white');
 var myLinks = document.querySelector(".nav__wr__links")
 var myCall = document.querySelector(".nav__wr__tel__wr")
-var myHamburger = document.querySelector(".nav__wr__icon__svg");
+var myHamburger = document.querySelector(".nav__wr__icon__a");
 
 var clientH = document.documentElement.clientHeight / 15;
 
 window.onscroll = function () {
     var scrolledVal1 = document.body.scrollTop;
     var scrolledVal2 = document.documentElement.scrollTop;
-
+    
     if (scrolledVal1 >= clientH || scrolledVal2 >= clientH) {
         myNav.classList.add("is-solid");
         myNav.classList.remove("is-trans");

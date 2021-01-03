@@ -54,7 +54,10 @@
 .is-light {
     fill: $font-col-light;
     color: $font-col-light;
-
+    border-color: $font-col-light;
+}
+.is-fill-light {
+    background-color: $font-col-light;
 }
 
 .is-dark {

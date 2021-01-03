@@ -14,16 +14,16 @@
         @include flex-djacai(column, center, center, center);
         & a {
             font-size: 1.5em;
+            color: $font-col-dark;
             @include link-decor(uppercase, 0.2rem);
-            margin-bottom: 2em;
+            margin-bottom: 1rem;
         }
     }
     &__icon {
         margin: $nav-elem-margins 2rem $nav-elem-margins auto;
-        svg {
-            display: flex;
-            @include svg-size($svg-h, $svg-minh);
-            fill: black;
+        & a {
+            color: $font-col-dark;
+            opacity: $i-op;
         }
     }
 }
@@ -54,9 +54,9 @@
             @include tablet-w {
                 display: none;
             }
-            & svg {
-                display: flex;
-                @include svg-size($svg-h, $svg-minh);
+            &__a {
+                color: $font-col-light;
+                opacity: $i-op;
             }
         }
         &__links {
@@ -74,23 +74,22 @@
             }
         }
         &__tel {
-            display: none;    
+            display: none;
+            color: $font-col-dark;  
+            opacity: $i-op;
             @include desktop {
                 display: flex;
             }
-            &__wr {
+            &__wr { //Navbar phone icon
                 @include flex-djacai(row, flex-start, center, center);
                 min-width: 200px;
-                font-size: $m-default-fsize;
-                // @include desktop {
-                //     font-size: $d-span-fsize;
-                // }
+                color: $font-col-dark;
                 & p {
                     color: $font-col-dark;
+                    margin: 0 0 0 1rem;
                 }
-                & svg {
-                width: $nav-phone-size;
-                margin: 0 1rem;
+                & i { 
+                    opacity: 0.8;
                 }
             }
         }
@@ -120,13 +119,14 @@
                 width: 100%;
                 min-width: 250px;
                 margin: 5rem 0 0 0;
-                & svg {
+                &__phone-icon {
                     fill: $font-col-light;
                     margin: 0 2rem 2rem 1rem;
+                    opacity: $i-op;
                     width: 35%;
                     max-width: 100px;
                 }
-                & div {
+                & div { //Phone text
                     margin: 0 0 2rem 0rem;
                     font-size: $m-span-fsize;
                     font-weight: 500;
@@ -134,8 +134,19 @@
                         font-size: $d-span-fsize;
                         margin: 0 0 2rem 1rem;
                     }
+                    p {
+                        margin: 0;
+                    }
                 }
             }
+        }
+    }
+
+    &__ddown-icon {
+        padding: 0 0 2rem 0;
+        opacity: $i-op;
+        a {
+            color: $font-col-light;
         }
     }
 
@@ -233,16 +244,32 @@
 }
 .button {
     margin: 2rem 0rem 1rem 0rem;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1.5rem;
     box-shadow: 1px 2px 1px rgba(0,0,0,0.25);
-    border: 1px solid $font-col-dark;
-    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
     color: black;
 }
 .button:hover {
     transform: scale(.97);
     transition: transform 300ms, box-shadow 300ms;
     box-shadow: 0 0px 0px rgba(0,0,0,0.25);
+}
+
+.sqr-fill {
+    height: 15px;
+    width: 15px;
+    border: 1px solid $font-col-dark;
+    border-radius: 3px;
+    background-color: $font-col-dark;
+    margin: 0 0.3rem;
+}
+.sqr {
+    height: 15px;
+    width: 15px;
+    border: 1px solid $font-col-dark;
+    border-radius: 3px;
+    margin: 0 0.3rem;
 }
 
 //TEAM
@@ -277,25 +304,38 @@
                 height: 600px;
             }
             &__slider {
+                display: flex;
+                @include flex-djacai(column, space-between, center, center);
+                height: 448px;
+                @include desktop {
+                    height: 100%;
+                }
                 &__pic {
                     @include pic-behavior();
-                    margin: 1rem 2rem 2rem 2rem;
+                    margin: 1.5rem 2rem 1rem 1.5rem;
                 }
                 &__stop {
                     display: flex;
                     @include flex-djacai(row, center, center, center);
-                    & img {
-                        width: $stopper-width;
-                        margin: 5px;
-                        @include desktop {
-                            margin: $stopper-margin;
-                        }
-                    }
+                    // & img {
+                    //     width: $stopper-width;
+                    //     margin: 2px;
+                    //     @include template {
+                    //         margin: 5px;
+                    //     }
+                    //     @include desktop {
+                    //         margin: $stopper-margin;
+                    //     }
+                    // }
                 }
             }
             &__text {  
                 width: 80%; 
                 &__wr {
+                    & a.button {
+                        width: 60px;
+                        display: flex;
+                    }
                     & h3 {
                         margin: 2rem 0 1rem 0;
                     }
@@ -320,25 +360,37 @@
         height: 3px;
     }
     &__wr {
-
         @include flex-djacai(column, flex-start, center, center);
         display: flex;
         position: relative;
         height: 100%;
         @include desktop {
-            height: 600px;
+            height: 500px;
         }
         &__links {
             display: flex;
             @include flex-djacai(column, center, center, center);
-            padding: 3rem 0 3rem 0;
-
+            padding: 2rem 0;
+            @include desktop {
+                @include standard-w;
+                @include flex-djacai(row, space-between, center, center);
+                padding: 4rem 0 0 0;
+            }
+            & ul {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                @include desktop {
+                    width: auto;
+                }
+            }
             & ul li {
+                margin:0;
                 list-style-type: none; 
             }
             & ul li:before { 
                 font-family: 'FontAwesome';
-                content: "\f058";
+                content: "\f14a";
                 color: $lavender-plus;
                 margin-right: 0.5rem;
                 font-size: $m-span-fsize;
@@ -350,6 +402,7 @@
                 @include link-decor(none, 0.1rem);
                 font-family: $dent-font-head;
                 font-size: $m-span-fsize;
+                color: $font-col-dark;
                 line-height: 2.5;
                 @include desktop {
                     font-size: $d-span-fsize;
@@ -372,7 +425,6 @@
                 position:absolute;
             }
             &__serv {
-                
                 position: relative;
                 width: 100vw;
                 height: 100vh;
@@ -383,25 +435,27 @@
                 @include tablet-w {
                     width: 600px;
                     max-width: unset;
-                    height: 490px;
+                    height: 480px;
                     box-shadow: $card-shadow;
                 }
                 @include desktop {
                     width: 800px;
-                    height: 580px;
+                    height: 480px;
                 }
                 @include l-desktop {
                     width: 850px;
                 }
                 &__icon {
-                    height: $nav-height;
+                    // height: $nav-height;
                     display: flex;
                     @include flex-djacai(row, flex-end, center, center);
+                    margin: 1rem 2rem;
                     & a {
-                        & svg {
-                            color: $font-col-dark;
-                            @include svg-size($svg-h,$svg-minh);
-                            margin: $nav-elem-margins;
+                        // margin: 1rem;
+                        
+                        & i {
+                            @include icon-details();
+                            
                         }
                     }
                 }
@@ -435,11 +489,13 @@
         @include card();
         justify-content: center;
         height: 80%;
-        &__wr { //Wrap table and parahraph together
+        padding-top: 2rem;
+        &__wr { //Wrap table and parahraph text
             @include flex-djacai(column,center,center,center);
             display: flex;
             width: 90%;
             margin-bottom: $section-bottom-margin;
+            
             &__table {
                 @include table();
                 & tr th {
@@ -455,8 +511,31 @@
                     }
                 }
             }
-            & p {
-                font-size: $m-second-fsize;
+            &__info { //Additional pricing information
+                @include flex-djacai(column, flex-start, center, center);
+                display: flex;
+                width: 100%;
+                @include tablet-w {
+                    width: 80%;
+                }
+                @include desktop {
+                    width: 70%;
+                }
+                & p {
+                    @include flex-djacai(column, flex-start, center, center);
+                    display: flex;
+                }
+                &__credit {
+                    @include flex-djacai(row, flex-start, center, center);
+                    display: flex;
+                    width: 100%;
+                    margin: 1rem 0;
+                }
+                i {
+                    margin: 0 1rem 0 0;
+                    color: $font-col-dark;
+                    opacity: $i-op;
+                }
             }
         }
     }
@@ -486,7 +565,6 @@
         @include l-desktop {
             display: flex;
             @include flex-djacai(row, space-between, center, center);
-            margin: 4rem 0 4rem 0;
         }
         &__slides {
             margin: 0 1rem 0 1rem;
@@ -520,58 +598,49 @@
         }
         &__slogan {
             display: flex;
-            @include flex-djacai(row, center, center, center);
-            margin: 1rem 0 0 0;
+            @include flex-djacai(column, center, center, center);
             width: 300px;
             text-align: center;
             @include desktop {
                 width: 500px;
-                margin: 2rem 0 0 0;
-            }
-            & h3 {
-                z-index: 2;
-                //min-width: 300px;
-                max-width: 400px;
-                letter-spacing: 0.1rem;
-                font-size: 1.3rem;
-                font-weight: 100;
             }
         }
     }
     
 }
 .gallery__wr__slogan::before {
-    position: relative;
-    left: 30px;
-    top: 60px;
+    // position: relative;
+    // left: 30px;
+    // top: 60px;
     font-family: 'FontAwesome';
     content: "\f10d";
     color: $font-col-light;
-    font-size: 3rem;
-    z-index: 0;
-    opacity: 0.05;
+    font-size: 1.5rem;
+    // z-index: 0;
+    opacity: $i-op;
+    margin: 0 0 1rem 0;
     @include desktop {
-        font-size: 4rem;
-        top: 50px;
-        left: 50px;
+        font-size: 2rem;
+        // top: 50px;
+        // left: 50px;
     }
 }
-.gallery__wr__slogan::after { 
-    position: relative;
-    left: -30px;
-    top: -60px;
-    font-family: 'FontAwesome';
-    content: "\f10e";
-    color: $font-col-light;
-    font-size: 3rem;
-    z-index: 0;
-    opacity: 0.05;
-    @include desktop {
-        font-size: 4rem;
-        top: -50px;
-        left: -50px;
-    }
-}
+// .gallery__wr__slogan::after { 
+//     position: relative;
+//     left: -30px;
+//     top: -60px;
+//     font-family: 'FontAwesome';
+//     content: "\f10e";
+//     color: $font-col-light;
+//     font-size: 3rem;
+//     z-index: 0;
+//     opacity: 0.05;
+//     @include desktop {
+//         font-size: 4rem;
+//         top: -50px;
+//         left: -50px;
+//     }
+// }
 
 //CONTACT
 .contact {
@@ -600,8 +669,8 @@
                 display: flex;
                 @include flex-djacai(column, center, center, center);
                 width: 100%;
-                & svg {
-                    @include contact-svg;
+                & i {
+                    @include contact-icon;
                 }
                 
             }
@@ -633,8 +702,8 @@
             &__phone-head {
                 display: flex;
                 @include flex-djacai(column, center, center, center);
-                & svg {
-                    @include contact-svg;
+                & i {
+                    @include contact-icon;
                 }
             }
             &__phone-text {
@@ -652,8 +721,12 @@
                 display: flex;
                 @include flex-djacai(column, center, center, center);
                 &__head {
-                    & svg {
-                        @include contact-svg;
+                    display: flex;
+                    @include flex-djacai(column, center, center, center);
+                    & i {
+                        display: flex;
+                        @include flex-djacai(column, center, center, center);
+                        @include contact-icon;
                     }
                 }
                 &__text {

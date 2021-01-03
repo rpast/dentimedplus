@@ -1,6 +1,6 @@
 // ##### PALETE #####
 $font-col-light: rgb(250, 250, 250); //USED
-$font-col-dark:  rgb(5, 5, 5); //USED
+$font-col-dark:  rgb(8, 8, 8); //USED
 $dent-cinnamon:  #f08080; //lightcoral //USED
 // $dent-cinnamon: #f18b62;
 $dent-cinnamon-light: rgb(236, 205, 192);
@@ -12,6 +12,8 @@ $lavender-plus: #494274; //USED
 $dent-nav-dark: rgba(179, 89, 54, 0.8);
 $dent-nav-light: rgba(85, 82, 250, 0.26);
 
+//ICONS
+$i-op: 0.95;
 
 // ##### TYPOGRAPHY #####
 //Font face
@@ -81,8 +83,7 @@ $stopper-margin-w: 15px;
 //NAVBAR VARIABLES
 //Hamburger icon
 $nav-elem-margins: 1rem; //USED
-$svg-h: 4vh; //USED
-$svg-minh: 35px; //USED
+$svg-h: 40px; //USED
 //Logo 
 $logo-size: 40px; //USED
 //Phone icon
