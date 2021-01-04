@@ -435,12 +435,12 @@
                 @include tablet-w {
                     width: 600px;
                     max-width: unset;
-                    height: 480px;
+                    height: 465px;
                     box-shadow: $card-shadow;
                 }
                 @include desktop {
                     width: 800px;
-                    height: 480px;
+                    // height: 480px;
                 }
                 @include l-desktop {
                     width: 850px;
@@ -558,7 +558,7 @@
         height: 700px;
     }
     &__wr {
-        margin: 2rem 0 2rem 0;
+        margin: 0 0 2rem 0;
         @include desktop {
             margin: 2rem 0 4rem 0;
         }
@@ -613,12 +613,12 @@
     // left: 30px;
     // top: 60px;
     font-family: 'FontAwesome';
-    content: "\f10d";
+    content: "\f5c9";
     color: $font-col-light;
-    font-size: 1.5rem;
+    font-size: 2rem;
     // z-index: 0;
     opacity: $i-op;
-    margin: 0 0 1rem 0;
+    margin: 1rem 0 1rem 0;
     @include desktop {
         font-size: 2rem;
         // top: 50px;
@@ -653,9 +653,12 @@
     &__wr {
         display: flex;
         @include flex-djacai(column, center, center, center);
+        margin: 2rem 0 0 0;
         @include desktop {
             display: flex;
             @include flex-djacai(row-reverse, space-between, flex-start, flex-start);
+            height: 100%;
+            margin: 0 0 0 0;
         }
 
         &__hours  {
@@ -664,11 +667,13 @@
             margin-bottom: 2rem;
             @include desktop {
                 width: 400px;
+                height: 900px;
             }
             &__wr {
                 display: flex;
                 @include flex-djacai(column, center, center, center);
                 width: 100%;
+                margin: 2rem 0 0 0;
                 & i {
                     @include contact-icon;
                 }
@@ -702,6 +707,7 @@
             &__phone-head {
                 display: flex;
                 @include flex-djacai(column, center, center, center);
+                margin: 2rem 0 0 0;
                 & i {
                     @include contact-icon;
                 }
@@ -724,8 +730,6 @@
                     display: flex;
                     @include flex-djacai(column, center, center, center);
                     & i {
-                        display: flex;
-                        @include flex-djacai(column, center, center, center);
                         @include contact-icon;
                     }
                 }
@@ -780,6 +784,7 @@ footer {
             width: 80%;
         }
         &__general {
+            margin: 0 0 1rem 0;
             &__tel-head {
                 margin: 2rem 0 0 0;
             }
@@ -796,10 +801,10 @@ footer {
             &__fb {
                 display:flex;
                 @include flex-djacai(row, flex-end, center, center);
-                & svg {
-                    width: 40px;
-                    fill: $font-col-light;
-                    margin: 2rem 0;
+                & i {
+                    color: $font-col-light;
+                    margin: 1rem 0;
+                    opacity: $i-op;
                     @include desktop {
                         margin:0;
                     }

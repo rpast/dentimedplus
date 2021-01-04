@@ -68,7 +68,13 @@
 }
 .l-anchor-team { //Special anchor for team
     position: absolute;
-    top: 920px;
+    top: 720px;
+    @include desktop {
+        top: 820px;
+    }
+    @include l-desktop {
+        top: 920px;
+    }
 }
 
 //Margin fixes

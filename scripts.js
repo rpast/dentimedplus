@@ -1,5 +1,3 @@
-//TODO: switch to class toggling
-
 // Const & Vars //
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
@@ -39,7 +37,7 @@ function switcher(element, state, onState, offState) {
 }
 
 // Activate menu wrapper
-//TODO: refactor with toggle() function
+//TODO: refactor with switcher() function
 function toggle(elem) {
     if(elem == 'hamburger') {
         //if menu is visible
@@ -90,7 +88,6 @@ function toggle(elem) {
 };
 
 // Style toggler for navbar //
-//TODO: refactor variables
 var myNav = document.querySelector(".nav");
 var myLogo = document.querySelector(".nav__wr__logo");
 var myLogoW = document.querySelector('.nav__wr__logo-white');
@@ -133,18 +130,6 @@ window.onscroll = function () {
     }
 };
 
-//Prevent scrolling while mobile menu element is-on
-// if(menu.classList.contains('is-flex')) {
-//     window.addEventListener("scroll", preventMotion, false);
-//     window.addEventListener("touchmove", preventMotion, false);
-// }
-
-// function preventMotion(event) {
-//     window.scrollTo(0, 0);
-//     event.preventDefault();
-//     event.stopPropagation();
-// }
-
 // Gallery switcher handlers - carousel //
 //TODO: Fix 'clear interval'!
 
@@ -180,6 +165,7 @@ function plusDivsOffice(n) {
 
 
 function pickMember(index) {
+    //Switch on/off particular element from a list
     var i;
     var elemList = document.getElementsByClassName('about__team__wr__slides'); //catch all related elements
     clearInterval(carouselTimerTeam); //stop timer
@@ -253,11 +239,11 @@ carouselTimerTeam = setInterval(plusDivsIntervalTeam, 6000);
 carouselTimerOffice = setInterval(plusDivsIntervalOffice, 6000);
 
 //Reload the page when viewport gets resized
-window.onresize = function(){ 
-    location.reload(); 
-    //if vw < maxVw display all office gallery elements
-    showDivs(slideIndex, "about__office__slides", 1, desktopW);
-    showDivs(slideIndexOffice, "gallery__wr__slides", 3, desktopW);
+window.onresize = function(){
+        //if vw < maxVw display all office gallery elements
+        showDivs(slideIndex, "about__office__slides", 1, tablW);
+        showDivs(slideIndexOffice, "gallery__wr__slides", 3, desktopW);
+        location.reload(); 
 }
 
 // Smooth scroll handler //     
@@ -269,23 +255,23 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 //TODO: implement intersection observer for lazy imgs and nav styling
 //set empty containers to observe at the begining and the end of
 //services section
-const servicesSection = document.querySelector("#services");
-const options = { 
-    root: null,
-    threshold: 0.9,
-    rootMargin: "1px" //>50% doesnt work, find a way to convert vh to pixels
-};
+// const servicesSection = document.querySelector("#services");
+// const options = { 
+//     root: null,
+//     threshold: 0.9,
+//     rootMargin: "1px" //>50% doesnt work, find a way to convert vh to pixels
+// };
 
-const io = new IntersectionObserver(function(entries, io) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) { //react only when intersecting with element
-            return;
-        }
-        console.log(entry.target);
-    });
-}, options);
+// const io = new IntersectionObserver(function(entries, io) {
+//     entries.forEach(entry => {
+//         if (!entry.isIntersecting) { //react only when intersecting with element
+//             return;
+//         }
+//         console.log(entry.target);
+//     });
+// }, options);
 
-io.observe(servicesSection);
+// io.observe(servicesSection);
 
 //find overflows
 // var docWidth = document.documentElement.offsetWidth;
@@ -299,14 +285,3 @@ io.observe(servicesSection);
 //         }
 //     }
 // );
-
-//Find embeded google map bar 
-
-//var gBar = innerDoc.contentWindow.document.querySelector(".i4ew0d-pzNkMb-haAclf")
-
-window.addEventListener("load", function () {
-    var iframe = document.getElementById("map");
-    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-    console.log(iframe.class)
-    console.log(innerDoc)
-})
