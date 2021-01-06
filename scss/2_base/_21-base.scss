@@ -6,9 +6,10 @@ body
 {
     margin: 0;
     padding: 0;
-    
     overflow-x: hidden; //get rid of h scrollbar 100vh/vw issue
     width: 100vw;
+    height: 100%
+
 }
 
 section {
@@ -23,6 +24,7 @@ html {
     font-style: normal;
     line-height: $line-height;
     font-size: $m-default-fsize; //16px default
+    height: 100%;
     & h1 {
         font-family: $dent-font-head;
         //Define responsive font sizes for Header

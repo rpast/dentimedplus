@@ -1,24 +1,21 @@
 //MOBILE MENU SPACE
+// .menu-bg {
+//     @include flex-djacai(column, center, center, center);
+//     height: 100%;
+//     width: 100%;
+//     background-color: rgba(255,255,255,1);
+//     position: fixed;
+//     z-index: 2;
+// }
 .menu {
-    @include flex-djacai(column, flex-start, center, center);
+    @include flex-djacai(column, center, center, center);
     height: 100%;
     width: 100%;
     color: $font-col-dark;
-    background-color: rgba(255,255,255,1);
+    background-color: $font-col-light;
     position: fixed;
     z-index: 3;
     overscroll-behavior: contain;
-    &__links {
-        height: 100vh;
-        display: flex; 
-        @include flex-djacai(column, center, center, center);
-        & a {
-            font-size: 1.5em;
-            color: $font-col-dark;
-            @include link-decor(uppercase, 0.2rem);
-            margin-bottom: 1rem;
-        }
-    }
     &__icon {
         margin: $nav-elem-margins 2rem $nav-elem-margins auto;
         & a {
@@ -26,6 +23,34 @@
             opacity: $i-op;
         }
     }
+    &__links {
+        height: 80%;
+        display: flex; 
+        @include flex-djacai(column, center, center, center);
+        // margin: 4rem 0 0 0;
+        & a {
+            font-size: 1.2em;
+            color: $font-col-dark;
+            @include link-decor(uppercase, 0.2rem);
+            margin-bottom: 1rem;
+        }
+    }
+    &__info {
+        height: 20%;
+        display: flex;
+        @include flex-djacai(column, flex-end, center, flex-start);
+        margin-bottom: 2rem;
+        & p {
+            margin: 0.2rem;
+            font-size: $m-default-fsize;
+            & i {
+                margin: 0 1rem 0 0;
+                color: $font-col-dark;
+                opacity: $i-op;
+            }
+        }
+    }
+
 }
 
 // NAVIGATION BAR
@@ -174,8 +199,6 @@
     @include tablet-w{
         display: flex;
         @include flex-djacai(row, center, center, center);
-        //width: $d-section-width;
-        //max-width: 3000px; //prevent from being too large on HD screens
     }
     @include l-desktop {
         //width: $ld-section-width;
@@ -213,6 +236,7 @@
             &__pic { 
                 @include pic-behavior();
             }
+            
             &__stops {
                 display: flex;
                 @include flex-djacai(row, center, center, center);
@@ -292,7 +316,7 @@
         display: flex;
         &__slides {
             @include card();
-            height: 940px;
+            height: 955px;
             width: 100%;
             @include tablet-w {
                 margin: 1rem 2rem;
@@ -306,7 +330,7 @@
             &__slider {
                 display: flex;
                 @include flex-djacai(column, space-between, center, center);
-                height: 448px;
+                height: 450px;
                 @include desktop {
                     height: 100%;
                 }
@@ -314,19 +338,13 @@
                     @include pic-behavior();
                     margin: 1.5rem 2rem 1rem 1.5rem;
                 }
+                & i {
+                    @include icon-behavior;
+                    margin: 1.5rem 2rem 1rem 1.5rem;
+                }
                 &__stop {
                     display: flex;
                     @include flex-djacai(row, center, center, center);
-                    // & img {
-                    //     width: $stopper-width;
-                    //     margin: 2px;
-                    //     @include template {
-                    //         margin: 5px;
-                    //     }
-                    //     @include desktop {
-                    //         margin: $stopper-margin;
-                    //     }
-                    // }
                 }
             }
             &__text {  
@@ -338,6 +356,10 @@
                     }
                     & h3 {
                         margin: 2rem 0 1rem 0;
+                    }
+                    & span {
+                        color: $font-col-dark;
+                        font-weight: 500;
                     }
                     @include desktop {
                         margin: 3rem;
@@ -625,22 +647,6 @@
         // left: 50px;
     }
 }
-// .gallery__wr__slogan::after { 
-//     position: relative;
-//     left: -30px;
-//     top: -60px;
-//     font-family: 'FontAwesome';
-//     content: "\f10e";
-//     color: $font-col-light;
-//     font-size: 3rem;
-//     z-index: 0;
-//     opacity: 0.05;
-//     @include desktop {
-//         font-size: 4rem;
-//         top: -50px;
-//         left: -50px;
-//     }
-// }
 
 //CONTACT
 .contact {
@@ -801,10 +807,13 @@ footer {
             &__fb {
                 display:flex;
                 @include flex-djacai(row, flex-end, center, center);
+
                 & i {
                     color: $font-col-light;
                     margin: 1rem 0;
                     opacity: $i-op;
+                    width: 48px;
+                    height: 48px;
                     @include desktop {
                         margin:0;
                     }

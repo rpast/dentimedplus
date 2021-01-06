@@ -20,11 +20,11 @@
     background-image: url(../static/back-geom.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: var(--computed-full-h);
 
     //Resize when in mobile horizontal position
     @include smartphone-h {
-        height: 540px;
+        min-height: 540px;
     }
 }
 

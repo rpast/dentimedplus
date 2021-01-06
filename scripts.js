@@ -4,10 +4,15 @@ const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeig
 const desktopW = 1440; //Large screen px threshold
 const tablW = 768; //Tablet px threshold
 
+
+
+
 // Toggle between adding and removing the "responsive" //
 // class to topnav when the user clicks on the icon //
 
 var menu = document.querySelector(".menu");
+// var menuBg = document.querySelector(".menu-bg")
+var hero = document.querySelector(".hero");
 var body = document.getElementsByTagName('body')[0];
 var html = document.getElementsByTagName('html')[0];
 
@@ -23,6 +28,12 @@ var chirurgia = document.querySelector("#chirurgia")
 var regen = document.querySelector("#regen")
 
 var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, protezy, chirurgia, regen];
+
+//Control 100% viewport height variable used in hero baner
+//Grab initial variable value
+var grabbedVar = getComputedStyle(hero).getPropertyValue('--computed-full-h');
+//set new variable value
+hero.style.setProperty('--computed-full-h', window.innerHeight+'px')
 
 //Class switching function
 function switcher(element, state, onState, offState) {
@@ -44,6 +55,8 @@ function toggle(elem) {
         if(menu.classList.contains('is-flex')) {
             menu.classList.remove('is-flex');
             menu.classList.add('is-off');
+            // menuBg.classList.remove('is-flex');
+            // menuBg.classList.add('is-off');
             myNav.classList.remove('is-off');
             myNav.classList.add('is-flex');
             //Allow scrolling
@@ -53,6 +66,8 @@ function toggle(elem) {
         } else if(menu.classList.contains('is-off')) {
             menu.classList.remove('is-off');
             menu.classList.add('is-flex');
+            // menuBg.classList.remove('is-off');
+            // menuBg.classList.add('is-flex');
             myNav.classList.remove('is-flex');
             myNav.classList.add('is-off');
             //Prevent from scrolling
@@ -69,7 +84,6 @@ function toggle(elem) {
                 switcher(body, 1, 'is-scrollable', 'is-fixed')
             }
         } else {
-            console.log(elem)
             //Switch off all the active objects in the DOM
             for(i=0; i<servicesList.length; i++) {
                 var item = servicesList[i];
@@ -240,10 +254,11 @@ carouselTimerOffice = setInterval(plusDivsIntervalOffice, 6000);
 
 //Reload the page when viewport gets resized
 window.onresize = function(){
+        //location.reload(); 
         //if vw < maxVw display all office gallery elements
         showDivs(slideIndex, "about__office__slides", 1, tablW);
         showDivs(slideIndexOffice, "gallery__wr__slides", 3, desktopW);
-        location.reload(); 
+        
 }
 
 // Smooth scroll handler //     
