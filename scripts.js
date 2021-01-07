@@ -175,6 +175,7 @@ function plusDivsTeam(n) {
 function plusDivsOffice(n) {
     showDivs((slideIndexOffice += n), "gallery__wr__slides", 3, desktopW);
     clearInterval(carouselTimerOffice); //stop timer
+    carouselTimerOffice = setInterval(plusDivsIntervalOffice, 6000); //Instantiate timer again
 }
 
 

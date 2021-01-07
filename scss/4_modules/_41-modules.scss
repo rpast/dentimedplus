@@ -74,6 +74,12 @@
                 width: $logo-size;
             }
         }
+        &__logo-white {
+            visibility: hidden;
+            @include tablet-w {
+                visibility: visible;
+            }
+        }
         &__icon{ //Hamburger
             margin: $nav-elem-margins 2rem;
             @include tablet-w {
@@ -318,6 +324,7 @@
             @include card();
             height: 955px;
             width: 100%;
+            position: relative;
             @include tablet-w {
                 margin: 1rem 2rem;
                 padding: 0 0 2rem 0;
@@ -326,6 +333,16 @@
             }
             @include desktop {
                 height: 600px;
+            }
+            & .slides-nav {
+                display: flex;
+                @include flex-djacai(row,center,center,center);
+                height: 50%;
+                width:50%;
+                background-color: red;
+                position: absolute;
+                // top: 20%;
+                z-index: 2;
             }
             &__slider {
                 display: flex;
