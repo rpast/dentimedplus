@@ -2,6 +2,7 @@
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 const desktopW = 1440; //Large screen px threshold
+const sdesktopW = 1024; //Small desktop w
 const tablW = 768; //Tablet px threshold
 
 
@@ -160,7 +161,7 @@ function plusDivsIntervalTeam() {
     showDivs((slideIndexTeam += 1), "about__team__wr__slides", 2, false);
 }
 function plusDivsIntervalOffice() {
-    showDivs((slideIndexOffice += 1), "gallery__wr__slides", 3, desktopW);
+    showDivs((slideIndexOffice += 1), "gallery__wr__slides", 3, sdesktopW);
 }
 
 //onclick functions
@@ -173,7 +174,7 @@ function plusDivsTeam(n) {
     clearInterval(carouselTimerTeam); //stop timer
 }
 function plusDivsOffice(n) {
-    showDivs((slideIndexOffice += n), "gallery__wr__slides", 3, desktopW);
+    showDivs((slideIndexOffice += n), "gallery__wr__slides", 3, sdesktopW);
     clearInterval(carouselTimerOffice); //stop timer
     carouselTimerOffice = setInterval(plusDivsIntervalOffice, 6000); //Instantiate timer again
 }
@@ -247,7 +248,7 @@ function showDivs(counter, className, counterFlag, maxVw) {
 //instantiate the galleries and timers
 showDivs(slideIndex, "about__office__slides", 1, tablW);
 showDivs(slideIndexTeam, "about__team__wr__slides", 2, false);
-showDivs(slideIndexOffice, "gallery__wr__slides", 3, desktopW);
+showDivs(slideIndexOffice, "gallery__wr__slides", 3, sdesktopW);
 
 carouselTimer = setInterval(plusDivsInterval, 6000);
 carouselTimerTeam = setInterval(plusDivsIntervalTeam, 6000);
@@ -258,7 +259,7 @@ window.onresize = function(){
         //location.reload(); 
         //if vw < maxVw display all office gallery elements
         showDivs(slideIndex, "about__office__slides", 1, tablW);
-        showDivs(slideIndexOffice, "gallery__wr__slides", 3, desktopW);
+        showDivs(slideIndexOffice, "gallery__wr__slides", 3, sdesktopW);
         
 }
 

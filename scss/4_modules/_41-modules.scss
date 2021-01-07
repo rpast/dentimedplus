@@ -338,7 +338,7 @@
                 display: flex;
                 @include flex-djacai(row,center,center,center);
                 height: 50%;
-                width:50%;
+                width: 50%;
                 background-color: red;
                 position: absolute;
                 // top: 20%;
@@ -601,13 +601,13 @@
         @include desktop {
             margin: 2rem 0 4rem 0;
         }
-        @include l-desktop {
+        @include desktop {
             display: flex;
             @include flex-djacai(row, space-between, center, center);
         }
         &__slides {
             margin: 0 1rem 0 1rem;
-            @include l-desktop {
+            @include desktop {
                 display: flex;
             }
             &__slider {
@@ -617,7 +617,7 @@
                     max-width: 500px;
                     margin: 0 0 1rem 0;
                     border-radius: 5px;
-                    @include l-desktop {
+                    @include desktop {
                         width: 300px;
                     }
                 }
@@ -625,7 +625,7 @@
                 .stopper-box {
                     display: flex;
                     @include flex-djacai(row, center, center, center);
-                    @include l-desktop {
+                    @include desktop {
                         display: none;
                     }
                     & img {
