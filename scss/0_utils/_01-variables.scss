@@ -1,6 +1,7 @@
 //JS controled varibales
 :root {
     --computed-full-h: 100%;
+    --root-fsize: 16px; //define 1rem value - used for mobile font scaling 
 }
 
 // ##### PALETE #####
@@ -42,7 +43,7 @@ $m-title-fsize: 2.488rem; //USED - adjusted
 $m-header-fsize: 1.424rem; ///USED
 $m-sheader-fsize: 1.266rem; //USED
 $m-span-fsize: 1.125rem; //USED
-$m-default-fsize: 1rem; //USED
+// $m-default-fsize: 1rem; //USED 
 $m-second-fsize: 0.889rem; //USED
 
 //Perfect-fourth for desktop
@@ -50,7 +51,7 @@ $d-title-fsize: 4.209rem; //67.34px //USED
 $d-header-fsize: 2.369rem; //37.90px //USED
 $d-sheader-fsize: 1.777rem; //28.43px //USED;
 $d-span-fsize: 1.333rem; //21.33px //USED
-$d-default-fsize: 1rem; //16px //USED
+// $d-default-fsize: 1rem; //16px //USED
 $d-second-fsize: 0.75rem; //12        
 $line-height: 1.75; //USED
 
@@ -95,7 +96,7 @@ $logo-size: 40px; //USED
 $nav-phone-size: 30px; //USED
 //NAV height
 $nav-height: 63px; //USED
-$nav-bbar-height: 3px; //USED
+$nav-bbar-height: 1px; //USED
 
 //SECTIONS
 $section-bottom-margin: 2rem; //USED
@@ -105,7 +106,7 @@ $ld-section-width: 60vw; //section width for large pcs USED
 //$office-card-max-w: 480px;
 $office-card-text-w: 250px;
 $office-card-txt-h: 400px;
-$card-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .5);
+$card-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .3);
 
 $m-contact-icons-w: 80px;
 $d-contact-icons-w: 100px;

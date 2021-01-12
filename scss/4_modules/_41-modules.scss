@@ -42,7 +42,7 @@
         margin-bottom: 2rem;
         & p {
             margin: 0.2rem;
-            font-size: $m-default-fsize;
+            font-size: var(--root-fsize);
             & i {
                 margin: 0 1rem 0 0;
                 color: $font-col-dark;
@@ -365,7 +365,12 @@
                 }
             }
             &__text {  
-                width: 80%; 
+                width: 80%;
+                overflow: scroll;
+                max-height: 100%;
+                @include tablet-w {
+                    overflow: hidden;
+                }
                 &__wr {
                     & a.button {
                         width: 60px;
@@ -378,7 +383,11 @@
                         color: $font-col-dark;
                         font-weight: 500;
                     }
+                    @include tablet-w {
+                        margin: 1rem;
+                    }
                     @include desktop {
+                        overflow: hidden;
                         margin: 3rem;
                     }
                     &__hours {
@@ -396,7 +405,7 @@
     &__bar {
         background-color: $lavender-plus;
         width: 100vw;
-        height: 3px;
+        height: 1px;
     }
     &__wr {
         @include flex-djacai(column, flex-start, center, center);

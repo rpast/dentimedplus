@@ -23,7 +23,7 @@ html {
     font-family: $dent-font-body;
     font-style: normal;
     line-height: $line-height;
-    font-size: $m-default-fsize; //16px default
+    font-size: var(--root-fsize); //16px default
     height: 100%;
     & h1 {
         font-family: $dent-font-head;
@@ -55,6 +55,13 @@ html {
             font-size: $d-span-fsize;
         }
     }
+}
+
+html, body {
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
 }
 
 //Default links

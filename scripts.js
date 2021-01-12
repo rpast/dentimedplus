@@ -5,9 +5,6 @@ const desktopW = 1440; //Large screen px threshold
 const sdesktopW = 1024; //Small desktop w
 const tablW = 768; //Tablet px threshold
 
-
-
-
 // Toggle between adding and removing the "responsive" //
 // class to topnav when the user clicks on the icon //
 
@@ -30,11 +27,7 @@ var regen = document.querySelector("#regen")
 
 var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, protezy, chirurgia, regen];
 
-//Control 100% viewport height variable used in hero baner
-//Grab initial variable value
-var grabbedVar = getComputedStyle(hero).getPropertyValue('--computed-full-h');
-//set new variable value
-hero.style.setProperty('--computed-full-h', window.innerHeight+'px')
+
 
 //Class switching function
 function switcher(element, state, onState, offState) {
