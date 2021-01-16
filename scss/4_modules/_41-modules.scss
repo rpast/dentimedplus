@@ -322,7 +322,7 @@
         display: flex;
         &__slides {
             @include card();
-            height: 955px;
+            height: 960px;
             width: 100%;
             position: relative;
             @include tablet-w {
@@ -333,16 +333,6 @@
             }
             @include desktop {
                 height: 600px;
-            }
-            & .slides-nav {
-                display: flex;
-                @include flex-djacai(row,center,center,center);
-                height: 50%;
-                width: 50%;
-                background-color: red;
-                position: absolute;
-                // top: 20%;
-                z-index: 2;
             }
             &__slider {
                 display: flex;
