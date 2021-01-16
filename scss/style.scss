@@ -1,22 +1,22 @@
 //INDEX file
 
 //UTILS
-@import "./0_utils/01-variables";
-@import "./0_utils/02-functions";
-@import "./0_utils/03-mixins";
+@import "./0-variables";
+@import "./0-functions";
+@import "./0-mixins";
 
 //EXTERNAL
-@import "./1_external/11-normalize";
+@import "./1-normalize";
 
 //BASE
-@import "./2_base/21-base";
+@import "./2-base";
 
 //LAYOUT
-@import './3_layout/31-layout';
+@import './3-layout';
 
 //MODULES
-@import "./4_modules/41-modules";
+@import "./4-modules";
 
 //STATE
-@import "./5_state/51-state";
+@import "./5-state";
 

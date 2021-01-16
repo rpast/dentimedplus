@@ -1,8 +1,0 @@
-2_base contains basic structural content of the page. How the element should look like regardless of the position on the page. The baseline. 
-
-## DO NOT INCLUDE CLASSES OR ID SELECTORS - IF NOT NECESSARY ##
-
-- default typography
-- box-sizing
-- default links
-- main html tags (html, body etc.)

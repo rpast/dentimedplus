@@ -1,0 +1,90 @@
+File structure inspired by SMACSS
+---
+
+0_utils 
+folder contains styling used in any part of the project
+- variables
+- mixins
+- functions
+
+---
+
+1_external 
+contains code from external sources
+
+---
+
+2_base 
+contains basic structural content of the page. How the element should look like regardless of the position on the page. The baseline. 
+
+## DO NOT INCLUDE CLASSES OR ID SELECTORS - IF NOT NECESSARY ##
+
+- default typography
+- box-sizing
+- default links
+- main html tags (html, body etc.)
+
+---
+
+3_layout 
+folder hold style for major sections of the page.
+
+- header
+- main content and sections within
+- footer
+- sidebar
+- navbar maybe
+
+##
+You want to define utility classes that you will extend later in modules or style something quickly on the page. The naming convention is to put 'l' at the begining.
+
+---
+
+4_modules 
+reusable little bits of code. 
+
+- cards
+- bars
+- buttons
+- lists
+- tables
+
+##
+Naming convention - BEM. A module dictates a namespace in which all elements and modifiers reside. This helps to decrease css specificity by avoiding class nesting.
+
+For SCSS syntax use:
+.module {
+    color: red;
+    &--big {
+        font-size: $big;
+    }
+    &__subpart {
+        border: 1px;
+    }
+}
+
+---
+
+5_state is for styling that defines the interactivity and current state of the element
+
+classes like:
+- is-on
+- is-hidden
+- is-selected
+- is-blinking
+etc.
+
+SCSS syntax example:
+
+.nav {
+    display: flex;
+    &__item {
+        color: black;
+        $.is-selected {
+            color: red;
+        }
+    }
+}
+
+---
+
