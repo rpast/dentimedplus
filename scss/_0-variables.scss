@@ -5,61 +5,53 @@
 }
 
 // ##### PALETE #####
-$font-col-light: rgb(250, 250, 250); //USED
-$font-col-dark:  rgb(8, 8, 8); //USED
-$dent-cinnamon:  #f08080; //lightcoral //USED
-// $dent-cinnamon: #f18b62;
-$dent-cinnamon-light: rgb(236, 205, 192);
-$dent-cinnamon-trans: #f18b621c;
-$dent-marine-light:  #5552fa26; //USED
-$dent-aqua: #b4d4db;
-$lavender-plus: #494274; //USED
-// navbar
-$dent-nav-dark: rgba(179, 89, 54, 0.8);
-$dent-nav-light: rgba(85, 82, 250, 0.26);
+$font-col-light: rgb(250, 250, 250);
+$font-col-dark:  rgb(8, 8, 8);
+$dent-cinnamon:  #f08080; //lightcoral
+$dent-marine-light:  #5552fa26;
+$lavender-plus: #494274;
 
 //ICONS
 $i-op: 0.8;
 
 // ##### TYPOGRAPHY #####
 //Font face
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&family=Open+Sans&display=swap'); //USED
-$dent-font-head: 'Abhaya Libre', serif; //USED
-$dent-font-body: 'Open Sans', sans-serif; //USED
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&family=Open+Sans&display=swap');
+$dent-font-head: 'Abhaya Libre', serif;
+$dent-font-body: 'Open Sans', sans-serif; 
 
 //Font size
 
 //Minor-third for mobiles
-// $m-title-fsize: 2.488rem; //39.81px //USED
-// $m-header-fsize: 1.728rem; //27.65px //USED
-// $m-sheader-fsize: 1.44rem; //23.04px //USED
-// $m-span-fsize: 1.2rem; //19.20px //USED
-// $m-default-fsize: 1rem; //16px //USED
-// $m-second-fsize: 0.833rem; //13.33px //USED
+// $m-title-fsize: 2.488rem; //39.81px
+// $m-header-fsize: 1.728rem; //27.65px 
+// $m-sheader-fsize: 1.44rem; //23.04px 
+// $m-span-fsize: 1.2rem; //19.20px 
+// $m-default-fsize: 1rem; //16px 
+// $m-second-fsize: 0.833rem; //13.33px
 
 
 //Major-second for mobiles
-$m-title-fsize: 2.488rem; //USED - adjusted
-$m-header-fsize: 1.424rem; ///USED
-$m-sheader-fsize: 1.266rem; //USED
-$m-span-fsize: 1.125rem; //USED
-// $m-default-fsize: 1rem; //USED 
-$m-second-fsize: 0.889rem; //USED
+$m-title-fsize: 2.488rem;  //- adjusted
+$m-header-fsize: 1.424rem; 
+$m-sheader-fsize: 1.266rem; 
+$m-span-fsize: 1.125rem; 
+// $m-default-fsize: 1rem; 
+$m-second-fsize: 0.889rem;
 
 //Perfect-fourth for desktop
-$d-title-fsize: 4.209rem; //67.34px //USED
-$d-header-fsize: 2.369rem; //37.90px //USED
-$d-sheader-fsize: 1.777rem; //28.43px //USED;
-$d-span-fsize: 1.333rem; //21.33px //USED
-// $d-default-fsize: 1rem; //16px //USED
-$d-second-fsize: 0.75rem; //12        
-$line-height: 1.75; //USED
+$d-title-fsize: 4.209rem; //67.34px 
+$d-header-fsize: 2.369rem; //37.90px 
+$d-sheader-fsize: 1.777rem; //28.43px 
+$d-span-fsize: 1.333rem; //21.33px 
+// $d-default-fsize: 1rem; //16px 
+$d-second-fsize: 0.75rem; //12px        
+$line-height: 1.75; 
 
 // ##### RESPONSIVENESS ##### 
 //Breakpoints
 //Widths
 $phone: 425px; 
-
 $tablet: 768px;
 $desktop: 1024px; 
 $l-desktop: 1440px; // large desktop screen
@@ -67,46 +59,28 @@ $l-desktop: 1440px; // large desktop screen
 //Heights
 $phone-height: 639px;
 
-//Widths
-$m-width: 85vw;
-$d-width: 60vw;
-$ld-width: 45vw;
-
-//Vars for displaying hero banner on tall phones
-$tall-phone-height: 680px;
-$tall-phone-width: 374px;
-
-$max-breakpoint: 414;
-$max-breakpoint-fontsize: 1024;
-$wide-screen: "(min-width: #{$max-breakpoint-fontsize}px)";  
-
-//Varia
+// ##### Varia ##### 
 $stopper-width: 15px;
 $stopper-margin: 6px;
 $stopper-margin-w: 15px;
 
-
-//NAVBAR VARIABLES
+// ##### NAVBAR VARIABLES ##### 
 //Hamburger icon
-$nav-elem-margins: 1rem; //USED
-$svg-h: 40px; //USED
+$nav-elem-margins: 1rem;
+$svg-h: 40px; 
 //Logo 
-$logo-size: 40px; //USED
+$logo-size: 40px;
 //Phone icon
-$nav-phone-size: 30px; //USED
+$nav-phone-size: 30px; 
 //NAV height
-$nav-height: 63px; //USED
-$nav-bbar-height: 1px; //USED
+$nav-height: 63px;
+$nav-bbar-height: 1px; 
 
-//SECTIONS
-$section-bottom-margin: 2rem; //USED
-$d-section-width: 65vw; //section width for small pcs USED
-$ld-section-width: 60vw; //section width for large pcs USED
+// ##### SECTIONS ##### 
+$section-bottom-margin: 2rem;
+$d-section-width: 65vw; //section width for small pcs
+$ld-section-width: 60vw; //section width for large pcs
 
-//$office-card-max-w: 480px;
 $office-card-text-w: 250px;
 $office-card-txt-h: 400px;
 $card-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .3);
-
-$m-contact-icons-w: 80px;
-$d-contact-icons-w: 100px;

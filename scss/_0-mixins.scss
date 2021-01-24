@@ -28,11 +28,6 @@
         @content;
     }
 }
-@mixin tall-smartphone {
-    @media screen and (min-height: $tall-phone-height) and (min-width: $tall-phone-width) and (max-width: $s-tablet) {
-        @content;
-    }
-}
 @mixin tablet-h {
     @media screen and (min-width: $l-tablet) and (max-height: $l-tablet) {
         @content;

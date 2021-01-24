@@ -258,8 +258,8 @@
 
         &__text {
             display: flex;
-            @include flex-djacai(column, space-between, flex-start, flex-start);   
-            margin: 1rem 2rem 2rem 2rem;
+            @include flex-djacai(column, space-between, flex-start, flex-start);
+            width: 80%;   
             @include tablet-w{
                 height: $office-card-txt-h;
                 margin: 1rem 3rem 1rem 3rem;
@@ -322,7 +322,7 @@
         display: flex;
         &__slides {
             @include card();
-            height: 960px;
+            height: 950px;
             width: 100%;
             position: relative;
             @include tablet-w {
@@ -343,7 +343,9 @@
                 }
                 &__pic {
                     @include pic-behavior();
-                    margin: 1.5rem 2rem 1rem 1.5rem;
+                    @include tablet-w {
+                        margin: 1.5rem 2rem 1rem 1.5rem;
+                    }
                 }
                 & i {
                     @include icon-behavior;
@@ -355,13 +357,16 @@
                 }
             }
             &__text {  
-                width: 80%;
+                display: flex;
+                @include flex-djacai(column, center, center, center);
+                width: 100%;
                 overflow: scroll;
                 max-height: 100%;
                 @include tablet-w {
                     overflow: hidden;
                 }
                 &__wr {
+                    width: 80%;
                     & a.button {
                         width: 60px;
                         display: flex;
@@ -382,6 +387,7 @@
                     }
                     &__hours {
                         @include table();
+                        width: 100%;
                     }
                 }
             }
@@ -499,7 +505,7 @@
                 }
 
                 &__text {
-                    
+                    padding: 0.5rem 0 2.5rem 0;
                     & p {
                         margin: 0 1.5rem 1rem 1.5rem;
                     }
@@ -682,7 +688,6 @@
             height: 100%;
             margin: 0 0 0 0;
         }
-
         &__hours  {
             @include card;
             width: 100%;
@@ -694,7 +699,7 @@
             &__wr {
                 display: flex;
                 @include flex-djacai(column, center, center, center);
-                width: 100%;
+                width: 80%;
                 margin: 2rem 0 0 0;
                 & i {
                     @include contact-icon;
@@ -703,6 +708,7 @@
             }
             & table {
                 @extend .prices__card__wr__table;
+                width: 100%;
                 & tr td {
                     padding: 0.5rem 0.5rem;
                     @include desktop {
