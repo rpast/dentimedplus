@@ -1,5 +1,3 @@
-# dentimedplus
-
 A static webpage for Dentimed Plus.
 
 Stack:
