@@ -1,6 +1,6 @@
 A static webpage for Dentimed Plus.
 
-Altered version - upon client request
+main
 
 Stack:
 * HTML5
