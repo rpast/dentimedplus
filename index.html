@@ -27,18 +27,17 @@
       </div>
       <!-- Menu-items-wrapper -> change the name -->
       <div class="menu__links">  
-        <a href="#about-us" onclick="toggle('hamburger')">Gabinety</a>
-        <a href="#team" onclick="toggle('hamburger')">Zespół</a>
+        <a href="#about-us" onclick="toggle('hamburger')">Zespół</a>
         <a href="#services" onclick="toggle('hamburger')">Usługi</a>
         <a href="#prices" onclick="toggle('hamburger')">Cennik</a>
         <a href="#contact" onclick="toggle('hamburger')">Kontakt</a>
       </div>
       <div class="menu__info">
         <p>
-          <i class="fas fa-phone-alt fa-lg"></i>601 584 946
+          <i class="fas fa-phone-alt fa-lg"></i><a href="tel:+48601584946">601 584 946</a>
         </p>
         <p>
-          <i class="far fa-envelope fa-lg"></i>dentimedplus@gmail.com
+          <i class="far fa-envelope fa-lg"></i><a href="mailto:dentimedplus@gmail.com">dentimedplus@gmail.com</a>
         </p>
       </div>
     <!-- End of mobile menu wrapper -->
@@ -65,8 +64,7 @@
 
         <!-- Navbar menu items -->
         <div class="nav__wr__links">  
-            <a href="#about-us">Gabinety</a>
-            <a href="#team">Zespół</a>
+            <a href="#about-us">Zespół</a>
             <a href="#services">Usługi</a>
             <a href="#prices">Cennik</a>
             <a href="#contact">Kontakt</a>
@@ -85,7 +83,7 @@
         <div class='nav__wr__tel'>
           <div class="nav__wr__tel__wr is-off">
             <i class="fas fa-phone-alt fa-lg" alt='phone icon'></i>
-            <p>601 584 946</p>
+            <p><a href="tel:+48601584946">601 584 946</a></p>
           </div>
         </div>
       </div>
@@ -100,7 +98,10 @@
         <div>
           <h1>Dentimed Plus</h1>
           <span>
-            Profesjonalne gabinety stomatologiczne w Krakowie
+            Profesjonalne gabinety stomatologiczne w Krakowie</br>
+			<p></p>
+			ul. Na Barciach (Prądnik Czerwony)</br>
+			Os. Kościuszkowskie (Czyżyny)
           </span>
         </div>
 
@@ -116,7 +117,7 @@
             <!-- Phone text -->
             <div>
               <p>Zadzwoń:</p> 
-              <p>601 584 946</p>
+              <p><a href="tel:+48601584946">601 584 946</a></p>
             </div>
 
           </div>
@@ -141,65 +142,6 @@
       <span id="about-us" class="l-anchor"></span>
 
       <h2 class='l-head'>O nas</h2>
-
-      <!-- Offices box start -->
-      <div class="about__office l-standard-w">
-
-        <!-- Offices gallery #1 -->
-        <div class="about__office__slides is-flex is-col-cent is-first" onclick="plusDivs(1)">
-
-          <!-- Start dynamic part -->
-          <div class="about__office__slides__slider">
-            <img class='about__office__slides__slider__pic' src="static/gabinet-nabarciach-krakow-dentimedplus-stomatolog.jpg" alt=''></img>
-
-            <div class="about__office__slides__slider__stops">
-              <div class="sqr-fill"></div>
-              <div class="sqr"></div>
-            </div>
-
-          </div>
-          
-          <div class="about__office__slides__text">
-            <h3>Gabinet<br>ul. Na Barciach 14/III</h3>
-            <p>Zapraszamy do Gabinetu na ul. Na Barciach 14/III (Prądnik Czerwony) w Krakowie, znajdującego się z tyłu budynku.</p>
-
-            <a href="#map" alt='Przejdź do mapy'>
-                <div class="button">
-                    Mapa
-                </div>
-            </a>
-
-          </div>
-
-        </div>
-          
-        <!-- Offices gallery #2 -->
-        <div class="about__office__slides is-flex is-col-cent" onclick="plusDivs(1)">
-
-          <!-- Start dynamic part -->
-          <div class="about__office__slides__slider">
-              <img class='about__office__slides__slider__pic' src="static/gabinet-kosciuszkowskie-krakow-dentimedplus-stomatolog.jpg" alt=''></img>
-
-              <div class="about__office__slides__slider__stops">
-                <div class="sqr"></div>
-                <div class="sqr-fill"></div>
-              </div>
-          </div>  
-              
-          <div class="about__office__slides__text">
-            <h3>Gabinet<br>os. Kościuszkowskie 6</h3>
-            <p>Zapraszamy do Gabinetu na os. Kościuszkowskim 6 (Czyżyny) Kraków, w przełączce między klatką 11 a 12.</p>
-            <a href="#map" alt='Przejdź do mapy'>
-              <div class="button">
-                  Mapa
-              </div>
-            </a>
-          </div>
-
-        </div>
-      <!-- End of offices box -->
-      </div>
-
 
       <!-- Team box start -->
       <span id="team" class="l-anchor-team"></span>
@@ -242,7 +184,6 @@
                 <h3>Anna Nowak</h3>
                 <h4 class='is-no-margin'>Lekarz Dentysta</h4>
                 <p class='is-no-top'>Specjalista Stomatologii Zachowawczej</p>
-
                 <span>ul. Na Barciach</span>
                 <table class="about__team__wr__slides__text__wr__hours">
                     <tr>
@@ -294,38 +235,11 @@
               <div class='about__team__wr__slides__text__wr'>
                 <h3>Łucja Gawin - Pastuszak</h3>
                 <h4>Lekarz Dentysta</h4>
-                
-                <!-- <a class='button' href="http://dentstar.pl">O mnie</a> -->
-                <span>ul. Na Barciach</span>
-                <table class="about__team__wr__slides__text__wr__hours">
-                  <tr>
-                      <th span=2>Godziny przyjęć</th>
-                  </tr>
-                  <tr>
-                      <td>Wt.</td>
-                      <td>09:30 - 15:00</td>
-                  </tr>
-                  <tr>
-                      <td>Śr.</td>
-                      <td>14:00 - 20:00</td>
-                  </tr>
-                  <tr>
-                      <td>Czw.</td>
-                      <td>09:30 - 15:00</td>
-                  </tr>
-                  <tr>
-                      <td>Pt.</td>
-                      <td>14:00 - 20:00</td>
-                  </tr>
-                  <tr>
-                      <td>Co 2ga sob.</td>
-                      <td>09:30 - 15:00</td>
-                  </tr>
-                </table>
+                <p>W 2006 roku ukończyłam Śląską Akademię Medyczną w Zabrzu. W toku wieloletniej praktyki współpracowałam z gabinetami na Śląsku i w Krakowie. W kręgu moich profesjonalnych zainteresowań są chirurgia, endodoncja i protetyka, które poza regularną praktyką lekarską doskonalę na licznych szkoleniach i konferencjach.</p>
               </div>
             </div>
           </div>
-
+                
           <!-- Employee slide #3 -->
           <div class="about__team__wr__slides is-off">
 
@@ -349,24 +263,7 @@
               <div class='about__team__wr__slides__text__wr'>
                 <h3>Sylwia Żujewska</h3>
                 <h4>Lekarz Dentysta</h4>
-                <span>ul. Na Barciach</span>
-                <table class="about__team__wr__slides__text__wr__hours">
-                  <tr>
-                      <th span=2>Godziny przyjęć</th>
-                  </tr>
-                  <tr>
-                      <td>Śr.</td>
-                      <td>15:00 - 20:00</td>
-                  </tr>
-                  <tr>
-                      <td>Czw.</td>
-                      <td>15:00 - 20:00</td>
-                  </tr>
-                  <tr>
-                      <td>Co 2ga sob.</td>
-                      <td>09:00 - 13:00</td>
-                  </tr>
-                </table>
+                <p>Jestem absolwentką kierunku lekarsko-dentystycznego na Uniwersytecie Jagiellońskim. Swoje umiejętności rozwijam poprzez udział w licznych kursach i szkoleniach. Wolny czas lubię spędzać w dobrym towarzystwie, na koncertach, w kinie lub z dobrą książką.</p>
               </div>
             </div>
           </div>
@@ -392,20 +289,7 @@
               <div class='about__team__wr__slides__text__wr'>
                 <h3>Anna Kaczor</h3>
                 <h4>Lekarz Dentysta</h4>
-                <span>ul. Na Barciach</span>
-                <table class="about__team__wr__slides__text__wr__hours">
-                  <tr>
-                      <th span=2>Godziny przyjęć</th>
-                  </tr>
-                  <tr>
-                      <td>Wt.</td>
-                      <td>15:00 - 20:00</td>
-                  </tr>
-                  <tr>
-                      <td>Czw.</td>
-                      <td>15:00 - 20:00</td>
-                  </tr>
-                </table>
+                <p>Absolwentka kierunku lekarsko-dentystycznego Collegium Medicum Uniwersytetu Jagiellońskiego. Szczególnie interesuje się leczeniem endodontycznym (kanałowym), które wykonuje w całości w powiększeniu mikroskopu oraz stomatologią odtwórczą. Członek Polskiego Towarzystwa Endodontycznego, Europejskiego Towarzystwa Endodontycznego i Polskiego Towarzystwa Stomatologicznego.</p>
               </div>
             </div>
           </div>
@@ -434,16 +318,7 @@
               <div class='about__team__wr__slides__text__wr'>
                 <h3>Katarzyna Stańczewska</h3>
                 <h4>Lekarz Dentysta - Ortodoncja</h4>
-                <span>ul. Na Barciach</span>
-                <!-- <table class="about__team__wr__slides__text__wr__hours">
-                  <tr>                      
-                    <th colspan=2>Godziny przyjęć:</th>
-                  </tr>
-                  <tr>
-                      <td>Wt.</td>
-                      <td>15:00 - 19:00</td>
-                  </tr>
-                </table> -->
+				<p>Jestem absolwentką kierunku lekarsko-dentystycznego Uniwersytetu Jagiellońskiego w Krakowie. W 2019 roku ukończyłam podyplomowy akademicki dwuletni program kliniczny „Progressive Orthodontic Seminars” McGann Postgraduate School of Dentistry, California. Ukończyłam również cykl kursów medycznych w Łodzi dotyczących leczenia wad zgryzu u dzieci przy użyciu aparatów zdejmowanych.</p>
               </div>
             </div>
           </div>
@@ -577,16 +452,16 @@
 
           <ul>
             <li>
-              <a href="javascript:void(0);" onclick="toggle(profilaktyka)">Profilaktyka</a>
+              <a href="javascript:void(0);" onclick="toggle(profilaktyka)">Scaling, piaskowanie, fluoryzacja</a>
             </li>
             <li>
-              <a href="javascript:void(0);" onclick="toggle(endodoncja)">Endodoncja</a>
+              <a href="javascript:void(0);" onclick="toggle(endodoncja)">Leczenie kanałowe</a>
             </li>
             <li>
-              <a href="javascript:void(0);" onclick="toggle(ortodoncja)">Ortodoncja</a>
+              <a href="javascript:void(0);" onclick="toggle(ortodoncja)">Aparaty i nakładki </a>
             </li>
             <li>
-              <a href="javascript:void(0);" onclick="toggle(estetyczna)">Stomatologia estetyczna</a>
+              <a href="javascript:void(0);" onclick="toggle(estetyczna)">Wybielanie i licówki</a>
             </li>
           </ul>
 
@@ -601,7 +476,7 @@
               <a href="javascript:void(0);" onclick="toggle(chirurgia)">Chirurgia</a>
             </li>
             <li>
-              <a href="javascript:void(0);" onclick="toggle(regen)">Stomatologia regeneracyjna</a>
+              <a href="javascript:void(0);" onclick="toggle(regen)">Regeneracja tkanek</a>
             </li>
           </ul>
         </div>
@@ -805,7 +680,7 @@
               </tr>
               <tr>
                   <td>Badanie ze zdjęciami wewnątrzustnymi RTG</td>
-                  <td>80 zł</td>
+                  <td>100 zł</td>
               </tr>
               <tr>
                   <td>Scaling, piaskowanie, fluoryzacja</td>
@@ -813,7 +688,7 @@
               </tr>
               <tr>
                   <td>Wypełnienia</td>
-                  <td>od 190 zł</td>
+                  <td>od 200 zł</td>
               </tr>
               <tr>
                   <td>Znieczulenie</td>
@@ -821,7 +696,7 @@
               </tr>
               <tr>
                   <td>Usunięcie zęba</td>
-                  <td>od 150 zł</td>
+                  <td>od 200 zł</td>
               </tr>
               <tr>
                   <td>Leczenie kanałowe pod mikroskopem</td>
@@ -829,7 +704,7 @@
               </tr>
               <tr>
                 <td>Korony porcelanowe</td>
-                <td>od 850zł</td>
+                <td>od 900zł</td>
               </tr>
               <tr>
                 <td>Licówki porcelanowe</td>
@@ -970,10 +845,10 @@
             
             <div class="contact__wr__contact__phone-text">
               <h4>Gabinet ul. Na Barciach 14/III</h4>
-              <p>531 930 929</p>
-              <p>601 584 946</p>
+              <p><a href="tel:+48531930929">531 930 929</a></p>
+              <p><a href="tel:+48601584946">601 584 946</a></p>
               <h4>Gabinet os. Kościuszkowskie 6</h4>
-              <p>601 584 946</p>
+              <p><a href="tel:+48601584946">601 584 946</a></p>
               <div class="contact__wr__contact__phone-text__bar"></div>
             </div>
 
@@ -983,7 +858,7 @@
             </div>
 
             <div class="contact__wr__contact__mail__text">
-              <p>dentimedplus@gmail.com</p>
+              <p><a href="mailto:dentimedplus@gmail.com">dentimedplus@gmail.com</a></p>
             </div>
 
           </div>
@@ -1005,12 +880,10 @@
         <div class="foot-info">
           <div class="foot-info__general">
             <h2>Dentimed Plus</h2>
-            <p>Gabinet 1: ul. Na Barciach 14 / III, Kraków</p>
-            <p>Gabinet 2: os. Kościuszkowskie 6 (przełączka), Kraków</p>
             <p class='foot-info__general__tel-head'><strong>Tel:</strong></p>
-            <p>601 584 946</p>
+            <p><a href="tel:+48601584946">601 584 946</a></p>
             <p class="foot-info__general__tel-head"><strong>Mail:</strong></p>
-            <p>dentimedplus@gmail.com</p>
+            <p><a href="mailto:dentimedplus@gmail.com">dentimedplus@gmail.com</a></p>
           </div>
 
           <div class="foot-info__hours">
@@ -1020,16 +893,16 @@
             <p>os. Kościuszkowskie 6</p>
             <p>wt: 14-19 | śr: 14-19 | czw: 14-19</p>
             <p class="foot-info__hours__hours-head"><strong>Usługi:</strong></p>
-            <a href="#services">Profilaktyka |</a>
-            <a href="#services">Endodoncja |</a>
-            <a href="#services">Ortodoncja |</a>
-            <a href="#services">Stom. estetyczna |</a>
+            <a href="#services">Scaling, piaskowanie, fluoryzacja |</a>
+            <a href="#services">Leczenie kanałowe |</a>
+            <a href="#services">Aparaty i nakładki |</a>
+            <a href="#services">Wybielanie i licówki |</a>
             <a href="#services">Korony porcelanowe |</a>
             <a href="#services">Protezy |</a>
             <a href="#services">Chirurgia |</a>
-            <a href="#services">Stomatologia regeneracyjna</a>
+            <a href="#services">Regeneracja tkanek</a>
           </div>
-
+<p></p>
           <div class="foot-info__media">
             <a class='foot-info__media__fb' href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FAnna-Nowak-DentimedPlus-961114830678500%2F">
               <i class="fab fa-facebook-square fa-4x" alt='Przejdź do Facebooka'></i>
