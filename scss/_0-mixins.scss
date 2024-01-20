@@ -58,7 +58,6 @@
     justify-content: $j-content;
     align-content: $a-content;
     align-items: $a-items;
-
 }
 
 @mixin link-decor($case, $spacing) {
@@ -120,10 +119,12 @@
     border-collapse: collapse;
     margin: 0 0 2rem 0;
     & tr th {
+        width: 200px;
         padding-bottom: 1rem;
         font-weight: 200;
     }
     & tr td {
+        width: 120px;
         padding: 0.2rem 1rem 0 0;
     }
     & tr:nth-child(even) {

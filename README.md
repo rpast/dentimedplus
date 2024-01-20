@@ -10,3 +10,8 @@ Stack:
 Features:
 * Smooth scroll
 * Responsive - mobile first
+
+---
+
+To min compile scss > css:
+```sass --style=compressed ./scss/style.scss output.css```
