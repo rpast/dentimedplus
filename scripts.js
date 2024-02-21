@@ -101,7 +101,7 @@ var myLogo = document.querySelector(".nav__wr__logo");
 var myLogoW = document.querySelector('.nav__wr__logo-white');
 var myLinks = document.querySelector(".nav__wr__links")
 var myCall = document.querySelector(".nav__wr__tel__wr")
-var myHamburger = document.querySelector(".nav__wr__icon__a");
+var myHamburger = document.querySelector(".nav__wr__icon");
 
 var clientH = document.documentElement.clientHeight / 15;
 

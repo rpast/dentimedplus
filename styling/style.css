@@ -1583,7 +1583,7 @@ a, a:hover, a:visited, a:link, a:active {
   height: 60vh;
 }
 .map iframe {
-  height: 105%;
+  height: 100%;
   border: none;
 }
 
