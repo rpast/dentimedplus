@@ -24,8 +24,9 @@ var korony = document.querySelector("#korony")
 var protezy = document.querySelector("#protezy")
 var chirurgia = document.querySelector("#chirurgia")
 var regen = document.querySelector("#regen")
+var rtg = document.querySelector("#rtg")
 
-var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, protezy, chirurgia, regen];
+var servicesList = [profilaktyka, endodoncja, ortodoncja, estetyczna, korony, protezy, chirurgia, regen, rtg];
 
 
 
